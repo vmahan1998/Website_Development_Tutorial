@@ -2,9 +2,9 @@
   {
     "objectID": "02-structure.html",
     "href": "02-structure.html",
-    "title": "3  4. 02-structure.qmd",
+    "title": "3  Understanding the File Structure",
     "section": "",
-    "text": "3.1 ```markdown",
+    "text": "3.1 Overview\nNow that your project is open in RStudio, you’re probably looking at a list of files and wondering what they all do. This chapter explains how a Quarto website is organized, what each file’s role is, and how they connect to produce the website you previewed in the last chapter.\nUnderstanding the structure before you start editing will save you a lot of confusion later — so take a few minutes to read through this before making any changes.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
     ]
@@ -44,7 +44,7 @@
     "href": "01-getting-started.html",
     "title": "2  Getting Started",
     "section": "",
-    "text": "2.1 Step 1: Download the Template\nGo to the GitHub repository and download the template as a ZIP file.\nUnzip it somewhere you can easily find it.",
+    "text": "2.1 Overview\nBefore you can build or edit your website, you need to set up a few free tools on your computer. This chapter walks you through every installation step and gets the website template running on your machine for the first time.\nBy the end of this chapter, you will have:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -72,9 +72,9 @@
   {
     "objectID": "03-editing.html",
     "href": "03-editing.html",
-    "title": "4  📘 5. 03-editing.qmd",
+    "title": "4  Editing Your Content",
     "section": "",
-    "text": "4.1 ```markdown",
+    "text": "4.1 Overview\nNow that you understand how the files are organized, it’s time to make the website yours. This chapter focuses on editing index.qmd — your homepage — which is the first thing visitors will see.\nYou’ll learn how to:",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
     ]
@@ -102,9 +102,9 @@
   {
     "objectID": "04-styling.html",
     "href": "04-styling.html",
-    "title": "5  📘 6. 04-styling.qmd",
+    "title": "5  Customizing Style",
     "section": "",
-    "text": "5.1 ```markdown",
+    "text": "5.1 Overview\nStyling controls how your website looks, including colors, fonts, spacing, and layout.\nIn Quarto, styling happens in two layers:",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]
@@ -122,9 +122,9 @@
   {
     "objectID": "04-styling.html#how-styling-works",
     "href": "04-styling.html#how-styling-works",
-    "title": "5  📘 6. 04-styling.qmd",
-    "section": "5.3 How Styling Works",
-    "text": "5.3 How Styling Works\nYou have two layers:\n\n5.3.1 1. Theme\n```yaml theme: [flatly, custom.scss]",
+    "title": "5  Customizing Style",
+    "section": "5.2 How Styling Works",
+    "text": "5.2 How Styling Works\n\n5.2.1 1. Theme (SCSS)\nDefined in _quarto.yml:\nformat:\n  html:\n    theme: [flatly, custom.scss]\n\nflatly is the base Bootstrap theme\n\ncustom.scss is your custom design layer\n\n\n\n\n\n\n\nNote\n\n\n\nSCSS allows you to define variables like colors once and reuse them across your entire site.\n\n\n\n\n\n5.2.2 2. CSS (styles.css)\ncss: styles.css\nThis file overrides specific elements after the theme is applied.\nYour current setup includes:\n\nDark background gradient\n\nLight readable text\n\nBlue accent colors\n\nStyled sidebar and headings",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]

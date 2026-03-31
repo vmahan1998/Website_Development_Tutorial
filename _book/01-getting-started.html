@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -123,25 +158,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">File Structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Understanding the File Structure</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-editing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Website Editing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing Your Content</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04-styling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing Style</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-publishing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></span></a>
   </div>
 </li>
     </ul>
@@ -154,9 +189,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#step-1-download-the-template" id="toc-step-1-download-the-template" class="nav-link active" data-scroll-target="#step-1-download-the-template"><span class="header-section-number">2.1</span> Step 1: Download the Template</a></li>
-  <li><a href="#step-2-open-the-project" id="toc-step-2-open-the-project" class="nav-link" data-scroll-target="#step-2-open-the-project"><span class="header-section-number">2.2</span> Step 2: Open the Project</a></li>
-  <li><a href="#step-3-run-the-website" id="toc-step-3-run-the-website" class="nav-link" data-scroll-target="#step-3-run-the-website"><span class="header-section-number">2.3</span> Step 3: Run the Website</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">2.1</span> Overview</a></li>
+  <li><a href="#step-1-install-r" id="toc-step-1-install-r" class="nav-link" data-scroll-target="#step-1-install-r"><span class="header-section-number">2.2</span> Step 1: Install R</a></li>
+  <li><a href="#step-2-install-rstudio" id="toc-step-2-install-rstudio" class="nav-link" data-scroll-target="#step-2-install-rstudio"><span class="header-section-number">2.3</span> Step 2: Install RStudio</a></li>
+  <li><a href="#step-3-install-quarto" id="toc-step-3-install-quarto" class="nav-link" data-scroll-target="#step-3-install-quarto"><span class="header-section-number">2.4</span> Step 3: Install Quarto</a></li>
+  <li><a href="#step-4-create-a-free-github-account" id="toc-step-4-create-a-free-github-account" class="nav-link" data-scroll-target="#step-4-create-a-free-github-account"><span class="header-section-number">2.5</span> Step 4: Create a Free GitHub Account</a></li>
+  <li><a href="#step-5-download-the-website-template" id="toc-step-5-download-the-website-template" class="nav-link" data-scroll-target="#step-5-download-the-website-template"><span class="header-section-number">2.6</span> Step 5: Download the Website Template</a></li>
+  <li><a href="#step-6-open-the-project-in-rstudio" id="toc-step-6-open-the-project-in-rstudio" class="nav-link" data-scroll-target="#step-6-open-the-project-in-rstudio"><span class="header-section-number">2.7</span> Step 6: Open the Project in RStudio</a></li>
   </ul>
 </nav>
     </div>
@@ -166,6 +205,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></h1>
+<p class="subtitle lead">Installing your tools and setting up the template</p>
 </div>
 
 
@@ -182,22 +222,248 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="step-1-download-the-template" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="step-1-download-the-template"><span class="header-section-number">2.1</span> Step 1: Download the Template</h2>
-<p>Go to the GitHub repository and download the template as a ZIP file.</p>
-<p>Unzip it somewhere you can easily find it.</p>
+<section id="overview" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.1</span> Overview</h2>
+<p>Before you can build or edit your website, you need to set up a few free tools on your computer. This chapter walks you through every installation step and gets the website template running on your machine for the first time.</p>
+<p>By the end of this chapter, you will have:</p>
+<ul>
+<li>R installed on your computer</li>
+<li>RStudio installed and open</li>
+<li>Quarto installed</li>
+<li>The website template downloaded and running in your browser</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These installations only need to be done once. Once your environment is set up, you won’t need to repeat these steps.</p>
+</div>
+</div>
 <hr>
 </section>
-<section id="step-2-open-the-project" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="step-2-open-the-project"><span class="header-section-number">2.2</span> Step 2: Open the Project</h2>
-<p>Open the <code>.Rproj</code> file in RStudio.</p>
-<p>You should now see all files in the project panel.</p>
+<section id="step-1-install-r" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="step-1-install-r"><span class="header-section-number">2.2</span> Step 1: Install R</h2>
+<p><strong>R</strong> is a free programming language that powers the tools behind your website. Even if you never write R code yourself, it needs to be installed for Quarto and RStudio to work properly.</p>
+<ol type="1">
+<li>Go to the official R download page: <a href="https://cran.r-project.org">https://cran.r-project.org</a></li>
+<li>Under <em>“Download and Install R”</em>, click the link that matches your operating system:
+<ul>
+<li><strong>Windows</strong> → click <em>“Download R for Windows”</em> → then <em>“base”</em> → then the download link at the top</li>
+<li><strong>Mac</strong> → click <em>“Download R for macOS”</em> → choose the version that matches your Mac</li>
+<li><strong>Linux</strong> → select your distribution and follow the instructions</li>
+</ul></li>
+<li>Open the downloaded file and follow the installer prompts. The default settings are fine — you don’t need to change anything.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Not sure which version to download?</strong> If you’re on a newer Mac (2020 or later), you likely have an Apple Silicon chip — look for the file labeled <strong>arm64</strong>. If you’re on an older Mac or a Windows PC, the standard download is the right choice.</p>
+</div>
+</div>
 <hr>
 </section>
-<section id="step-3-run-the-website" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="step-3-run-the-website"><span class="header-section-number">2.3</span> Step 3: Run the Website</h2>
-<p>In the terminal, run:</p>
-<p>```bash quarto preview</p>
+<section id="step-2-install-rstudio" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="step-2-install-rstudio"><span class="header-section-number">2.3</span> Step 2: Install RStudio</h2>
+<p><strong>RStudio</strong> is a free application that gives you a visual, beginner-friendly environment for working with R and Quarto. Think of it as the workspace where everything comes together.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You must install R <strong>before</strong> installing RStudio. RStudio requires R to be present on your computer in order to run.</p>
+</div>
+</div>
+<ol type="1">
+<li>Go to the RStudio download page: <a href="https://posit.co/download/rstudio-desktop">https://posit.co/download/rstudio-desktop</a></li>
+<li>Click <strong>“Download RStudio Desktop”</strong> — the free version is all you need.</li>
+<li>Choose the installer for your operating system, download it, and run it.</li>
+<li>Follow the installer prompts. Again, the default settings are fine.</li>
+<li>Once installed, open RStudio. You should see a window divided into several panels.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What am I looking at?</strong> When RStudio opens for the first time, you’ll see a few panels: the <strong>Console</strong> (where R runs commands), the <strong>Environment</strong> (where your data and variables live), and the <strong>Files</strong> panel (where you browse your project files). Don’t worry about mastering these right away — you’ll get familiar with them as you go.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="step-3-install-quarto" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="step-3-install-quarto"><span class="header-section-number">2.4</span> Step 3: Install Quarto</h2>
+<p><strong>Quarto</strong> is the tool that actually builds your website. It reads your content files and turns them into the web pages visitors will see. You’ll install it directly from inside RStudio using the R Console — no need to visit any external websites or run a separate installer.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>Console</strong> is the tab in the bottom-left panel of RStudio where you type and run R commands. It usually has a <code>&gt;</code> symbol waiting for your input. This is different from the <strong>Terminal</strong> tab next to it — the Console is for R code, while the Terminal is for system-level commands.</p>
+</div>
+</div>
+<ol type="1">
+<li>Open <strong>RStudio</strong></li>
+<li>Click on the <strong>Console</strong> tab in the bottom-left panel</li>
+<li>Click next to the <code>&gt;</code> symbol and type the following command, then press <strong>Enter</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"quarto"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>R will download and install the Quarto package. You may see a lot of text scroll by — that’s normal. Wait until you see the <code>&gt;</code> prompt appear again, which means it’s done.</li>
+<li>Once installed, load the package by typing the following and pressing <strong>Enter</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quarto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="6" type="1">
+<li>To confirm everything installed correctly, run:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quarto_path</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If a file path is printed in the Console (for example, <code>/usr/local/bin/quarto</code>), Quarto is installed and ready to go.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Seeing a warning that says the package was built under a different version of R?</strong> That’s usually fine and won’t affect anything in this tutorial. As long as the <code>&gt;</code> prompt returns without an error message in red, you’re good to continue.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you see a red error message saying Quarto was not found or the path is empty, it may mean Quarto’s command-line tools are not installed on your system yet. In that case, visit <a href="https://quarto.org/docs/get-started">https://quarto.org/docs/get-started</a>, download the installer for your operating system, and run it. Then return to this step and run <code>quarto_path()</code> again to confirm.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="step-4-create-a-free-github-account" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="step-4-create-a-free-github-account"><span class="header-section-number">2.5</span> Step 4: Create a Free GitHub Account</h2>
+<p><strong>GitHub</strong> is a free platform where people store and share code and projects. You’ll use it to download the website template and later to publish your site online.</p>
+<p>If you already have a GitHub account, you can skip to Step 5.</p>
+<ol type="1">
+<li>Go to <a href="https://github.com">https://github.com</a> and click <strong>“Sign up”</strong></li>
+<li>Follow the prompts to create a free account.</li>
+<li>Verify your email address when prompted.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Choose a professional username if you can — your GitHub profile may be visible to collaborators or employers in the future.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="step-5-download-the-website-template" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="step-5-download-the-website-template"><span class="header-section-number">2.6</span> Step 5: Download the Website Template</h2>
+<p>You’ll download the template directly from GitHub as a ZIP file — no special tools or commands needed for this step, just your web browser.</p>
+<ol type="1">
+<li>Go to the template repository in your browser: <a href="https://github.com/vmahan1998/Personal_Website_Template">https://github.com/vmahan1998/Personal_Website_Template</a></li>
+<li>Click the green <strong>“Code”</strong> button near the top-right of the page</li>
+<li>In the dropdown that appears, click <strong>“Download ZIP”</strong></li>
+<li>Your browser will download a file called <code>Personal_Website_Template-main.zip</code></li>
+<li>Once downloaded, <strong>unzip the file</strong>:
+<ul>
+<li><strong>Windows:</strong> Right-click the ZIP file → select <em>“Extract All”</em> → choose a destination (Desktop or Documents is fine) → click <em>“Extract”</em></li>
+<li><strong>Mac:</strong> Double-click the ZIP file — it will automatically unzip into a folder in the same location</li>
+</ul></li>
+<li>You should now have a folder called <code>Personal_Website_Template-main</code> containing all the website files</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Move the unzipped folder somewhere easy to find and remember — you’ll be opening and editing files inside it throughout this tutorial. Avoid leaving it in your Downloads folder where it can get buried.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What’s inside the folder?</strong> Don’t worry if the contents look unfamiliar right now. The next chapter will walk you through what each file and folder does. For now, you just need the folder in place and ready to open.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="step-6-open-the-project-in-rstudio" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="step-6-open-the-project-in-rstudio"><span class="header-section-number">2.7</span> Step 6: Open the Project in RStudio</h2>
+<p>Now you’ll open the template as a <strong>project</strong> in RStudio. Opening it as a project (rather than just opening individual files) is important — it tells RStudio where all your files live so that everything works correctly together.</p>
+<ol type="1">
+<li>Open <strong>RStudio</strong></li>
+<li>Go to <strong>File → Open Project</strong></li>
+<li>Navigate to the <code>Personal_Website_Template-main</code> folder you just unzipped</li>
+<li>Inside the folder, find the file ending in <strong><code>.Rproj</code></strong> and click on it</li>
+<li>Click <strong>“Open”</strong></li>
+</ol>
+<p>RStudio will reload and you’ll see all the template files appear in the <strong>Files</strong> panel in the bottom-right corner of the screen.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>.Rproj</code> file is what tells RStudio to treat this folder as a self-contained project. It sets up your working environment automatically so all the files and folder paths work correctly without any extra configuration on your part.</p>
+</div>
+</div>
 
 
 </section>
@@ -609,8 +875,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02-structure.html" class="pagination-link" aria-label="File Structure">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">File Structure</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02-structure.html" class="pagination-link" aria-label="Understanding the File Structure">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Understanding the File Structure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

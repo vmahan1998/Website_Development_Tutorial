@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; 📘 6. 04-styling.qmd – Building a Research Website with Quarto</title>
+<title>5&nbsp; Customizing Style – Building a Research Website with Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -141,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-publishing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></span></a>
   </div>
 </li>
     </ul>
@@ -154,9 +189,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#markdown" id="toc-markdown" class="nav-link active" data-scroll-target="#markdown"><span class="header-section-number">5.1</span> ```markdown</a></li>
-  <li><a href="#title-customizing-style" id="toc-title-customizing-style" class="nav-link" data-scroll-target="#title-customizing-style"><span class="header-section-number">5.2</span> title: “Customizing Style”</a></li>
-  <li><a href="#how-styling-works" id="toc-how-styling-works" class="nav-link" data-scroll-target="#how-styling-works"><span class="header-section-number">5.3</span> How Styling Works</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">5.1</span> Overview</a></li>
+  <li><a href="#how-styling-works" id="toc-how-styling-works" class="nav-link" data-scroll-target="#how-styling-works"><span class="header-section-number">5.2</span> How Styling Works</a></li>
+  <li><a href="#your-current-theme-dark-mode" id="toc-your-current-theme-dark-mode" class="nav-link" data-scroll-target="#your-current-theme-dark-mode"><span class="header-section-number">5.3</span> Your Current Theme: Dark Mode</a></li>
+  <li><a href="#creating-multiple-themes" id="toc-creating-multiple-themes" class="nav-link" data-scroll-target="#creating-multiple-themes"><span class="header-section-number">5.4</span> Creating Multiple Themes</a></li>
+  <li><a href="#where-to-edit-your-style" id="toc-where-to-edit-your-style" class="nav-link" data-scroll-target="#where-to-edit-your-style"><span class="header-section-number">5.5</span> Where to Edit Your Style</a></li>
+  <li><a href="#editing-colors-step-by-step" id="toc-editing-colors-step-by-step" class="nav-link" data-scroll-target="#editing-colors-step-by-step"><span class="header-section-number">5.6</span> Editing Colors Step-by-Step</a></li>
+  <li><a href="#understanding-what-you-changed" id="toc-understanding-what-you-changed" class="nav-link" data-scroll-target="#understanding-what-you-changed"><span class="header-section-number">5.7</span> Understanding What You Changed</a></li>
+  <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">5.8</span> Try It Yourself</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes"><span class="header-section-number">5.9</span> Common Mistakes</a></li>
+  <li><a href="#next-step" id="toc-next-step" class="nav-link" data-scroll-target="#next-step"><span class="header-section-number">5.10</span> Next Step</a></li>
+  <li><a href="#key-idea" id="toc-key-idea" class="nav-link" data-scroll-target="#key-idea"><span class="header-section-number">5.11</span> Key Idea</a></li>
   </ul>
 </nav>
     </div>
@@ -165,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">📘 6. <code>04-styling.qmd</code></span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing Style</span></h1>
 </div>
 
 
@@ -182,22 +225,334 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="overview" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">5.1</span> Overview</h2>
+<p>Styling controls how your website looks, including colors, fonts, spacing, and layout.</p>
+<p>In Quarto, styling happens in two layers:</p>
+<ol type="1">
+<li><strong>Theme (SCSS)</strong> → controls global design such as colors and typography<br>
+</li>
+<li><strong>CSS</strong> → fine-tunes specific elements like buttons, spacing, and layout details</li>
+</ol>
 <hr>
-<section id="markdown" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="markdown"><span class="header-section-number">5.1</span> ```markdown</h2>
 </section>
-<section id="title-customizing-style" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="title-customizing-style"><span class="header-section-number">5.2</span> title: “Customizing Style”</h2>
+<section id="how-styling-works" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="how-styling-works"><span class="header-section-number">5.2</span> How Styling Works</h2>
+<section id="theme-scss" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="theme-scss"><span class="header-section-number">5.2.1</span> 1. Theme (SCSS)</h3>
+<p>Defined in <code>_quarto.yml</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">flatly</span><span class="kw">,</span><span class="at"> custom.scss</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>flatly</code> is the base Bootstrap theme<br>
+</li>
+<li><code>custom.scss</code> is your custom design layer</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SCSS allows you to define variables like colors once and reuse them across your entire site.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="how-styling-works" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="how-styling-works"><span class="header-section-number">5.3</span> How Styling Works</h2>
-<p>You have two layers:</p>
-<section id="theme" class="level3" data-number="5.3.1">
-<h3 data-number="5.3.1" class="anchored" data-anchor-id="theme"><span class="header-section-number">5.3.1</span> 1. Theme</h3>
-<p>```yaml theme: [flatly, custom.scss]</p>
+<section id="css-styles.css" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="css-styles.css"><span class="header-section-number">5.2.2</span> 2. CSS (<code>styles.css</code>)</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This file overrides specific elements after the theme is applied.</p>
+<p>Your current setup includes:</p>
+<ul>
+<li>Dark background gradient<br>
+</li>
+<li>Light readable text<br>
+</li>
+<li>Blue accent colors<br>
+</li>
+<li>Styled sidebar and headings</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="your-current-theme-dark-mode" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="your-current-theme-dark-mode"><span class="header-section-number">5.3</span> Your Current Theme: Dark Mode</h2>
+<p>Your site currently uses a dark, professional theme:</p>
+<ul>
+<li>Deep blue background<br>
+</li>
+<li>Light text<br>
+</li>
+<li>Blue accent highlights</li>
+</ul>
+<p>This works well for research portfolios and technical content.</p>
+<hr>
+</section>
+<section id="creating-multiple-themes" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="creating-multiple-themes"><span class="header-section-number">5.4</span> Creating Multiple Themes</h2>
+<p>You can use different styles by switching SCSS files.</p>
+<p>Within this template, we provide:</p>
+<ul>
+<li>Dark mode<br>
+</li>
+<li>Light mode<br>
+</li>
+<li>Pastel theme</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can edit these themes or create your own to personalize your website.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="where-to-edit-your-style" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="where-to-edit-your-style"><span class="header-section-number">5.5</span> Where to Edit Your Style</h2>
+<section id="open-custom.scss" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="open-custom.scss"><span class="header-section-number">5.5.1</span> Open <code>custom.scss</code></h3>
+<p>This file controls your <strong>core theme settings</strong>, including:</p>
+<ul>
+<li>Background color<br>
+</li>
+<li>Text color<br>
+</li>
+<li>Accent color<br>
+</li>
+<li>Navbar styling</li>
+</ul>
+<p>This is where you define the overall look of your site.</p>
+<hr>
+</section>
+<section id="open-_quarto.yml" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="open-_quarto.yml"><span class="header-section-number">5.5.2</span> Open <code>_quarto.yml</code></h3>
+<p>This file tells Quarto <strong>which theme to use</strong>.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">flatly</span><span class="kw">,</span><span class="at"> custom.scss</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To switch themes, replace <code>custom.scss</code> with another file:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">flatly</span><span class="kw">,</span><span class="at"> custom-light.scss</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">flatly</span><span class="kw">,</span><span class="at"> custom-pastel.scss</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="editing-colors-step-by-step" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="editing-colors-step-by-step"><span class="header-section-number">5.6</span> Editing Colors Step-by-Step</h2>
+<p>This section walks you through making a simple style change so you can see how themes work in real time.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure you have <code>quarto preview</code> running before you start so you can see your changes instantly.</p>
+</div>
+</div>
+<hr>
+<section id="step-1-open-custom.scss" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="step-1-open-custom.scss"><span class="header-section-number">5.6.1</span> Step 1: Open <code>custom.scss</code></h3>
+<p>In your project folder, open:</p>
+<pre><code>custom.scss</code></pre>
+<p>You should see something like:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>: <span class="cn">#08131d</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="va">$body-color</span>: <span class="fu">rgba(</span><span class="dv">222</span><span class="op">,</span> <span class="dv">238</span><span class="op">,</span> <span class="dv">246</span><span class="op">,</span> <span class="dv">0.92</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="va">$primary</span>: <span class="cn">#7ecce6</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="step-2-change-the-accent-color" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="step-2-change-the-accent-color"><span class="header-section-number">5.6.2</span> Step 2: Change the Accent Color</h3>
+<p>Find this line:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="va">$primary</span>: <span class="cn">#7ecce6</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace it with a new color, for example:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="va">$primary</span>: <span class="cn">#ff6b6b</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file.</p>
+<p>👉 Your site should automatically refresh, and you’ll see: - Links change color<br>
+- Buttons change color<br>
+- Callouts update</p>
+<hr>
+</section>
+<section id="step-3-change-the-background-color" class="level3" data-number="5.6.3">
+<h3 data-number="5.6.3" class="anchored" data-anchor-id="step-3-change-the-background-color"><span class="header-section-number">5.6.3</span> Step 3: Change the Background Color</h3>
+<p>Find:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>: <span class="cn">#08131d</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Try changing it to something lighter:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>: <span class="cn">#f4f7fb</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file.</p>
+<p>👉 Notice how the entire tone of the site changes.</p>
+<hr>
+</section>
+<section id="step-4-adjust-text-color" class="level3" data-number="5.6.4">
+<h3 data-number="5.6.4" class="anchored" data-anchor-id="step-4-adjust-text-color"><span class="header-section-number">5.6.4</span> Step 4: Adjust Text Color</h3>
+<p>Find:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="va">$body-color</span>: <span class="fu">rgba(</span><span class="dv">222</span><span class="op">,</span> <span class="dv">238</span><span class="op">,</span> <span class="dv">246</span><span class="op">,</span> <span class="dv">0.92</span><span class="fu">)</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you switched to a light background, update this to:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="va">$body-color</span>: <span class="cn">#1a1a1a</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Background and text color should always have strong contrast so your site remains readable.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="understanding-what-you-changed" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="understanding-what-you-changed"><span class="header-section-number">5.7</span> Understanding What You Changed</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>What it controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>$primary</code></td>
+<td>Accent color (links, buttons, highlights)</td>
+</tr>
+<tr class="even">
+<td><code>$body-bg</code></td>
+<td>Page background</td>
+</tr>
+<tr class="odd">
+<td><code>$body-color</code></td>
+<td>Main text color</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="try-it-yourself" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">5.8</span> Try It Yourself</h2>
+<p>Experiment with different combinations:</p>
+<ul>
+<li>Blue → Green<br>
+</li>
+<li>Dark → Light<br>
+</li>
+<li>Pastel → Bold</li>
+</ul>
+<p>You can use tools like: - https://coolors.co<br>
+- https://colorhunt.co</p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Small changes go a long way. Changing just one or two variables can completely transform your site.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="common-mistakes" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="common-mistakes"><span class="header-section-number">5.9</span> Common Mistakes</h2>
+<section id="nothing-changes-after-saving" class="level3" data-number="5.9.1">
+<h3 data-number="5.9.1" class="anchored" data-anchor-id="nothing-changes-after-saving"><span class="header-section-number">5.9.1</span> Nothing changes after saving</h3>
+<ul>
+<li>Make sure <code>quarto preview</code> is running<br>
+</li>
+<li>Check that you’re editing the correct file</li>
+</ul>
+</section>
+<section id="colors-look-wrong" class="level3" data-number="5.9.2">
+<h3 data-number="5.9.2" class="anchored" data-anchor-id="colors-look-wrong"><span class="header-section-number">5.9.2</span> Colors look wrong</h3>
+<ul>
+<li>Your <code>styles.css</code> may be overriding your SCSS</li>
+</ul>
+</section>
+<section id="site-looks-broken" class="level3" data-number="5.9.3">
+<h3 data-number="5.9.3" class="anchored" data-anchor-id="site-looks-broken"><span class="header-section-number">5.9.3</span> Site looks broken</h3>
+<ul>
+<li>Check for missing semicolons (<code>;</code>) in SCSS</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="next-step" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="next-step"><span class="header-section-number">5.10</span> Next Step</h2>
+<p>Now that you’ve changed your first colors, try:</p>
+<ul>
+<li>Creating your own theme file<br>
+</li>
+<li>Switching between themes in <code>_quarto.yml</code><br>
+</li>
+<li>Matching your site to your personal or institutional branding</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The goal is not to memorize SCSS — it is to understand how small changes affect your entire site.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="key-idea" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="key-idea"><span class="header-section-number">5.11</span> Key Idea</h2>
+<ul>
+<li><code>custom.scss</code> = controls design<br>
+</li>
+<li><code>styles.css</code> = refines details<br>
+</li>
+<li><code>_quarto.yml</code> = connects everything</li>
+</ul>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your styling is not updating, check that the file name in <code>_quarto.yml</code> matches your SCSS file exactly.</p>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -607,8 +962,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05-publishing.html" class="pagination-link" aria-label="Publishing">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-publishing.html" class="pagination-link" aria-label="Publishing Your Website">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

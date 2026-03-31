@@ -19,3 +19,31 @@ figcaption {
   color: rgba(210, 228, 238, 0.8);
   font-size: 0.95rem;
 }
+
+/* ---- Code block styling (fix gray boxes) ---- */
+
+pre {
+  background: rgba(15, 30, 45, 0.75) !important;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(126, 204, 230, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+/* Inline code inside blocks */
+pre code {
+  background: transparent !important;
+  color: #cfeaf5;
+  font-size: 0.95rem;
+}
+
+/* YAML syntax colors (improves readability) */
+code span.kw { color: #7ecce6; }   /* keys */
+code span.dt { color: #f4a261; }   /* values */
+code span.st { color: #a8dadc; }   /* strings */
+code span.co { color: #6c8ea3; }   /* comments */
+
+/* Optional: softer shadow for depth */
+pre {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}

@@ -22,7 +22,8 @@ or `quarto render`, Quarto reads those files and converts them into the HTML pag
 make up your website.
 
 Here's a map of what's in your project folder and what each piece does:
-```
+
+```yaml
 Personal_Website_Template/
 │
 ├── _quarto.yml          ← The control center: site title, navigation, theme

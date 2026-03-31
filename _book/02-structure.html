@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; 4. 02-structure.qmd – Building a Research Website with Quarto</title>
+<title>3&nbsp; Understanding the File Structure – Building a Research Website with Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -129,19 +164,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-editing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Website Editing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing Your Content</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04-styling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing Style</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-publishing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></span></a>
   </div>
 </li>
     </ul>
@@ -154,10 +189,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#markdown" id="toc-markdown" class="nav-link active" data-scroll-target="#markdown"><span class="header-section-number">3.1</span> ```markdown</a></li>
-  <li><a href="#title-understanding-the-structure" id="toc-title-understanding-the-structure" class="nav-link" data-scroll-target="#title-understanding-the-structure"><span class="header-section-number">3.2</span> title: “Understanding the Structure”</a></li>
-  <li><a href="#the-core-files" id="toc-the-core-files" class="nav-link" data-scroll-target="#the-core-files"><span class="header-section-number">3.3</span> The Core Files</a></li>
-  <li><a href="#how-navigation-works" id="toc-how-navigation-works" class="nav-link" data-scroll-target="#how-navigation-works"><span class="header-section-number">3.4</span> How Navigation Works</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">3.1</span> Overview</a></li>
+  <li><a href="#the-big-picture" id="toc-the-big-picture" class="nav-link" data-scroll-target="#the-big-picture"><span class="header-section-number">3.2</span> The Big Picture</a></li>
+  <li><a href="#the-.qmd-files-your-page-content" id="toc-the-.qmd-files-your-page-content" class="nav-link" data-scroll-target="#the-.qmd-files-your-page-content"><span class="header-section-number">3.3</span> The <code>.qmd</code> Files — Your Page Content</a></li>
+  <li><a href="#the-_quarto.yml-file-your-sites-control-center" id="toc-the-_quarto.yml-file-your-sites-control-center" class="nav-link" data-scroll-target="#the-_quarto.yml-file-your-sites-control-center"><span class="header-section-number">3.4</span> The <code>_quarto.yml</code> File — Your Site’s Control Center</a></li>
+  <li><a href="#the-styling-files" id="toc-the-styling-files" class="nav-link" data-scroll-target="#the-styling-files"><span class="header-section-number">3.5</span> The Styling Files</a></li>
+  <li><a href="#the-images-and-files-folders" id="toc-the-images-and-files-folders" class="nav-link" data-scroll-target="#the-images-and-files-folders"><span class="header-section-number">3.6</span> The <code>images/</code> and <code>files/</code> Folders</a></li>
+  <li><a href="#the-docs-folder" id="toc-the-docs-folder" class="nav-link" data-scroll-target="#the-docs-folder"><span class="header-section-number">3.7</span> The <code>docs/</code> Folder</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">3.8</span> Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -166,7 +205,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">4. <code>02-structure.qmd</code></span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Understanding the File Structure</span></h1>
+<p class="subtitle lead">What each file does and how they work together</p>
 </div>
 
 
@@ -183,31 +223,291 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<hr>
-<section id="markdown" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="markdown"><span class="header-section-number">3.1</span> ```markdown</h2>
-</section>
-<section id="title-understanding-the-structure" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="title-understanding-the-structure"><span class="header-section-number">3.2</span> title: “Understanding the Structure”</h2>
-</section>
-<section id="the-core-files" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="the-core-files"><span class="header-section-number">3.3</span> The Core Files</h2>
-<p>Your template includes:</p>
-<ul>
-<li><code>index.qmd</code></li>
-<li><code>research.qmd</code></li>
-<li><code>projects.qmd</code></li>
-<li><code>publications.qmd</code></li>
-<li><code>cv.qmd</code></li>
-</ul>
-<p>Each one becomes a page on your website.</p>
+<section id="overview" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">3.1</span> Overview</h2>
+<p>Now that your project is open in RStudio, you’re probably looking at a list of files and wondering what they all do. This chapter explains how a Quarto website is organized, what each file’s role is, and how they connect to produce the website you previewed in the last chapter.</p>
+<p>Understanding the structure before you start editing will save you a lot of confusion later — so take a few minutes to read through this before making any changes.</p>
 <hr>
 </section>
-<section id="how-navigation-works" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="how-navigation-works"><span class="header-section-number">3.4</span> How Navigation Works</h2>
-<p>Open <code>_quarto.yml</code>.</p>
-<p>You’ll see:</p>
-<p>```yaml navbar: left: - href: research.qmd text: Research</p>
+<section id="the-big-picture" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="the-big-picture"><span class="header-section-number">3.2</span> The Big Picture</h2>
+<p>A Quarto website is just a <strong>folder of plain text files</strong>. When you run <code>quarto preview</code> or <code>quarto render</code>, Quarto reads those files and converts them into the HTML pages that make up your website.</p>
+<p>Here’s a map of what’s in your project folder and what each piece does:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">Personal_Website_Template/</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">│</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">├── _quarto.yml          ← The control center</span><span class="kw">:</span><span class="at"> site title, navigation, theme</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">├── index.qmd            ← Your homepage</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">├── research.qmd         ← Your research overview page</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">├── publications.qmd     ← Your publications list</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">├── projects.qmd         ← Your projects and models page</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">├── cv.qmd               ← Your CV page</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">├── modeling_basics.qmd  ← A learning/tutorial tab</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">│</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">├── custom.scss          ← Advanced style customization (colors, fonts)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">├── styles.css           ← Additional styling rules</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">│</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">├── images/              ← Folder for photos and figures used on the site</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">├── files/               ← Folder for downloadable files like your CV PDF</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">├── docs/                ← Auto-generated folder; this is what gets published online</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">│</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">└── *.Rproj              ← RStudio project file (you opened this in Chapter 1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You don’t need to understand every file right now. Focus on the <code>.qmd</code> files and <code>_quarto.yml</code> for now — those are where almost all of your editing will happen.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-.qmd-files-your-page-content" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="the-.qmd-files-your-page-content"><span class="header-section-number">3.3</span> The <code>.qmd</code> Files — Your Page Content</h2>
+<p>Files ending in <code>.qmd</code> are <strong>Quarto Markdown</strong> files. Each one becomes a single page on your website. They are plain text files, which means you can open and edit them in RStudio like a document.</p>
+<p>Here’s what each page in your template is for:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Page</th>
+<th>What it contains</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>index.qmd</code></td>
+<td>Homepage</td>
+<td>Your name, photo, research summary, and featured tools</td>
+</tr>
+<tr class="even">
+<td><code>research.qmd</code></td>
+<td>Research</td>
+<td>An overview of your research areas and dissertation work</td>
+</tr>
+<tr class="odd">
+<td><code>publications.qmd</code></td>
+<td>Publications</td>
+<td>A list of your papers, reports, and written work</td>
+</tr>
+<tr class="even">
+<td><code>projects.qmd</code></td>
+<td>Projects / Models</td>
+<td>Highlights of tools and projects you’ve built</td>
+</tr>
+<tr class="odd">
+<td><code>cv.qmd</code></td>
+<td>CV</td>
+<td>A web version of your curriculum vitae</td>
+</tr>
+<tr class="even">
+<td><code>modeling_basics.qmd</code></td>
+<td>Learning Tab</td>
+<td>Educational content or resources you want to share</td>
+</tr>
+</tbody>
+</table>
+<p>If you open any of these files in RStudio, you’ll see they follow the same basic pattern: a short header block at the top (called the <strong>YAML front matter</strong>, enclosed in <code>---</code>), followed by regular text with some formatting.</p>
+<p>For example, at the top of <code>research.qmd</code> you’ll see:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Research"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That’s all Quarto needs to know the title of the page. Everything below that line is the content that appears on the page.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What is Markdown?</strong> Markdown is a simple way of formatting text using plain characters. For example, putting <code>**text**</code> around a word makes it <strong>bold</strong>, and starting a line with <code>##</code> makes it a heading. You don’t need to learn all of Markdown right now — you’ll pick it up naturally as you edit the template pages.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-_quarto.yml-file-your-sites-control-center" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="the-_quarto.yml-file-your-sites-control-center"><span class="header-section-number">3.4</span> The <code>_quarto.yml</code> File — Your Site’s Control Center</h2>
+<p>The <code>_quarto.yml</code> file is the most important configuration file in your project. It controls the overall structure of the site: the title, the navigation bar, the theme, the footer, and more.</p>
+<p>Open it in RStudio now and take a look. Here’s what the key sections mean:</p>
+<section id="site-title" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="site-title"><span class="header-section-number">3.4.1</span> Site Title</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Vanessa Quintana"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This sets the name that appears in the browser tab and the top-left of the navigation bar. You’ll change this to your own name when you personalize the site.</p>
+</section>
+<section id="navigation-bar" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="navigation-bar"><span class="header-section-number">3.4.2</span> Navigation Bar</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> modeling_basics.qmd</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Modeling Basics</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> research.qmd</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Research</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> publications.qmd</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Publications</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> projects.qmd</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Models</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> cv.qmd</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> CV</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is where the navigation bar links are defined. Each entry has two parts: - <code>href</code> — the <code>.qmd</code> file this link points to - <code>text</code> — the label that appears in the navbar</p>
+<p>The order here controls the order the links appear on your site. If you want to rename a tab or reorder the pages, this is where you do it.</p>
+</section>
+<section id="social-links-right-side-of-navbar" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="social-links-right-side-of-navbar"><span class="header-section-number">3.4.3</span> Social Links (Right Side of Navbar)</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/vmahan1998</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> envelope</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> mailto:vanessa.mahan@maine.edu</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> linkedin</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://www.linkedin.com/in/vanessa-mahan/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>These are the icon links that appear on the right side of the navigation bar. You’ll update these with your own GitHub, email, and LinkedIn in a later chapter.</p>
+</section>
+<section id="theme" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="theme"><span class="header-section-number">3.4.4</span> Theme</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">flatly</span><span class="kw">,</span><span class="at"> custom.scss</span><span class="kw">]</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This tells Quarto which visual theme to use. The template uses <strong>flatly</strong> (a clean, professional Bootstrap theme) combined with a custom style file (<code>custom.scss</code>) that adds the dark color scheme you saw when you previewed the site.</p>
+</section>
+<section id="output-folder" class="level3" data-number="3.4.5">
+<h3 data-number="3.4.5" class="anchored" data-anchor-id="output-folder"><span class="header-section-number">3.4.5</span> Output Folder</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This tells Quarto to save the built website files into a folder called <code>docs</code>. This matters when it comes time to publish — GitHub Pages looks for your site files in the <code>docs</code> folder by default.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be careful editing <code>_quarto.yml</code>. It uses <strong>YAML formatting</strong>, which is very sensitive to indentation. If a line is indented by the wrong number of spaces, Quarto may throw an error. Always use <strong>spaces</strong> (not tabs) for indentation, and keep the existing structure intact while making your edits.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="the-styling-files" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="the-styling-files"><span class="header-section-number">3.5</span> The Styling Files</h2>
+<p>Your template has two files that control how the site looks visually:</p>
+<p><strong><code>styles.css</code></strong> — A CSS file that applies the dark background, text colors, card styles, and other visual details across the site. CSS (Cascading Style Sheets) is the standard language for styling web pages. You don’t need to edit this file to personalize your content, but you’ll explore it in the styling chapter later.</p>
+<p><strong><code>custom.scss</code></strong> — A SCSS file that extends and customizes the base Quarto theme. SCSS is a more powerful version of CSS. Again, you won’t need to touch this right away.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The separation between content (<code>.qmd</code> files) and style (<code>styles.css</code>, <code>custom.scss</code>) is intentional and useful. It means you can completely redesign the look of your site without touching a single word of your content — and vice versa.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-images-and-files-folders" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="the-images-and-files-folders"><span class="header-section-number">3.6</span> The <code>images/</code> and <code>files/</code> Folders</h2>
+<p><strong><code>images/</code></strong> is where you store any photos or figures used on the site — your headshot, research images, project screenshots, and so on. When a <code>.qmd</code> file references an image like <code>images/Author_Picture.jpg</code>, Quarto looks for it in this folder.</p>
+<p><strong><code>files/</code></strong> is where you store downloadable files — most commonly a PDF version of your CV. A link on your CV page points here so visitors can download it.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you’re ready to personalize the site, you’ll add your own headshot to the <code>images/</code> folder and your CV PDF to the <code>files/</code> folder. You’ll do this in Chapter 3.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-docs-folder" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="the-docs-folder"><span class="header-section-number">3.7</span> The <code>docs/</code> Folder</h2>
+<p>The <code>docs/</code> folder is <strong>automatically generated</strong> by Quarto when you run <code>quarto render</code>. You should never edit files inside <code>docs/</code> directly — Quarto will overwrite your changes the next time it builds the site.</p>
+<p>Think of <code>docs/</code> as the final, compiled version of your website. It’s the folder that gets published online when you deploy to GitHub Pages.</p>
+<hr>
+</section>
+<section id="summary" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.8</span> Summary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File / Folder</th>
+<th>What it’s for</th>
+<th>Do you edit it?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_quarto.yml</code></td>
+<td>Site structure, navigation, theme</td>
+<td>Yes — for titles, links, settings</td>
+</tr>
+<tr class="even">
+<td><code>*.qmd</code> files</td>
+<td>Page content</td>
+<td>Yes — your main editing happens here</td>
+</tr>
+<tr class="odd">
+<td><code>styles.css</code></td>
+<td>Visual styling</td>
+<td>Later — for design customization</td>
+</tr>
+<tr class="even">
+<td><code>custom.scss</code></td>
+<td>Theme customization</td>
+<td>Later — for advanced styling</td>
+</tr>
+<tr class="odd">
+<td><code>images/</code></td>
+<td>Photos and figures</td>
+<td>Yes — add your own images here</td>
+</tr>
+<tr class="even">
+<td><code>files/</code></td>
+<td>Downloadable files (CV PDF)</td>
+<td>Yes — add your CV PDF here</td>
+</tr>
+<tr class="odd">
+<td><code>docs/</code></td>
+<td>Auto-generated site output</td>
+<td>Never — Quarto manages this</td>
+</tr>
+<tr class="even">
+<td><code>*.Rproj</code></td>
+<td>RStudio project file</td>
+<td>Never — leave this as-is</td>
+</tr>
+</tbody>
+</table>
+<p>Now that you understand how the pieces fit together, you’re ready to start making the site your own. In the next chapter, you’ll edit your homepage and add your personal information.</p>
 
 
 </section>
@@ -619,8 +919,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-editing.html" class="pagination-link" aria-label="Website Editing">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Website Editing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-editing.html" class="pagination-link" aria-label="Editing Your Content">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing Your Content</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; 📘 5. 03-editing.qmd – Building a Research Website with Quarto</title>
+<title>4&nbsp; Editing Your Content – Building a Research Website with Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -135,13 +170,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04-styling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing Style</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-publishing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></span></a>
   </div>
 </li>
     </ul>
@@ -154,9 +189,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#markdown" id="toc-markdown" class="nav-link active" data-scroll-target="#markdown"><span class="header-section-number">4.1</span> ```markdown</a></li>
-  <li><a href="#title-editing-your-content" id="toc-title-editing-your-content" class="nav-link" data-scroll-target="#title-editing-your-content"><span class="header-section-number">4.2</span> title: “Editing Your Content”</a></li>
-  <li><a href="#editing-the-homepage" id="toc-editing-the-homepage" class="nav-link" data-scroll-target="#editing-the-homepage"><span class="header-section-number">4.3</span> Editing the Homepage</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">4.1</span> Overview</a></li>
+  <li><a href="#step-1-open-your-homepage-file" id="toc-step-1-open-your-homepage-file" class="nav-link" data-scroll-target="#step-1-open-your-homepage-file"><span class="header-section-number">4.2</span> Step 1: Open Your Homepage File</a></li>
+  <li><a href="#step-2-add-your-profile-photo" id="toc-step-2-add-your-profile-photo" class="nav-link" data-scroll-target="#step-2-add-your-profile-photo"><span class="header-section-number">4.3</span> Step 2: Add Your Profile Photo</a></li>
+  <li><a href="#step-3-edit-your-bio-text" id="toc-step-3-edit-your-bio-text" class="nav-link" data-scroll-target="#step-3-edit-your-bio-text"><span class="header-section-number">4.4</span> Step 3: Edit Your Bio Text</a></li>
+  <li><a href="#step-4-understanding-side-by-side-layouts-columns" id="toc-step-4-understanding-side-by-side-layouts-columns" class="nav-link" data-scroll-target="#step-4-understanding-side-by-side-layouts-columns"><span class="header-section-number">4.5</span> Step 4: Understanding Side-by-Side Layouts (Columns)</a></li>
+  <li><a href="#step-5-update-your-badge-list" id="toc-step-5-update-your-badge-list" class="nav-link" data-scroll-target="#step-5-update-your-badge-list"><span class="header-section-number">4.6</span> Step 5: Update Your Badge List</a></li>
+  <li><a href="#step-6-embed-a-public-google-calendar" id="toc-step-6-embed-a-public-google-calendar" class="nav-link" data-scroll-target="#step-6-embed-a-public-google-calendar"><span class="header-section-number">4.7</span> Step 6: Embed a Public Google Calendar</a></li>
+  <li><a href="#step-7-save-and-preview-your-changes" id="toc-step-7-save-and-preview-your-changes" class="nav-link" data-scroll-target="#step-7-save-and-preview-your-changes"><span class="header-section-number">4.8</span> Step 7: Save and Preview Your Changes</a></li>
+  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources"><span class="header-section-number">4.9</span> Other Resources</a></li>
+  <li><a href="#summary-what-you-edited-in-this-chapter" id="toc-summary-what-you-edited-in-this-chapter" class="nav-link" data-scroll-target="#summary-what-you-edited-in-this-chapter"><span class="header-section-number">4.10</span> Summary: What You Edited in This Chapter</a></li>
   </ul>
 </nav>
     </div>
@@ -165,7 +207,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">📘 5. <code>03-editing.qmd</code></span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing Your Content</span></h1>
+<p class="subtitle lead">Personalizing your homepage with text, images, and a live calendar</p>
 </div>
 
 
@@ -182,17 +225,442 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="overview" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">4.1</span> Overview</h2>
+<p>Now that you understand how the files are organized, it’s time to make the website yours. This chapter focuses on editing <code>index.qmd</code> — your homepage — which is the first thing visitors will see.</p>
+<p>You’ll learn how to:</p>
+<ul>
+<li>Replace the placeholder text with your own name and bio</li>
+<li>Add your own profile photo</li>
+<li>Arrange text and images side by side using columns</li>
+<li>Embed a live public Google Calendar</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before making any edits, it’s a good habit to run <code>quarto preview</code> in the Terminal so the preview is live in your browser. That way you can see your changes reflected in real time as you save the file.</p>
+</div>
+</div>
 <hr>
-<section id="markdown" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="markdown"><span class="header-section-number">4.1</span> ```markdown</h2>
 </section>
-<section id="title-editing-your-content" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="title-editing-your-content"><span class="header-section-number">4.2</span> title: “Editing Your Content”</h2>
+<section id="step-1-open-your-homepage-file" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="step-1-open-your-homepage-file"><span class="header-section-number">4.2</span> Step 1: Open Your Homepage File</h2>
+<p>In RStudio, find <code>index.qmd</code> in the <strong>Files</strong> panel (bottom-right) and click on it to open it in the editor.</p>
+<p>At the very top of the file you’ll see the <strong>YAML front matter</strong> — a short block between two <code>---</code> lines that sets page-level options:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Vanessa Quintana"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Applied Ecological Modeler • Coastal Systems Scientist • Geospatial Analyst"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">page-layout</span><span class="kw">:</span><span class="at"> full</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> images/Author_Picture.jpg</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">smooth-scroll</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Start by updating these fields:</p>
+<ul>
+<li><strong><code>title</code></strong> — Replace <code>"Vanessa Quintana"</code> with your own name</li>
+<li><strong><code>subtitle</code></strong> — Replace the subtitle with your own roles or research focus areas, separated by <code>•</code> if you’d like the same style</li>
+<li><strong><code>image</code></strong> — This points to your profile photo (more on this in Step 2)</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>page-layout: full</code> setting gives the homepage a wider layout than the other pages, which is why it looks different from <code>research.qmd</code> or <code>cv.qmd</code>. Leave this as-is for the homepage.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="editing-the-homepage" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="editing-the-homepage"><span class="header-section-number">4.3</span> Editing the Homepage</h2>
-<p>Open:</p>
-<p>```text index.qmd</p>
+<section id="step-2-add-your-profile-photo" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="step-2-add-your-profile-photo"><span class="header-section-number">4.3</span> Step 2: Add Your Profile Photo</h2>
+<p>Your profile photo is displayed on the left side of the homepage. To replace the placeholder with your own image:</p>
+<ol type="1">
+<li>Find a photo you’d like to use — a headshot or professional photo works best</li>
+<li>Rename the file to something simple with no spaces, for example <code>my_photo.jpg</code></li>
+<li>Move or copy the file into the <strong><code>images/</code></strong> folder inside your project</li>
+<li>In <code>index.qmd</code>, find the line that references the image:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/Author_Picture.jpg)</span>{.profile-image width="100%" fig-alt="Vanessa Quintana"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Replace <code>Author_Picture.jpg</code> with your own filename, and update the <code>fig-alt</code> text with your name:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/my_photo.jpg)</span>{.profile-image width="100%" fig-alt="Your Name"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>fig-alt</code> text is the <strong>alt text</strong> for your image — a short description that appears if the image fails to load and that screen readers use for accessibility. Always include a brief, accurate description.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure your image file is actually inside the <code>images/</code> folder and that the filename in your <code>.qmd</code> file matches exactly — including capitalization and the file extension (<code>.jpg</code>, <code>.png</code>, etc.). A mismatch here is one of the most common beginner errors.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="step-3-edit-your-bio-text" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="step-3-edit-your-bio-text"><span class="header-section-number">4.4</span> Step 3: Edit Your Bio Text</h2>
+<p>Below the YAML front matter, the homepage is built using <strong>columns</strong> — a Quarto layout feature that lets you place content side by side. Here’s how the two-column layout is structured in <code>index.qmd</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.columns}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>::: {.column width="32%"}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">[</span><span class="ot">your photo and profile panel go here</span><span class="co">]</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>::: {.column width="68%"}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">[</span><span class="ot">your bio text goes here</span><span class="co">]</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The first column (32% wide) holds your photo and badge list. The second column (68% wide) holds your bio and research philosophy. To update your bio, find the text in the wider column and replace it with your own:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: {.column width="68%"}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>::: {.kicker}</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>About My Work</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>I work at the intersection of <span class="co">[</span><span class="ot">your research areas here</span><span class="co">]</span>. My research focuses on</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">what you study and why it matters</span><span class="co">]</span>.</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>I approach <span class="co">[</span><span class="ot">your methods or philosophy here</span><span class="co">]</span>.</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What is <code>.kicker</code>?</strong> The <code>.kicker</code> is a small styled label that appears above a section heading — like a category tag. It’s defined in <code>styles.css</code> and gives the page a clean, editorial look. You can change the text inside it to anything you like, or remove it entirely if you prefer.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="step-4-understanding-side-by-side-layouts-columns" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="step-4-understanding-side-by-side-layouts-columns"><span class="header-section-number">4.5</span> Step 4: Understanding Side-by-Side Layouts (Columns)</h2>
+<p>The column layout you just saw is one of the most useful features in Quarto for building a polished homepage. Here’s the full pattern so you can use it anywhere on your site:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>::: {.columns}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>Content for the left side goes here.</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>You can put text, images, lists, or anything else.</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>Content for the right side goes here.</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The widths must add up to 100%. You can split them however you like — for example <code>30%</code> / <code>70%</code>, or <code>25%</code> / <code>25%</code> / <code>25%</code> / <code>25%</code> for four equal columns (as used in the Research Areas section of the homepage).</p>
+<section id="placing-an-image-next-to-text" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="placing-an-image-next-to-text"><span class="header-section-number">4.5.1</span> Placing an Image Next to Text</h3>
+<p>A common use of the column layout is putting a photo or figure next to a block of text. Here’s a simple example you can copy and adapt:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>::: {.columns}</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>::: {.column width="40%"}</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/my_photo.jpg)</span>{width="100%" fig-alt="A description of the image"}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>::: {.column width="60%"}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### A heading for the text side</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>Write your paragraph text here. This will appear to the right of the image.</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>You can include as much or as little text as you need.</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Add a blank line between the <code>:::</code> dividers and your content. Quarto needs that spacing to correctly parse the column layout — missing blank lines is a common cause of formatting issues.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="step-5-update-your-badge-list" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="step-5-update-your-badge-list"><span class="header-section-number">4.6</span> Step 5: Update Your Badge List</h2>
+<p>In the left column of the homepage, below your photo, there is a <strong>badge list</strong> — a set of small styled labels showing your affiliation, title, or research focus areas. Find this block in <code>index.qmd</code>:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>::: {.badge-list}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Marine Sciences, University of Maine</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ORISE Fellow, U.S. Army Corps of Engineers</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>Estuarine Hydrodynamics and Sediment Transport</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>Agent-Based and Ecological Modeling</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace each line with your own affiliations, department, institution, or keywords. Each separate line becomes its own badge. You can add or remove lines as needed.</p>
+<hr>
+</section>
+<section id="step-6-embed-a-public-google-calendar" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="step-6-embed-a-public-google-calendar"><span class="header-section-number">4.7</span> Step 6: Embed a Public Google Calendar</h2>
+<p>If you have a public Google Calendar — for office hours, events, lab meetings, or workshops — you can embed it directly into your website as a live, interactive calendar. Any updates you make in Google Calendar will automatically appear on your site.</p>
+<section id="first-make-your-google-calendar-public" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="first-make-your-google-calendar-public"><span class="header-section-number">4.7.1</span> First: Make Your Google Calendar Public</h3>
+<ol type="1">
+<li>Go to <a href="https://calendar.google.com">calendar.google.com</a> and sign in</li>
+<li>In the left panel, find the calendar you want to embed, click the <strong>three dots</strong> next to its name, and select <strong>“Settings and sharing”</strong></li>
+<li>Under <strong>“Access permissions for events”</strong>, check the box that says <strong>“Make available to public”</strong></li>
+<li>Confirm the warning if prompted</li>
+</ol>
+</section>
+<section id="second-get-the-embed-code" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="second-get-the-embed-code"><span class="header-section-number">4.7.2</span> Second: Get the Embed Code</h3>
+<ol type="1">
+<li>Still on the calendar settings page, scroll down to <strong>“Integrate calendar”</strong></li>
+<li>Copy the <strong>“Public URL to this calendar”</strong> — it will look like a long link ending in <code>@group.calendar.google.com</code></li>
+<li>In the same section, click <strong>“Customize”</strong> to open the embed builder if you’d like to adjust the calendar’s appearance, then copy the <code>&lt;iframe&gt;</code> embed code</li>
+</ol>
+</section>
+<section id="third-add-the-calendar-to-your-site-optional" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="third-add-the-calendar-to-your-site-optional"><span class="header-section-number">4.7.3</span> Third: Add the Calendar to Your Site (<em>optional</em>)</h3>
+<p>Create a new file in your project called <code>calendar.qmd</code> and add the following. Replace the <code>src</code> URL with your own calendar’s embed URL:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Event Calendar"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> article</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu"># Event Calendar</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="st">  max-width: 1100px;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="st">  margin: 0 auto 50px auto;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="st">  border-radius: 22px;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="st">  background: #ffffff;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="st">  box-shadow: 0 12px 25px rgba(0,0,0,0.15);</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="st">  overflow: hidden;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="st">"</span><span class="dt">&gt;</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> </span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="ot">    src</span><span class="op">=</span><span class="st">"YOUR-GOOGLE-CALENDAR-EMBED-URL-HERE"</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="ot">    style</span><span class="op">=</span><span class="st">"border:0; width:100%; height:900px; display:block;"</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="ot">    frameborder</span><span class="op">=</span><span class="st">"0"</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="ot">    scrolling</span><span class="op">=</span><span class="st">"no"</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="ot">  </span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="fourth-add-the-calendar-to-your-navigation-bar-optional" class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="fourth-add-the-calendar-to-your-navigation-bar-optional"><span class="header-section-number">4.7.4</span> Fourth: Add the Calendar to Your Navigation Bar (<em>optional</em>)</h3>
+<p>Open <code>_quarto.yml</code> and add your new calendar page to the navbar under the <code>left:</code> section:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> calendar.qmd</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Calendar</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> research.qmd</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Research</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save <code>_quarto.yml</code>, then run <code>quarto preview</code> in the Terminal to see your calendar page live.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The calendar will only display correctly when viewed in a browser — it won’t show up in RStudio’s built-in viewer panel. If you don’t see it in the RStudio preview pane, copy the local address (e.g.&nbsp;<code>http://localhost:4321</code>) and open it in Chrome or Firefox.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="step-7-save-and-preview-your-changes" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="step-7-save-and-preview-your-changes"><span class="header-section-number">4.8</span> Step 7: Save and Preview Your Changes</h2>
+<p>After making any edits in <code>index.qmd</code> or <code>_quarto.yml</code>, save the file with <strong>Ctrl+S</strong> (Windows) or <strong>Cmd+S</strong> (Mac). If <code>quarto preview</code> is already running in the Terminal, your browser should refresh automatically within a few seconds.</p>
+<p>If the preview doesn’t update, go to the Terminal and run:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you see an error in the Terminal after saving, read the message carefully — Quarto’s error messages usually tell you exactly which file and line the problem is on. The most common issues are mismatched <code>:::</code> column dividers, incorrect image filenames, or indentation errors in <code>_quarto.yml</code>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="other-resources" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="other-resources"><span class="header-section-number">4.9</span> Other Resources</h2>
+<p>As you continue building your website, you may want to explore more advanced customization, layouts, and templates. The official Quarto documentation is extremely well organized and worth bookmarking.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If something feels limited in your website, it almost always already exists in the Quarto documentation — you just need to find the right section.</p>
+</div>
+</div>
+<hr>
+<section id="website-development" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="website-development"><span class="header-section-number">4.9.1</span> Website Development</h3>
+<ul>
+<li><p><a href="https://quarto.org/docs/websites/">Quarto Websites Documentation</a><br>
+A complete guide to building and structuring Quarto websites, including navigation, pages, and configuration.</p></li>
+<li><p><a href="https://quarto.org/docs/gallery/#websites">Quarto Website Gallery</a><br>
+Real examples of websites built with Quarto. Useful for inspiration and design ideas.</p></li>
+<li><p><a href="https://quarto.org/docs/guide/">Quarto Guide</a><br>
+A broader introduction to Quarto, including project types, publishing, and workflows.</p></li>
+</ul>
+<hr>
+</section>
+<section id="customization-and-advanced-formatting" class="level3" data-number="4.9.2">
+<h3 data-number="4.9.2" class="anchored" data-anchor-id="customization-and-advanced-formatting"><span class="header-section-number">4.9.2</span> Customization and Advanced Formatting</h3>
+<ul>
+<li><p><a href="https://quarto.org/docs/reference/formats/html.html">HTML Format Reference</a><br>
+Detailed reference for all HTML output options, including themes, layout, and advanced settings.</p></li>
+<li><p><a href="https://quarto.org/docs/output-formats/html-basics.html">HTML Basics</a><br>
+A simpler introduction to how Quarto renders HTML, useful for understanding how your site is structured.</p></li>
+</ul>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You do not need to learn all of this at once. Start by building your site, then return to these resources when you want to customize something specific.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="suggested-workflow-for-learning-more" class="level3" data-number="4.9.3">
+<h3 data-number="4.9.3" class="anchored" data-anchor-id="suggested-workflow-for-learning-more"><span class="header-section-number">4.9.3</span> Suggested Workflow for Learning More</h3>
+<ol type="1">
+<li>Build your basic website using this tutorial<br>
+</li>
+<li>Identify one thing you want to improve (layout, styling, navigation)<br>
+</li>
+<li>Use the documentation above to find that specific feature<br>
+</li>
+<li>Implement and test it</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Avoid trying to learn all of Quarto at once. Focus on small, incremental improvements.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="summary-what-you-edited-in-this-chapter" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="summary-what-you-edited-in-this-chapter"><span class="header-section-number">4.10</span> Summary: What You Edited in This Chapter</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>What</th>
+<th>Where</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Your name and subtitle</td>
+<td><code>index.qmd</code> YAML front matter</td>
+<td>Edit the <code>title</code> and <code>subtitle</code> fields</td>
+</tr>
+<tr class="even">
+<td>Your profile photo</td>
+<td><code>images/</code> folder + <code>index.qmd</code></td>
+<td>Add file to <code>images/</code>, update the filename</td>
+</tr>
+<tr class="odd">
+<td>Your bio text</td>
+<td><code>index.qmd</code> wide column</td>
+<td>Replace the paragraph text</td>
+</tr>
+<tr class="even">
+<td>Your badge labels</td>
+<td><code>index.qmd</code> <code>.badge-list</code> block</td>
+<td>Replace each line with your own info</td>
+</tr>
+<tr class="odd">
+<td>Side-by-side layout</td>
+<td>Any <code>.qmd</code> file</td>
+<td>Use the <code>{.columns}</code> / <code>{.column}</code> pattern</td>
+</tr>
+<tr class="even">
+<td>Google Calendar</td>
+<td>New <code>calendar.qmd</code> + <code>_quarto.yml</code></td>
+<td>Embed iframe, add link to navbar</td>
+</tr>
+</tbody>
+</table>
+<p>In the next chapter, you’ll edit the inner pages — Research, Publications, Projects, and CV — and learn how to add your own work to each one.</p>
 
 
 </section>
@@ -604,8 +1072,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./04-styling.html" class="pagination-link" aria-label="Customizing">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04-styling.html" class="pagination-link" aria-label="Customizing Style">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing Style</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
