@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; 📘 7. 05-publishing.qmd – Building a Research Website with Quarto</title>
+<title>6&nbsp; Publishing Your Website – Building a Research Website with Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-publishing.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-publishing.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -122,25 +157,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">File Structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Understanding the File Structure</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-editing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Website Editing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing Your Content</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04-styling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing Style</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-publishing.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></span></a>
   </div>
 </li>
     </ul>
@@ -153,12 +188,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#markdown" id="toc-markdown" class="nav-link active" data-scroll-target="#markdown"><span class="header-section-number">6.1</span> ```markdown</a></li>
-  <li><a href="#title-publishing-your-website" id="toc-title-publishing-your-website" class="nav-link" data-scroll-target="#title-publishing-your-website"><span class="header-section-number">6.2</span> title: “Publishing Your Website”</a></li>
-  <li><a href="#option-1-github-pages" id="toc-option-1-github-pages" class="nav-link" data-scroll-target="#option-1-github-pages"><span class="header-section-number">6.3</span> Option 1: GitHub Pages</a></li>
-  <li><a href="#step-1-push-to-github" id="toc-step-1-push-to-github" class="nav-link" data-scroll-target="#step-1-push-to-github"><span class="header-section-number">6.4</span> Step 1: Push to GitHub</a></li>
-  <li><a href="#step-2-enable-pages" id="toc-step-2-enable-pages" class="nav-link" data-scroll-target="#step-2-enable-pages"><span class="header-section-number">6.5</span> Step 2: Enable Pages</a></li>
-  <li><a href="#step-3-access-your-site" id="toc-step-3-access-your-site" class="nav-link" data-scroll-target="#step-3-access-your-site"><span class="header-section-number">6.6</span> Step 3: Access Your Site</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">6.1</span> Overview</a></li>
+  <li><a href="#option-1-github-pages" id="toc-option-1-github-pages" class="nav-link" data-scroll-target="#option-1-github-pages"><span class="header-section-number">7</span> Option 1: GitHub Pages</a>
+  <ul class="collapse">
+  <li><a href="#step-1-prepare-your-project" id="toc-step-1-prepare-your-project" class="nav-link" data-scroll-target="#step-1-prepare-your-project"><span class="header-section-number">7.1</span> Step 1: Prepare Your Project</a></li>
+  <li><a href="#step-2-render-your-website" id="toc-step-2-render-your-website" class="nav-link" data-scroll-target="#step-2-render-your-website"><span class="header-section-number">7.2</span> Step 2: Render Your Website</a></li>
+  <li><a href="#step-3-push-to-github" id="toc-step-3-push-to-github" class="nav-link" data-scroll-target="#step-3-push-to-github"><span class="header-section-number">7.3</span> Step 3: Push to GitHub</a></li>
+  <li><a href="#step-4-enable-github-pages" id="toc-step-4-enable-github-pages" class="nav-link" data-scroll-target="#step-4-enable-github-pages"><span class="header-section-number">7.4</span> Step 4: Enable GitHub Pages</a></li>
+  <li><a href="#step-5-access-your-site" id="toc-step-5-access-your-site" class="nav-link" data-scroll-target="#step-5-access-your-site"><span class="header-section-number">7.5</span> Step 5: Access Your Site</a></li>
+  <li><a href="#updating-your-site" id="toc-updating-your-site" class="nav-link" data-scroll-target="#updating-your-site"><span class="header-section-number">7.6</span> Updating Your Site</a></li>
+  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues"><span class="header-section-number">7.7</span> Common Issues</a></li>
+  </ul></li>
+  <li><a href="#option-2-posit-connect" id="toc-option-2-posit-connect" class="nav-link" data-scroll-target="#option-2-posit-connect"><span class="header-section-number">8</span> Option 2: Posit Connect</a>
+  <ul class="collapse">
+  <li><a href="#when-to-use-posit-connect" id="toc-when-to-use-posit-connect" class="nav-link" data-scroll-target="#when-to-use-posit-connect"><span class="header-section-number">8.1</span> When to Use Posit Connect</a></li>
+  <li><a href="#step-1-connect-your-account" id="toc-step-1-connect-your-account" class="nav-link" data-scroll-target="#step-1-connect-your-account"><span class="header-section-number">8.2</span> Step 1: Connect Your Account</a></li>
+  <li><a href="#step-2-publish-from-rstudio" id="toc-step-2-publish-from-rstudio" class="nav-link" data-scroll-target="#step-2-publish-from-rstudio"><span class="header-section-number">8.3</span> Step 2: Publish from RStudio</a></li>
+  <li><a href="#step-3-deploy" id="toc-step-3-deploy" class="nav-link" data-scroll-target="#step-3-deploy"><span class="header-section-number">8.4</span> Step 3: Deploy</a></li>
+  <li><a href="#step-4-share-your-site" id="toc-step-4-share-your-site" class="nav-link" data-scroll-target="#step-4-share-your-site"><span class="header-section-number">8.5</span> Step 4: Share Your Site</a></li>
+  <li><a href="#key-differences" id="toc-key-differences" class="nav-link" data-scroll-target="#key-differences"><span class="header-section-number">8.6</span> Key Differences</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.7</span> Summary</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -167,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">📘 7. <code>05-publishing.qmd</code></span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Publishing Your Website</span></h1>
 </div>
 
 
@@ -184,31 +234,270 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<hr>
-<section id="markdown" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="markdown"><span class="header-section-number">6.1</span> ```markdown</h2>
-</section>
-<section id="title-publishing-your-website" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="title-publishing-your-website"><span class="header-section-number">6.2</span> title: “Publishing Your Website”</h2>
-</section>
-<section id="option-1-github-pages" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="option-1-github-pages"><span class="header-section-number">6.3</span> Option 1: GitHub Pages</h2>
-<p>This is the best option for most users.</p>
-<hr>
-</section>
-<section id="step-1-push-to-github" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="step-1-push-to-github"><span class="header-section-number">6.4</span> Step 1: Push to GitHub</h2>
-<p>Create a repository and upload your project.</p>
+<section id="overview" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">6.1</span> Overview</h2>
+<p>Once your website is built, the final step is publishing it so others can access it online.</p>
+<p>There are two common options:</p>
+<ol type="1">
+<li><strong>GitHub Pages</strong> → best for most users (free, simple, widely used)<br>
+</li>
+<li><strong>Posit Connect</strong> → best for organizations, labs, or internal deployments</li>
+</ol>
 <hr>
 </section>
-<section id="step-2-enable-pages" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="step-2-enable-pages"><span class="header-section-number">6.5</span> Step 2: Enable Pages</h2>
-<p>Go to:</p>
-<p>Settings → Pages</p>
-<p>Set:</p>
+<section id="option-1-github-pages" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Option 1: GitHub Pages</h1>
+<p>This is the most common and recommended option.</p>
+<p>It is: - Free<br>
+- Easy to set up<br>
+- Designed for static websites like Quarto</p>
+<hr>
+<section id="step-1-prepare-your-project" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="step-1-prepare-your-project"><span class="header-section-number">7.1</span> Step 1: Prepare Your Project</h2>
+<p>Make sure your <code>_quarto.yml</code> includes:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>GitHub Pages requires your site to be rendered into a folder named <code>docs</code>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="step-2-render-your-website" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="step-2-render-your-website"><span class="header-section-number">7.2</span> Step 2: Render Your Website</h2>
+<p>In the Terminal, run:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This creates a <code>docs/</code> folder containing your website.</p>
+<hr>
+</section>
+<section id="step-3-push-to-github" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="step-3-push-to-github"><span class="header-section-number">7.3</span> Step 3: Push to GitHub</h2>
+<ol type="1">
+<li>Create a new repository on GitHub<br>
+</li>
+<li>Upload your project files<br>
+</li>
+<li>Make sure the <code>docs/</code> folder is included</li>
+</ol>
+<hr>
+</section>
+<section id="step-4-enable-github-pages" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="step-4-enable-github-pages"><span class="header-section-number">7.4</span> Step 4: Enable GitHub Pages</h2>
+<p>Go to your repository:</p>
+<p><strong>Settings → Pages</strong></p>
+<p>Then set:</p>
 <ul>
-<li>Branch: <code>main</code></li>
-<li>Folder: <code>/docs</code></li>
+<li><strong>Branch</strong>: <code>main</code><br>
+</li>
+<li><strong>Folder</strong>: <code>/docs</code></li>
+</ul>
+<p>Click <strong>Save</strong></p>
+<hr>
+</section>
+<section id="step-5-access-your-site" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="step-5-access-your-site"><span class="header-section-number">7.5</span> Step 5: Access Your Site</h2>
+<p>Your website will be available at:</p>
+<pre><code>https://yourusername.github.io/repository-name/</code></pre>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It may take 1–2 minutes for your site to go live the first time.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="updating-your-site" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="updating-your-site"><span class="header-section-number">7.6</span> Updating Your Site</h2>
+<p>Whenever you make changes:</p>
+<ol type="1">
+<li>Save your files<br>
+</li>
+<li>Run:</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Push changes to GitHub</li>
+</ol>
+<p>Your site will automatically update.</p>
+<hr>
+</section>
+<section id="common-issues" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="common-issues"><span class="header-section-number">7.7</span> Common Issues</h2>
+<section id="site-not-showing" class="level3" data-number="7.7.1">
+<h3 data-number="7.7.1" class="anchored" data-anchor-id="site-not-showing"><span class="header-section-number">7.7.1</span> Site not showing</h3>
+<ul>
+<li>Check that GitHub Pages is enabled<br>
+</li>
+<li>Make sure <code>docs/</code> exists</li>
+</ul>
+</section>
+<section id="changes-not-appearing" class="level3" data-number="7.7.2">
+<h3 data-number="7.7.2" class="anchored" data-anchor-id="changes-not-appearing"><span class="header-section-number">7.7.2</span> Changes not appearing</h3>
+<ul>
+<li>Wait a minute and refresh<br>
+</li>
+<li>Confirm you pushed updates</li>
+</ul>
+</section>
+<section id="broken-links-or-missing-pages" class="level3" data-number="7.7.3">
+<h3 data-number="7.7.3" class="anchored" data-anchor-id="broken-links-or-missing-pages"><span class="header-section-number">7.7.3</span> Broken links or missing pages</h3>
+<ul>
+<li>Check file paths<br>
+</li>
+<li>Verify <code>_quarto.yml</code> navigation</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="option-2-posit-connect" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Option 2: Posit Connect</h1>
+<p>Posit Connect is used by:</p>
+<ul>
+<li>Universities<br>
+</li>
+<li>Government agencies<br>
+</li>
+<li>Research labs</li>
+</ul>
+<p>It allows you to host:</p>
+<ul>
+<li>Quarto websites<br>
+</li>
+<li>Shiny apps<br>
+</li>
+<li>Dashboards</li>
+</ul>
+<hr>
+<section id="when-to-use-posit-connect" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="when-to-use-posit-connect"><span class="header-section-number">8.1</span> When to Use Posit Connect</h2>
+<p>Use this option if:</p>
+<ul>
+<li>Your organization provides access<br>
+</li>
+<li>You are deploying internal tools<br>
+</li>
+<li>You need authentication or restricted access</li>
+</ul>
+<hr>
+</section>
+<section id="step-1-connect-your-account" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="step-1-connect-your-account"><span class="header-section-number">8.2</span> Step 1: Connect Your Account</h2>
+<p>Your organization will provide:</p>
+<ul>
+<li>A Posit Connect URL<br>
+</li>
+<li>Login credentials</li>
+</ul>
+<hr>
+</section>
+<section id="step-2-publish-from-rstudio" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="step-2-publish-from-rstudio"><span class="header-section-number">8.3</span> Step 2: Publish from RStudio</h2>
+<p>In RStudio:</p>
+<ol type="1">
+<li>Open your Quarto project<br>
+</li>
+<li>Click <strong>Publish</strong><br>
+</li>
+<li>Choose <strong>Posit Connect</strong><br>
+</li>
+<li>Select your project</li>
+</ol>
+<hr>
+</section>
+<section id="step-3-deploy" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="step-3-deploy"><span class="header-section-number">8.4</span> Step 3: Deploy</h2>
+<p>RStudio will:</p>
+<ul>
+<li>Render your site<br>
+</li>
+<li>Upload it to the server<br>
+</li>
+<li>Provide a live URL</li>
+</ul>
+<hr>
+</section>
+<section id="step-4-share-your-site" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="step-4-share-your-site"><span class="header-section-number">8.5</span> Step 4: Share Your Site</h2>
+<p>Your site will be available at a URL like:</p>
+<pre><code>https://your-org.connect.server/content/your-site/</code></pre>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Unlike GitHub Pages, Posit Connect can host dynamic content and restrict access to specific users.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="key-differences" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="key-differences"><span class="header-section-number">8.6</span> Key Differences</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>GitHub Pages</th>
+<th>Posit Connect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cost</td>
+<td>Free</td>
+<td>Organization-provided</td>
+</tr>
+<tr class="even">
+<td>Access</td>
+<td>Public</td>
+<td>Public or private</td>
+</tr>
+<tr class="odd">
+<td>Setup</td>
+<td>Simple</td>
+<td>Requires server access</td>
+</tr>
+<tr class="even">
+<td>Best for</td>
+<td>Personal websites</td>
+<td>Research tools and apps</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="summary" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.7</span> Summary</h2>
+<ul>
+<li>GitHub Pages is the best starting point for most users<br>
+</li>
+<li>Posit Connect is ideal for professional or institutional workflows<br>
+</li>
+<li>Both allow you to share your work beyond your local machine</li>
 </ul>
 <hr>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -221,18 +510,12 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Your <code>_quarto.yml</code> already uses:</p>
-<p>output-dir: docs</p>
-<p>This is required for GitHub Pages.</p>
+<p>Publishing is what turns your website from a project into a tool others can actually use.</p>
 </div>
 </div>
-<hr>
+
+
 </section>
-<section id="step-3-access-your-site" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="step-3-access-your-site"><span class="header-section-number">6.6</span> Step 3: Access Your Site</h2>
-<p>Your site will be available at:</p>
-
-
 </section>
 
 </main> <!-- /main -->
@@ -637,8 +920,8 @@ Important
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./04-styling.html" class="pagination-link" aria-label="Customizing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing</span></span>
+      <a href="./04-styling.html" class="pagination-link" aria-label="Customizing Style">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Customizing Style</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

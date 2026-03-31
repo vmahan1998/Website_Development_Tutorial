@@ -1,48 +1,221 @@
 
 ---
-
-# Publishing
-
-```markdown
----
 title: "Publishing Your Website"
 ---
 
-## Option 1: GitHub Pages
+## Overview
 
-This is the best option for most users.
+Once your website is built, the final step is publishing it so others can access it online.
+
+There are two common options:
+
+1. **GitHub Pages** → best for most users (free, simple, widely used)  
+2. **Posit Connect** → best for organizations, labs, or internal deployments  
+
+---
+
+# Option 1: GitHub Pages
+
+This is the most common and recommended option.
+
+It is:
+- Free  
+- Easy to set up  
+- Designed for static websites like Quarto  
 
 ---
 
-## Step 1: Push to GitHub
+## Step 1: Prepare Your Project
 
-Create a repository and upload your project.
+Make sure your `_quarto.yml` includes:
 
----
-
-## Step 2: Enable Pages
-
-Go to:
-
-Settings → Pages
-
-Set:
-
-- Branch: `main`
-- Folder: `/docs`
-
----
+```yaml
+project:
+  type: website
+  output-dir: docs
+```
 
 ::: {.callout-important}
-Your `_quarto.yml` already uses:
-
-output-dir: docs
-
-This is required for GitHub Pages.
+GitHub Pages requires your site to be rendered into a folder named `docs`.
 :::
 
 ---
 
-## Step 3: Access Your Site
+## Step 2: Render Your Website
 
-Your site will be available at:
+In the Terminal, run:
+
+```bash
+quarto render
+```
+
+This creates a `docs/` folder containing your website.
+
+---
+
+## Step 3: Push to GitHub
+
+1. Create a new repository on GitHub  
+2. Upload your project files  
+3. Make sure the `docs/` folder is included  
+
+---
+
+## Step 4: Enable GitHub Pages
+
+Go to your repository:
+
+**Settings → Pages**
+
+Then set:
+
+- **Branch**: `main`  
+- **Folder**: `/docs`  
+
+Click **Save**
+
+---
+
+## Step 5: Access Your Site
+
+Your website will be available at:
+
+```
+https://yourusername.github.io/repository-name/
+```
+
+---
+
+::: {.callout-tip}
+It may take 1–2 minutes for your site to go live the first time.
+:::
+
+---
+
+## Updating Your Site
+
+Whenever you make changes:
+
+1. Save your files  
+2. Run:
+
+```bash
+quarto render
+```
+
+3. Push changes to GitHub  
+
+Your site will automatically update.
+
+---
+
+## Common Issues
+
+### Site not showing
+- Check that GitHub Pages is enabled  
+- Make sure `docs/` exists  
+
+### Changes not appearing
+- Wait a minute and refresh  
+- Confirm you pushed updates  
+
+### Broken links or missing pages
+- Check file paths  
+- Verify `_quarto.yml` navigation  
+
+---
+
+# Option 2: Posit Connect
+
+Posit Connect is used by:
+
+- Universities  
+- Government agencies  
+- Research labs  
+
+It allows you to host:
+
+- Quarto websites  
+- Shiny apps  
+- Dashboards  
+
+---
+
+## When to Use Posit Connect
+
+Use this option if:
+
+- Your organization provides access  
+- You are deploying internal tools  
+- You need authentication or restricted access  
+
+---
+
+## Step 1: Connect Your Account
+
+Your organization will provide:
+
+- A Posit Connect URL  
+- Login credentials  
+
+---
+
+## Step 2: Publish from RStudio
+
+In RStudio:
+
+1. Open your Quarto project  
+2. Click **Publish**  
+3. Choose **Posit Connect**  
+4. Select your project  
+
+---
+
+## Step 3: Deploy
+
+RStudio will:
+
+- Render your site  
+- Upload it to the server  
+- Provide a live URL  
+
+---
+
+## Step 4: Share Your Site
+
+Your site will be available at a URL like:
+
+```
+https://your-org.connect.server/content/your-site/
+```
+
+---
+
+::: {.callout-note}
+Unlike GitHub Pages, Posit Connect can host dynamic content and restrict access to specific users.
+:::
+
+---
+
+## Key Differences
+
+| Feature | GitHub Pages | Posit Connect |
+|--------|-------------|--------------|
+| Cost | Free | Organization-provided |
+| Access | Public | Public or private |
+| Setup | Simple | Requires server access |
+| Best for | Personal websites | Research tools and apps |
+
+---
+
+## Summary
+
+- GitHub Pages is the best starting point for most users  
+- Posit Connect is ideal for professional or institutional workflows  
+- Both allow you to share your work beyond your local machine  
+
+---
+
+::: {.callout-important}
+Publishing is what turns your website from a project into a tool others can actually use.
+:::

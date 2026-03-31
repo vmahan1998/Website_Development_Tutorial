@@ -132,11 +132,11 @@
   {
     "objectID": "05-publishing.html",
     "href": "05-publishing.html",
-    "title": "6  📘 7. 05-publishing.qmd",
+    "title": "6  Publishing Your Website",
     "section": "",
-    "text": "6.1 ```markdown",
+    "text": "6.1 Overview\nOnce your website is built, the final step is publishing it so others can access it online.\nThere are two common options:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
     ]
   },
   {
@@ -597,6 +597,156 @@
     "text": "5.10 Next Step\nNow that you’ve changed your first colors, try:\n\nCreating your own theme file\n\nSwitching between themes in _quarto.yml\n\nMatching your site to your personal or institutional branding\n\n\n\n\n\n\n\nImportant\n\n\n\nThe goal is not to memorize SCSS — it is to understand how small changes affect your entire site.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#overview",
+    "href": "05-publishing.html#overview",
+    "title": "6  Publishing Your Website",
+    "section": "",
+    "text": "GitHub Pages → best for most users (free, simple, widely used)\n\nPosit Connect → best for organizations, labs, or internal deployments",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-1-prepare-your-project",
+    "href": "05-publishing.html#step-1-prepare-your-project",
+    "title": "6  Publishing Your Website",
+    "section": "7.1 Step 1: Prepare Your Project",
+    "text": "7.1 Step 1: Prepare Your Project\nMake sure your _quarto.yml includes:\nproject:\n  type: website\n  output-dir: docs\n\n\n\n\n\n\nImportant\n\n\n\nGitHub Pages requires your site to be rendered into a folder named docs.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-2-render-your-website",
+    "href": "05-publishing.html#step-2-render-your-website",
+    "title": "6  Publishing Your Website",
+    "section": "7.2 Step 2: Render Your Website",
+    "text": "7.2 Step 2: Render Your Website\nIn the Terminal, run:\nquarto render\nThis creates a docs/ folder containing your website.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-3-push-to-github",
+    "href": "05-publishing.html#step-3-push-to-github",
+    "title": "6  Publishing Your Website",
+    "section": "7.3 Step 3: Push to GitHub",
+    "text": "7.3 Step 3: Push to GitHub\n\nCreate a new repository on GitHub\n\nUpload your project files\n\nMake sure the docs/ folder is included",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-4-enable-github-pages",
+    "href": "05-publishing.html#step-4-enable-github-pages",
+    "title": "6  Publishing Your Website",
+    "section": "7.4 Step 4: Enable GitHub Pages",
+    "text": "7.4 Step 4: Enable GitHub Pages\nGo to your repository:\nSettings → Pages\nThen set:\n\nBranch: main\n\nFolder: /docs\n\nClick Save",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-5-access-your-site",
+    "href": "05-publishing.html#step-5-access-your-site",
+    "title": "6  Publishing Your Website",
+    "section": "7.5 Step 5: Access Your Site",
+    "text": "7.5 Step 5: Access Your Site\nYour website will be available at:\nhttps://yourusername.github.io/repository-name/\n\n\n\n\n\n\n\nTip\n\n\n\nIt may take 1–2 minutes for your site to go live the first time.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#updating-your-site",
+    "href": "05-publishing.html#updating-your-site",
+    "title": "6  Publishing Your Website",
+    "section": "7.6 Updating Your Site",
+    "text": "7.6 Updating Your Site\nWhenever you make changes:\n\nSave your files\n\nRun:\n\nquarto render\n\nPush changes to GitHub\n\nYour site will automatically update.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#common-issues",
+    "href": "05-publishing.html#common-issues",
+    "title": "6  Publishing Your Website",
+    "section": "7.7 Common Issues",
+    "text": "7.7 Common Issues\n\n7.7.1 Site not showing\n\nCheck that GitHub Pages is enabled\n\nMake sure docs/ exists\n\n\n\n7.7.2 Changes not appearing\n\nWait a minute and refresh\n\nConfirm you pushed updates\n\n\n\n7.7.3 Broken links or missing pages\n\nCheck file paths\n\nVerify _quarto.yml navigation",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#when-to-use-posit-connect",
+    "href": "05-publishing.html#when-to-use-posit-connect",
+    "title": "6  Publishing Your Website",
+    "section": "8.1 When to Use Posit Connect",
+    "text": "8.1 When to Use Posit Connect\nUse this option if:\n\nYour organization provides access\n\nYou are deploying internal tools\n\nYou need authentication or restricted access",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-1-connect-your-account",
+    "href": "05-publishing.html#step-1-connect-your-account",
+    "title": "6  Publishing Your Website",
+    "section": "8.2 Step 1: Connect Your Account",
+    "text": "8.2 Step 1: Connect Your Account\nYour organization will provide:\n\nA Posit Connect URL\n\nLogin credentials",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-2-publish-from-rstudio",
+    "href": "05-publishing.html#step-2-publish-from-rstudio",
+    "title": "6  Publishing Your Website",
+    "section": "8.3 Step 2: Publish from RStudio",
+    "text": "8.3 Step 2: Publish from RStudio\nIn RStudio:\n\nOpen your Quarto project\n\nClick Publish\n\nChoose Posit Connect\n\nSelect your project",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-3-deploy",
+    "href": "05-publishing.html#step-3-deploy",
+    "title": "6  Publishing Your Website",
+    "section": "8.4 Step 3: Deploy",
+    "text": "8.4 Step 3: Deploy\nRStudio will:\n\nRender your site\n\nUpload it to the server\n\nProvide a live URL",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-4-share-your-site",
+    "href": "05-publishing.html#step-4-share-your-site",
+    "title": "6  Publishing Your Website",
+    "section": "8.5 Step 4: Share Your Site",
+    "text": "8.5 Step 4: Share Your Site\nYour site will be available at a URL like:\nhttps://your-org.connect.server/content/your-site/\n\n\n\n\n\n\n\nNote\n\n\n\nUnlike GitHub Pages, Posit Connect can host dynamic content and restrict access to specific users.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#key-differences",
+    "href": "05-publishing.html#key-differences",
+    "title": "6  Publishing Your Website",
+    "section": "8.6 Key Differences",
+    "text": "8.6 Key Differences\n\n\n\nFeature\nGitHub Pages\nPosit Connect\n\n\n\n\nCost\nFree\nOrganization-provided\n\n\nAccess\nPublic\nPublic or private\n\n\nSetup\nSimple\nRequires server access\n\n\nBest for\nPersonal websites\nResearch tools and apps",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#summary",
+    "href": "05-publishing.html#summary",
+    "title": "6  Publishing Your Website",
+    "section": "8.7 Summary",
+    "text": "8.7 Summary\n\nGitHub Pages is the best starting point for most users\n\nPosit Connect is ideal for professional or institutional workflows\n\nBoth allow you to share your work beyond your local machine\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPublishing is what turns your website from a project into a tool others can actually use.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
     ]
   }
 ]
