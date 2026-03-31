@@ -1,0 +1,16 @@
+
+---
+
+# 📘 5. `03-editing.qmd`
+
+```markdown
+---
+title: "Editing Your Content"
+---
+
+## Editing the Homepage
+
+Open:
+
+```text
+index.qmd

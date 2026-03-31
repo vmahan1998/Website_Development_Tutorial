@@ -1,0 +1,192 @@
+[
+  {
+    "objectID": "02-structure.html",
+    "href": "02-structure.html",
+    "title": "3  4. 02-structure.qmd",
+    "section": "",
+    "text": "3.1 ```markdown",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#title-understanding-the-structure",
+    "href": "02-structure.html#title-understanding-the-structure",
+    "title": "3  4. 02-structure.qmd",
+    "section": "3.2 title: “Understanding the Structure”",
+    "text": "3.2 title: “Understanding the Structure”",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#the-core-files",
+    "href": "02-structure.html#the-core-files",
+    "title": "3  4. 02-structure.qmd",
+    "section": "3.3 The Core Files",
+    "text": "3.3 The Core Files\nYour template includes:\n\nindex.qmd\nresearch.qmd\nprojects.qmd\npublications.qmd\ncv.qmd\n\nEach one becomes a page on your website.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#how-navigation-works",
+    "href": "02-structure.html#how-navigation-works",
+    "title": "3  4. 02-structure.qmd",
+    "section": "3.4 How Navigation Works",
+    "text": "3.4 How Navigation Works\nOpen _quarto.yml.\nYou’ll see:\n```yaml navbar: left: - href: research.qmd text: Research",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html",
+    "href": "01-getting-started.html",
+    "title": "2  Getting Started",
+    "section": "",
+    "text": "2.1 Step 1: Download the Template\nGo to the GitHub repository and download the template as a ZIP file.\nUnzip it somewhere you can easily find it.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-2-open-the-project",
+    "href": "01-getting-started.html#step-2-open-the-project",
+    "title": "2  Getting Started",
+    "section": "2.2 Step 2: Open the Project",
+    "text": "2.2 Step 2: Open the Project\nOpen the .Rproj file in RStudio.\nYou should now see all files in the project panel.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-3-run-the-website",
+    "href": "01-getting-started.html#step-3-run-the-website",
+    "title": "2  Getting Started",
+    "section": "2.3 Step 3: Run the Website",
+    "text": "2.3 Step 3: Run the Website\nIn the terminal, run:\n```bash quarto preview",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html",
+    "href": "03-editing.html",
+    "title": "4  📘 5. 03-editing.qmd",
+    "section": "",
+    "text": "4.1 ```markdown",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>📘 5. `03-editing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#title-editing-your-content",
+    "href": "03-editing.html#title-editing-your-content",
+    "title": "4  📘 5. 03-editing.qmd",
+    "section": "4.2 title: “Editing Your Content”",
+    "text": "4.2 title: “Editing Your Content”",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>📘 5. `03-editing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#editing-the-homepage",
+    "href": "03-editing.html#editing-the-homepage",
+    "title": "4  📘 5. 03-editing.qmd",
+    "section": "4.3 Editing the Homepage",
+    "text": "4.3 Editing the Homepage\nOpen:\n```text index.qmd",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>📘 5. `03-editing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html",
+    "href": "04-styling.html",
+    "title": "5  📘 6. 04-styling.qmd",
+    "section": "",
+    "text": "5.1 ```markdown",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>📘 6. `04-styling.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#title-customizing-style",
+    "href": "04-styling.html#title-customizing-style",
+    "title": "5  📘 6. 04-styling.qmd",
+    "section": "5.2 title: “Customizing Style”",
+    "text": "5.2 title: “Customizing Style”",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>📘 6. `04-styling.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#how-styling-works",
+    "href": "04-styling.html#how-styling-works",
+    "title": "5  📘 6. 04-styling.qmd",
+    "section": "5.3 How Styling Works",
+    "text": "5.3 How Styling Works\nYou have two layers:\n\n5.3.1 1. Theme\n```yaml theme: [flatly, custom.scss]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>📘 6. `04-styling.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html",
+    "href": "05-publishing.html",
+    "title": "6  📘 7. 05-publishing.qmd",
+    "section": "",
+    "text": "6.1 ```markdown",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#title-publishing-your-website",
+    "href": "05-publishing.html#title-publishing-your-website",
+    "title": "6  📘 7. 05-publishing.qmd",
+    "section": "6.2 title: “Publishing Your Website”",
+    "text": "6.2 title: “Publishing Your Website”",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#option-1-github-pages",
+    "href": "05-publishing.html#option-1-github-pages",
+    "title": "6  📘 7. 05-publishing.qmd",
+    "section": "6.3 Option 1: GitHub Pages",
+    "text": "6.3 Option 1: GitHub Pages\nThis is the best option for most users.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-1-push-to-github",
+    "href": "05-publishing.html#step-1-push-to-github",
+    "title": "6  📘 7. 05-publishing.qmd",
+    "section": "6.4 Step 1: Push to GitHub",
+    "text": "6.4 Step 1: Push to GitHub\nCreate a repository and upload your project.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-2-enable-pages",
+    "href": "05-publishing.html#step-2-enable-pages",
+    "title": "6  📘 7. 05-publishing.qmd",
+    "section": "6.5 Step 2: Enable Pages",
+    "text": "6.5 Step 2: Enable Pages\nGo to:\nSettings → Pages\nSet:\n\nBranch: main\nFolder: /docs\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYour _quarto.yml already uses:\noutput-dir: docs\nThis is required for GitHub Pages.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html#step-3-access-your-site",
+    "href": "05-publishing.html#step-3-access-your-site",
+    "title": "6  📘 7. 05-publishing.qmd",
+    "section": "6.6 Step 3: Access Your Site",
+    "text": "6.6 Step 3: Access Your Site\nYour site will be available at:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+/* ---- Base Colors ---- */
+$body-bg: #08131d;
+$body-color: rgba(222, 238, 246, 0.92);
+$primary: #7ecce6;
+
+/* ---- Typography ---- */
+$font-family-sans-serif: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$headings-color: #ffffff;
+
+/* ---- Links ---- */
+$link-color: #7ecce6;
+$link-hover-color: lighten($link-color, 10%);
+
+/* ---- Navbar ---- */
+$navbar-bg: #0d1f2b;
+$navbar-fg: #ffffff;
+
+/* ---- Code blocks ---- */
+$code-bg: #0d1f2b;
+$code-color: #c3e6f3;
+
+/* ---- Buttons ---- */
+$btn-border-radius: 10px;
+
+/* ---- Callouts ---- */
+.callout {
+  border-radius: 10px;
+  background: rgba(126, 204, 230, 0.08);
+  border-left: 4px solid $primary;
+}
+
+/* ---- Page content ---- */
+body {
+  background: linear-gradient(180deg, #08131d 0%, #0d1f2b 100%);
+}

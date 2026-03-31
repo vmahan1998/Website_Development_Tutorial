@@ -1,0 +1,48 @@
+/* ---- Global text ---- */
+body {
+  color: rgba(222, 238, 246, 0.92);
+}
+
+/* ---- Headings ---- */
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+h3 {
+  color: #7ecce6;
+}
+
+/* ---- Links ---- */
+a {
+  color: #7ecce6;
+}
+
+a:hover {
+  color: #a6e3f5;
+}
+
+/* ---- Navbar tweaks ---- */
+.navbar {
+  font-weight: 600;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  border-radius: 10px;
+}
+
+/* ---- Callouts ---- */
+.callout-note {
+  background: rgba(126, 204, 230, 0.08);
+  border-left: 4px solid #7ecce6;
+}
+
+.callout-important {
+  background: rgba(255, 100, 100, 0.08);
+  border-left: 4px solid #ff6b6b;
+}
+
+.callout-tip {
+  background: rgba(100, 255, 200, 0.08);
+  border-left: 4px solid #4ce0b3;
+}

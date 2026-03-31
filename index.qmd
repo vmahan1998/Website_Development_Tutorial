@@ -1,0 +1,51 @@
+---
+title: "Building a Research Website with Quarto"
+subtitle: "A step-by-step guide using a real research template"
+---
+
+## Welcome
+
+This tutorial walks you through building a personal research website using Quarto.
+
+You will:
+- Download a working template from GitHub
+- Run it locally
+- Edit content and structure
+- Customize styling
+- Publish your site online
+
+This tutorial is designed for beginners, but it uses a real workflow that scales to professional research websites.
+
+::: {.callout-note}
+This is not just a demo. You will be editing an actual working template used for research communication.
+:::
+
+---
+
+## What You’ll Build
+
+By the end, you’ll have a website with:
+
+- A homepage
+- Research overview
+- Publications
+- Projects or models
+- CV page
+
+---
+
+## What You Need
+
+- Quarto installed
+- RStudio (recommended)
+- A GitHub account (for publishing)
+
+---
+
+## How This Tutorial Works
+
+Each chapter builds on the last. Follow in order, and make changes as you go.
+
+::: {.callout-important}
+Do not just read this. Open the template and edit alongside the tutorial.
+:::

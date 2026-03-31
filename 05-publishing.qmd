@@ -1,0 +1,48 @@
+
+---
+
+# 📘 7. `05-publishing.qmd`
+
+```markdown
+---
+title: "Publishing Your Website"
+---
+
+## Option 1: GitHub Pages
+
+This is the best option for most users.
+
+---
+
+## Step 1: Push to GitHub
+
+Create a repository and upload your project.
+
+---
+
+## Step 2: Enable Pages
+
+Go to:
+
+Settings → Pages
+
+Set:
+
+- Branch: `main`
+- Folder: `/docs`
+
+---
+
+::: {.callout-important}
+Your `_quarto.yml` already uses:
+
+output-dir: docs
+
+This is required for GitHub Pages.
+:::
+
+---
+
+## Step 3: Access Your Site
+
+Your site will be available at:

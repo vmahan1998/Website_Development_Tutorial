@@ -1,0 +1,26 @@
+---
+title: "Getting Started"
+---
+
+## Step 1: Download the Template
+
+Go to the GitHub repository and download the template as a ZIP file.
+
+Unzip it somewhere you can easily find it.
+
+---
+
+## Step 2: Open the Project
+
+Open the `.Rproj` file in RStudio.
+
+You should now see all files in the project panel.
+
+---
+
+## Step 3: Run the Website
+
+In the terminal, run:
+
+```bash
+quarto preview

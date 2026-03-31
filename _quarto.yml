@@ -1,0 +1,23 @@
+project:
+  type: book
+
+book:
+  title: "Building a Research Website with Quarto"
+  author: "Vanessa Quintana"
+  chapters:
+    - index.qmd
+    - 01-getting-started.qmd
+    - 02-structure.qmd
+    - 03-editing.qmd
+    - 04-styling.qmd
+    - 05-publishing.qmd
+
+format:
+  html:
+    theme: [flatly, custom.scss]
+    css: styles.css
+    toc: true
+    toc-depth: 2
+
+execute:
+  freeze: auto

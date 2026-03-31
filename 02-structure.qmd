@@ -1,0 +1,35 @@
+
+---
+
+# 4. `02-structure.qmd`
+
+```markdown
+---
+title: "Understanding the Structure"
+---
+
+## The Core Files
+
+Your template includes:
+
+- `index.qmd`
+- `research.qmd`
+- `projects.qmd`
+- `publications.qmd`
+- `cv.qmd`
+
+Each one becomes a page on your website.
+
+---
+
+## How Navigation Works
+
+Open `_quarto.yml`.
+
+You’ll see:
+
+```yaml
+navbar:
+  left:
+    - href: research.qmd
+      text: Research
