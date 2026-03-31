@@ -1,35 +1,77 @@
-/* ---- Base Colors ---- */
+/*-- scss:defaults --*/
+
+/* Base colors */
 $body-bg: #08131d;
 $body-color: rgba(222, 238, 246, 0.92);
 $primary: #7ecce6;
-
-/* ---- Typography ---- */
-$font-family-sans-serif: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $headings-color: #ffffff;
 
-/* ---- Links ---- */
-$link-color: #7ecce6;
-$link-hover-color: lighten($link-color, 10%);
+/* Typography */
+$font-family-sans-serif: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
-/* ---- Navbar ---- */
+/* Links */
+$link-color: #7ecce6;
+$link-hover-color: #a6e3f5;
+
+/* Navbar */
 $navbar-bg: #0d1f2b;
 $navbar-fg: #ffffff;
 
-/* ---- Code blocks ---- */
+/* Code */
 $code-bg: #0d1f2b;
 $code-color: #c3e6f3;
 
-/* ---- Buttons ---- */
+/* Buttons */
 $btn-border-radius: 10px;
 
-/* ---- Callouts ---- */
-.callout {
-  border-radius: 10px;
-  background: rgba(126, 204, 230, 0.08);
-  border-left: 4px solid $primary;
-}
 
-/* ---- Page content ---- */
+/*-- scss:rules --*/
+
 body {
   background: linear-gradient(180deg, #08131d 0%, #0d1f2b 100%);
+  color: rgba(222, 238, 246, 0.92);
+}
+
+h1, h2 {
+  color: #ffffff;
+}
+
+h3, h4 {
+  color: #7ecce6;
+}
+
+a {
+  color: #7ecce6;
+}
+
+a:hover {
+  color: #a6e3f5;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-weight: 600;
+}
+
+.callout {
+  border-radius: 10px;
+}
+
+.callout.callout-note {
+  background: rgba(126, 204, 230, 0.08);
+  border-left: 4px solid #7ecce6;
+}
+
+.callout.callout-tip {
+  background: rgba(76, 224, 179, 0.08);
+  border-left: 4px solid #4ce0b3;
+}
+
+.callout.callout-important {
+  background: rgba(255, 107, 107, 0.08);
+  border-left: 4px solid #ff6b6b;
+}
+
+pre, code {
+  border-radius: 8px;
 }

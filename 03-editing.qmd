@@ -1,16 +1,382 @@
-
----
-
-# 📘 5. `03-editing.qmd`
-
-```markdown
 ---
 title: "Editing Your Content"
+subtitle: "Personalizing your homepage with text, images, and a live calendar"
 ---
 
-## Editing the Homepage
+## Overview
 
-Open:
+Now that you understand how the files are organized, it's time to make the website yours.
+This chapter focuses on editing `index.qmd` — your homepage — which is the first thing
+visitors will see.
 
-```text
-index.qmd
+You'll learn how to:
+
+- Replace the placeholder text with your own name and bio
+- Add your own profile photo
+- Arrange text and images side by side using columns
+- Embed a live public Google Calendar
+
+::: {.callout-tip}
+Before making any edits, it's a good habit to run `quarto preview` in the Terminal so
+the preview is live in your browser. That way you can see your changes reflected in
+real time as you save the file.
+:::
+
+---
+
+## Step 1: Open Your Homepage File
+
+In RStudio, find `index.qmd` in the **Files** panel (bottom-right) and click on it to
+open it in the editor.
+
+At the very top of the file you'll see the **YAML front matter** — a short block between
+two `---` lines that sets page-level options:
+```yaml
+---
+title: "Vanessa Quintana"
+subtitle: "Applied Ecological Modeler • Coastal Systems Scientist • Geospatial Analyst"
+page-layout: full
+image: images/Author_Picture.jpg
+format:
+  html:
+    toc: false
+    smooth-scroll: true
+---
+```
+
+Start by updating these fields:
+
+- **`title`** — Replace `"Vanessa Quintana"` with your own name
+- **`subtitle`** — Replace the subtitle with your own roles or research focus areas,
+  separated by `•` if you'd like the same style
+- **`image`** — This points to your profile photo (more on this in Step 2)
+
+::: {.callout-note}
+The `page-layout: full` setting gives the homepage a wider layout than the other pages,
+which is why it looks different from `research.qmd` or `cv.qmd`. Leave this as-is for
+the homepage.
+:::
+
+---
+
+## Step 2: Add Your Profile Photo
+
+Your profile photo is displayed on the left side of the homepage. To replace the
+placeholder with your own image:
+
+1. Find a photo you'd like to use — a headshot or professional photo works best
+2. Rename the file to something simple with no spaces, for example `my_photo.jpg`
+3. Move or copy the file into the **`images/`** folder inside your project
+4. In `index.qmd`, find the line that references the image:
+```markdown
+![](images/Author_Picture.jpg){.profile-image width="100%" fig-alt="Vanessa Quintana"}
+```
+
+5. Replace `Author_Picture.jpg` with your own filename, and update the `fig-alt` text
+   with your name:
+```markdown
+![](images/my_photo.jpg){.profile-image width="100%" fig-alt="Your Name"}
+```
+
+::: {.callout-tip}
+The `fig-alt` text is the **alt text** for your image — a short description that appears
+if the image fails to load and that screen readers use for accessibility. Always include
+a brief, accurate description.
+:::
+
+::: {.callout-important}
+Make sure your image file is actually inside the `images/` folder and that the filename
+in your `.qmd` file matches exactly — including capitalization and the file extension
+(`.jpg`, `.png`, etc.). A mismatch here is one of the most common beginner errors.
+:::
+
+---
+
+## Step 3: Edit Your Bio Text
+
+Below the YAML front matter, the homepage is built using **columns** — a Quarto layout
+feature that lets you place content side by side. Here's how the two-column layout is
+structured in `index.qmd`:
+```markdown
+::: {.columns}
+::: {.column width="32%"}
+
+  [your photo and profile panel go here]
+
+:::
+::: {.column width="68%"}
+
+  [your bio text goes here]
+
+:::
+:::
+```
+
+The first column (32% wide) holds your photo and badge list. The second column (68% wide)
+holds your bio and research philosophy. To update your bio, find the text in the wider
+column and replace it with your own:
+```markdown
+::: {.column width="68%"}
+
+::: {.kicker}
+About My Work
+:::
+
+I work at the intersection of [your research areas here]. My research focuses on
+[what you study and why it matters].
+
+I approach [your methods or philosophy here].
+
+:::
+```
+
+::: {.callout-note}
+**What is `.kicker`?** The `.kicker` is a small styled label that appears above a
+section heading — like a category tag. It's defined in `styles.css` and gives the page
+a clean, editorial look. You can change the text inside it to anything you like, or
+remove it entirely if you prefer.
+:::
+
+---
+
+## Step 4: Understanding Side-by-Side Layouts (Columns)
+
+The column layout you just saw is one of the most useful features in Quarto for building
+a polished homepage. Here's the full pattern so you can use it anywhere on your site:
+```markdown
+::: {.columns}
+::: {.column width="50%"}
+
+Content for the left side goes here.
+
+You can put text, images, lists, or anything else.
+
+:::
+::: {.column width="50%"}
+
+Content for the right side goes here.
+
+:::
+:::
+```
+
+The widths must add up to 100%. You can split them however you like — for example
+`30%` / `70%`, or `25%` / `25%` / `25%` / `25%` for four equal columns (as used in
+the Research Areas section of the homepage).
+
+### Placing an Image Next to Text
+
+A common use of the column layout is putting a photo or figure next to a block of text.
+Here's a simple example you can copy and adapt:
+```markdown
+::: {.columns}
+::: {.column width="40%"}
+
+![](images/my_photo.jpg){width="100%" fig-alt="A description of the image"}
+
+:::
+::: {.column width="60%"}
+
+### A heading for the text side
+
+Write your paragraph text here. This will appear to the right of the image.
+You can include as much or as little text as you need.
+
+:::
+:::
+```
+
+::: {.callout-tip}
+Add a blank line between the `:::` dividers and your content. Quarto needs that spacing
+to correctly parse the column layout — missing blank lines is a common cause of
+formatting issues.
+:::
+
+---
+
+## Step 5: Update Your Badge List
+
+In the left column of the homepage, below your photo, there is a **badge list** — a
+set of small styled labels showing your affiliation, title, or research focus areas.
+Find this block in `index.qmd`:
+```markdown
+::: {.badge-list}
+Marine Sciences, University of Maine
+
+ORISE Fellow, U.S. Army Corps of Engineers
+
+Estuarine Hydrodynamics and Sediment Transport
+
+Agent-Based and Ecological Modeling
+:::
+```
+
+Replace each line with your own affiliations, department, institution, or keywords. Each
+separate line becomes its own badge. You can add or remove lines as needed.
+
+---
+
+## Step 6: Embed a Public Google Calendar
+
+If you have a public Google Calendar — for office hours, events, lab meetings, or
+workshops — you can embed it directly into your website as a live, interactive calendar.
+Any updates you make in Google Calendar will automatically appear on your site.
+
+### First: Make Your Google Calendar Public
+
+1. Go to [calendar.google.com](https://calendar.google.com) and sign in
+2. In the left panel, find the calendar you want to embed, click the **three dots** next
+   to its name, and select **"Settings and sharing"**
+3. Under **"Access permissions for events"**, check the box that says
+   **"Make available to public"**
+4. Confirm the warning if prompted
+
+### Second: Get the Embed Code
+
+1. Still on the calendar settings page, scroll down to **"Integrate calendar"**
+2. Copy the **"Public URL to this calendar"** — it will look like a long link ending
+   in `@group.calendar.google.com`
+3. In the same section, click **"Customize"** to open the embed builder if you'd like
+   to adjust the calendar's appearance, then copy the `<iframe>` embed code
+
+### Third: Add the Calendar to Your Site (*optional*)
+
+Create a new file in your project called `calendar.qmd` and add the following. Replace
+the `src` URL with your own calendar's embed URL:
+```markdown
+---
+title: "Event Calendar"
+toc: true
+page-layout: article
+---
+
+# Event Calendar
+
+<div style="
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+">
+
+  <iframe 
+    src="YOUR-GOOGLE-CALENDAR-EMBED-URL-HERE"
+    style="border:0; width:100%; height:900px; display:block;"
+    frameborder="0"
+    scrolling="no"
+  ></iframe>
+
+</div>
+```
+
+### Fourth: Add the Calendar to Your Navigation Bar (*optional*)
+
+Open `_quarto.yml` and add your new calendar page to the navbar under the `left:`
+section:
+```yaml
+navbar:
+  left:
+    - href: calendar.qmd
+      text: Calendar
+    - href: research.qmd
+      text: Research
+```
+
+Save `_quarto.yml`, then run `quarto preview` in the Terminal to see your calendar
+page live.
+
+::: {.callout-note}
+The calendar will only display correctly when viewed in a browser — it won't show up
+in RStudio's built-in viewer panel. If you don't see it in the RStudio preview pane,
+copy the local address (e.g. `http://localhost:4321`) and open it in Chrome or Firefox.
+:::
+
+---
+
+## Step 7: Save and Preview Your Changes
+
+After making any edits in `index.qmd` or `_quarto.yml`, save the file with
+**Ctrl+S** (Windows) or **Cmd+S** (Mac). If `quarto preview` is already running in the
+Terminal, your browser should refresh automatically within a few seconds.
+
+If the preview doesn't update, go to the Terminal and run:
+```bash
+quarto preview
+```
+
+::: {.callout-important}
+If you see an error in the Terminal after saving, read the message carefully — Quarto's
+error messages usually tell you exactly which file and line the problem is on. The most
+common issues are mismatched `:::` column dividers, incorrect image filenames, or
+indentation errors in `_quarto.yml`.
+:::
+
+---
+
+## Other Resources
+
+As you continue building your website, you may want to explore more advanced customization, layouts, and templates. The official Quarto documentation is extremely well organized and worth bookmarking.
+
+::: {.callout-tip}
+If something feels limited in your website, it almost always already exists in the Quarto documentation — you just need to find the right section.
+:::
+
+---
+
+### Website Development
+
+- [Quarto Websites Documentation](https://quarto.org/docs/websites/)  
+  A complete guide to building and structuring Quarto websites, including navigation, pages, and configuration.
+
+- [Quarto Website Gallery](https://quarto.org/docs/gallery/#websites)  
+  Real examples of websites built with Quarto. Useful for inspiration and design ideas.
+
+- [Quarto Guide](https://quarto.org/docs/guide/)  
+  A broader introduction to Quarto, including project types, publishing, and workflows.
+
+---
+
+### Customization and Advanced Formatting
+
+- [HTML Format Reference](https://quarto.org/docs/reference/formats/html.html)  
+  Detailed reference for all HTML output options, including themes, layout, and advanced settings.
+
+- [HTML Basics](https://quarto.org/docs/output-formats/html-basics.html)  
+  A simpler introduction to how Quarto renders HTML, useful for understanding how your site is structured.
+
+---
+
+::: {.callout-note}
+You do not need to learn all of this at once. Start by building your site, then return to these resources when you want to customize something specific.
+:::
+
+---
+
+### Suggested Workflow for Learning More
+
+1. Build your basic website using this tutorial  
+2. Identify one thing you want to improve (layout, styling, navigation)  
+3. Use the documentation above to find that specific feature  
+4. Implement and test it  
+
+::: {.callout-important}
+Avoid trying to learn all of Quarto at once. Focus on small, incremental improvements.
+:::
+
+---
+
+## Summary: What You Edited in This Chapter
+
+| What | Where | How |
+|---|---|---|
+| Your name and subtitle | `index.qmd` YAML front matter | Edit the `title` and `subtitle` fields |
+| Your profile photo | `images/` folder + `index.qmd` | Add file to `images/`, update the filename |
+| Your bio text | `index.qmd` wide column | Replace the paragraph text |
+| Your badge labels | `index.qmd` `.badge-list` block | Replace each line with your own info |
+| Side-by-side layout | Any `.qmd` file | Use the `{.columns}` / `{.column}` pattern |
+| Google Calendar | New `calendar.qmd` + `_quarto.yml` | Embed iframe, add link to navbar |
+
+In the next chapter, you'll edit the inner pages — Research, Publications, Projects,
+and CV — and learn how to add your own work to each one.

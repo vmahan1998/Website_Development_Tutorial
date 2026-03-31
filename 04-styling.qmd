@@ -1,18 +1,286 @@
-
----
-
-# 📘 6. `04-styling.qmd`
-
-```markdown
 ---
 title: "Customizing Style"
 ---
 
+## Overview
+
+Styling controls how your website looks, including colors, fonts, spacing, and layout.
+
+In Quarto, styling happens in two layers:
+
+1. **Theme (SCSS)** → controls global design such as colors and typography  
+2. **CSS** → fine-tunes specific elements like buttons, spacing, and layout details  
+
+---
+
 ## How Styling Works
 
-You have two layers:
+### 1. Theme (SCSS)
 
-### 1. Theme
+Defined in `_quarto.yml`:
 
 ```yaml
-theme: [flatly, custom.scss]
+format:
+  html:
+    theme: [flatly, custom.scss]
+```
+
+- `flatly` is the base Bootstrap theme  
+- `custom.scss` is your custom design layer  
+
+::: {.callout-note}
+SCSS allows you to define variables like colors once and reuse them across your entire site.
+:::
+
+---
+
+### 2. CSS (`styles.css`)
+
+```yaml
+css: styles.css
+```
+
+This file overrides specific elements after the theme is applied.
+
+Your current setup includes:
+
+- Dark background gradient  
+- Light readable text  
+- Blue accent colors  
+- Styled sidebar and headings  
+
+---
+
+## Your Current Theme: Dark Mode
+
+Your site currently uses a dark, professional theme:
+
+- Deep blue background  
+- Light text  
+- Blue accent highlights  
+
+This works well for research portfolios and technical content.
+
+---
+
+## Creating Multiple Themes
+
+You can use different styles by switching SCSS files.
+
+Within this template, we provide:
+
+- Dark mode  
+- Light mode  
+- Pastel theme  
+
+::: {.callout-tip}
+You can edit these themes or create your own to personalize your website.
+:::
+
+---
+
+## Where to Edit Your Style
+
+### Open `custom.scss`
+
+This file controls your **core theme settings**, including:
+
+- Background color  
+- Text color  
+- Accent color  
+- Navbar styling  
+
+This is where you define the overall look of your site.
+
+---
+
+### Open `_quarto.yml`
+
+This file tells Quarto **which theme to use**.
+
+For example:
+
+```yaml
+format:
+  html:
+    theme: [flatly, custom.scss]
+```
+
+To switch themes, replace `custom.scss` with another file:
+
+```yaml
+theme: [flatly, custom-light.scss]
+```
+
+or
+
+```yaml
+theme: [flatly, custom-pastel.scss]
+```
+
+---
+
+## Editing Colors Step-by-Step
+
+This section walks you through making a simple style change so you can see how themes work in real time.
+
+::: {.callout-important}
+Make sure you have `quarto preview` running before you start so you can see your changes instantly.
+:::
+
+---
+
+### Step 1: Open `custom.scss`
+
+In your project folder, open:
+
+```
+custom.scss
+```
+
+You should see something like:
+
+```scss
+/*-- scss:defaults --*/
+
+$body-bg: #08131d;
+$body-color: rgba(222, 238, 246, 0.92);
+$primary: #7ecce6;
+```
+
+---
+
+### Step 2: Change the Accent Color
+
+Find this line:
+
+```scss
+$primary: #7ecce6;
+```
+
+Replace it with a new color, for example:
+
+```scss
+$primary: #ff6b6b;
+```
+
+Save the file.
+
+👉 Your site should automatically refresh, and you’ll see:
+- Links change color  
+- Buttons change color  
+- Callouts update  
+
+---
+
+### Step 3: Change the Background Color
+
+Find:
+
+```scss
+$body-bg: #08131d;
+```
+
+Try changing it to something lighter:
+
+```scss
+$body-bg: #f4f7fb;
+```
+
+Save the file.
+
+👉 Notice how the entire tone of the site changes.
+
+---
+
+### Step 4: Adjust Text Color
+
+Find:
+
+```scss
+$body-color: rgba(222, 238, 246, 0.92);
+```
+
+If you switched to a light background, update this to:
+
+```scss
+$body-color: #1a1a1a;
+```
+
+---
+
+::: {.callout-note}
+Background and text color should always have strong contrast so your site remains readable.
+:::
+
+---
+
+## Understanding What You Changed
+
+| Variable | What it controls |
+|--------|----------------|
+| `$primary` | Accent color (links, buttons, highlights) |
+| `$body-bg` | Page background |
+| `$body-color` | Main text color |
+
+---
+
+## Try It Yourself
+
+Experiment with different combinations:
+
+- Blue → Green  
+- Dark → Light  
+- Pastel → Bold  
+
+You can use tools like:
+- https://coolors.co  
+- https://colorhunt.co  
+
+---
+
+::: {.callout-tip}
+Small changes go a long way. Changing just one or two variables can completely transform your site.
+:::
+
+---
+
+## Common Mistakes
+
+### Nothing changes after saving
+- Make sure `quarto preview` is running  
+- Check that you're editing the correct file  
+
+### Colors look wrong
+- Your `styles.css` may be overriding your SCSS  
+
+### Site looks broken
+- Check for missing semicolons (`;`) in SCSS  
+
+---
+
+## Next Step
+
+Now that you’ve changed your first colors, try:
+
+- Creating your own theme file  
+- Switching between themes in `_quarto.yml`  
+- Matching your site to your personal or institutional branding  
+
+::: {.callout-important}
+The goal is not to memorize SCSS — it is to understand how small changes affect your entire site.
+:::
+
+---
+
+## Key Idea
+
+- `custom.scss` = controls design  
+- `styles.css` = refines details  
+- `_quarto.yml` = connects everything  
+
+---
+
+::: {.callout-important}
+If your styling is not updating, check that the file name in `_quarto.yml` matches your SCSS file exactly.
+:::

@@ -6,7 +6,7 @@
     "section": "",
     "text": "3.1 ```markdown",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "3.2 title: “Understanding the Structure”",
     "text": "3.2 title: “Understanding the Structure”",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "3.3 The Core Files",
     "text": "3.3 The Core Files\nYour template includes:\n\nindex.qmd\nresearch.qmd\nprojects.qmd\npublications.qmd\ncv.qmd\n\nEach one becomes a page on your website.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "section": "3.4 How Navigation Works",
     "text": "3.4 How Navigation Works\nOpen _quarto.yml.\nYou’ll see:\n```yaml navbar: left: - href: research.qmd text: Research",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>4. `02-structure.qmd`</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
     ]
   },
   {
@@ -76,7 +76,7 @@
     "section": "",
     "text": "4.1 ```markdown",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>📘 5. `03-editing.qmd`</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "section": "4.2 title: “Editing Your Content”",
     "text": "4.2 title: “Editing Your Content”",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>📘 5. `03-editing.qmd`</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
     ]
   },
   {
@@ -96,7 +96,7 @@
     "section": "4.3 Editing the Homepage",
     "text": "4.3 Editing the Homepage\nOpen:\n```text index.qmd",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>📘 5. `03-editing.qmd`</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
     ]
   },
   {
@@ -106,7 +106,7 @@
     "section": "",
     "text": "5.1 ```markdown",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>📘 6. `04-styling.qmd`</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]
   },
   {
@@ -116,7 +116,7 @@
     "section": "5.2 title: “Customizing Style”",
     "text": "5.2 title: “Customizing Style”",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>📘 6. `04-styling.qmd`</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]
   },
   {
@@ -126,7 +126,7 @@
     "section": "5.3 How Styling Works",
     "text": "5.3 How Styling Works\nYou have two layers:\n\n5.3.1 1. Theme\n```yaml theme: [flatly, custom.scss]",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>📘 6. `04-styling.qmd`</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]
   },
   {
@@ -136,7 +136,7 @@
     "section": "",
     "text": "6.1 ```markdown",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
     ]
   },
   {
@@ -146,7 +146,7 @@
     "section": "6.2 title: “Publishing Your Website”",
     "text": "6.2 title: “Publishing Your Website”",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
     ]
   },
   {
@@ -156,7 +156,7 @@
     "section": "6.3 Option 1: GitHub Pages",
     "text": "6.3 Option 1: GitHub Pages\nThis is the best option for most users.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
     ]
   },
   {
@@ -166,7 +166,7 @@
     "section": "6.4 Step 1: Push to GitHub",
     "text": "6.4 Step 1: Push to GitHub\nCreate a repository and upload your project.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
     ]
   },
   {
@@ -176,7 +176,7 @@
     "section": "6.5 Step 2: Enable Pages",
     "text": "6.5 Step 2: Enable Pages\nGo to:\nSettings → Pages\nSet:\n\nBranch: main\nFolder: /docs\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYour _quarto.yml already uses:\noutput-dir: docs\nThis is required for GitHub Pages.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
     ]
   },
   {
@@ -186,7 +186,417 @@
     "section": "6.6 Step 3: Access Your Site",
     "text": "6.6 Step 3: Access Your Site\nYour site will be available at:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>📘 7. `05-publishing.qmd`</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Building a Research Website with Quarto",
+    "section": "",
+    "text": "0.1 Welcome\nWelcome! This tutorial will guide you through building your own personal research website using Quarto — a free, open-source tool that lets you create beautiful websites, documents, and reports directly from code.\nDon’t worry if you’ve never built a website before, or if you’ve never used R or RStudio. This tutorial starts from the very beginning and walks you through every step. By the end, you’ll have a fully working, professional-looking research website that you can share with the world.\nIn this tutorial, you will:\nThis tutorial is designed for complete beginners, but it uses a real, professional workflow. The skills you learn here are the same ones researchers, scientists, and developers use to build and maintain their own websites.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Building a Research Website with Quarto",
+    "section": "",
+    "text": "Install R and RStudio — R is a free programming language widely used in research and data science. RStudio is a beginner-friendly application that makes working with R much easier. We’ll walk you through installing both from scratch.\nDownload a working template from GitHub — Instead of building a website from a blank page, you’ll start with a real, pre-built research website template. GitHub is a free platform where people share and store code — think of it like Google Drive, but for projects.\nRun the website on your own computer — Before publishing anything online, you’ll preview your website locally (meaning only you can see it on your computer). This is a safe space to experiment and make mistakes.\nEdit the content and structure — You’ll learn how to change text, add your own information, and reorganize pages to reflect your work and research.\nCustomize the styling — You’ll make the website look like yours by adjusting colors, fonts, and layout.\nPublish your site online — Finally, you’ll put your site on the internet so anyone can visit it — for free.\n\n\n\nTemplate source: This tutorial is based on a real research website template. You can view and download the template here: github.com/vmahan1998/Website_Development_Tutorial\n\n\n\n\n\n\n\nNote\n\n\n\nThis is not just a demo. You will be editing an actual working template used for research communication. Every change you make is a real change to a real website — so you’ll leave this tutorial with something you can actually use and build on.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-youll-build",
+    "href": "index.html#what-youll-build",
+    "title": "Building a Research Website with Quarto",
+    "section": "0.2 What You’ll Build",
+    "text": "0.2 What You’ll Build\nBy the end of this tutorial, you’ll have a multi-page personal research website. Here’s a preview of what it will include:\n\n\n\n\n\n\n\nPage\nDescription\n\n\n\n\nHomepage\nAn introduction to who you are and what you do\n\n\nLearning Tab\nA space to share resources, notes, or educational content\n\n\nResearch Overview\nA summary of your research interests and focus areas\n\n\nPublications\nA list of your papers, reports, or written work\n\n\nProjects / Models\nHighlights of specific projects or tools you’ve developed\n\n\nCV Page\nA digital version of your curriculum vitae (résumé)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-you-need",
+    "href": "index.html#what-you-need",
+    "title": "Building a Research Website with Quarto",
+    "section": "0.3 What You Need",
+    "text": "0.3 What You Need\n\nR\nQuarto installed\nRStudio (recommended)\nA GitHub account (for publishing)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-this-tutorial-works",
+    "href": "index.html#how-this-tutorial-works",
+    "title": "Building a Research Website with Quarto",
+    "section": "0.4 How This Tutorial Works",
+    "text": "0.4 How This Tutorial Works\nThis tutorial is organized into chapters, and each chapter builds on the one before it. It’s important to follow the chapters in order, especially at the beginning, since later steps assume you’ve completed the earlier ones.\nAs you go, you’ll be making real edits to the template — not just reading about how things work. This hands-on approach is intentional: the best way to learn is by doing.\n\n\n\n\n\n\nImportant\n\n\n\nGo at your own pace. There’s no rush. If something doesn’t work the first time, that’s normal — troubleshooting is a natural part of working with any new tool. Each chapter includes tips to help you if you get stuck.\n\n\nReady to get started? Head to Chapter 1 to install R and RStudio.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-you-need-before-you-start",
+    "href": "index.html#what-you-need-before-you-start",
+    "title": "Building a Research Website with Quarto",
+    "section": "0.3 What You Need Before You Start",
+    "text": "0.3 What You Need Before You Start\nYou don’t need to install anything right now — the first chapters will walk you through setup step by step. But here’s a quick overview of what you’ll be working with:\n\nR — A free programming language. Even if you never write a single line of R code yourself, it powers the tools that build your website behind the scenes.\nQuarto — The tool that turns your content into a website. It’s free and works alongside R and RStudio.\nRStudio — A free application that gives you a visual, beginner-friendly environment for working with R and Quarto. Think of it as your “home base” for this whole project.\nA GitHub account — A free account on github.com that you’ll use to store your website files and publish your site online. If you don’t have one yet, we’ll show you how to create one.\n\n\n\n\n\n\n\nTip\n\n\n\nNever used any of these tools before? That’s completely okay — and actually expected! Each tool is introduced gradually, with explanations along the way. You do not need any prior coding or web development experience.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#overview",
+    "href": "01-getting-started.html#overview",
+    "title": "2  Getting Started",
+    "section": "",
+    "text": "R installed on your computer\nRStudio installed and open\nQuarto installed\nThe website template downloaded and running in your browser\n\n\n\n\n\n\n\nNote\n\n\n\nThese installations only need to be done once. Once your environment is set up, you won’t need to repeat these steps.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-1-install-r",
+    "href": "01-getting-started.html#step-1-install-r",
+    "title": "2  Getting Started",
+    "section": "2.2 Step 1: Install R",
+    "text": "2.2 Step 1: Install R\nR is a free programming language that powers the tools behind your website. Even if you never write R code yourself, it needs to be installed for Quarto and RStudio to work properly.\n\nGo to the official R download page: https://cran.r-project.org\nUnder “Download and Install R”, click the link that matches your operating system:\n\nWindows → click “Download R for Windows” → then “base” → then the download link at the top\nMac → click “Download R for macOS” → choose the version that matches your Mac\nLinux → select your distribution and follow the instructions\n\nOpen the downloaded file and follow the installer prompts. The default settings are fine — you don’t need to change anything.\n\n\n\n\n\n\n\nTip\n\n\n\nNot sure which version to download? If you’re on a newer Mac (2020 or later), you likely have an Apple Silicon chip — look for the file labeled arm64. If you’re on an older Mac or a Windows PC, the standard download is the right choice.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-2-install-rstudio",
+    "href": "01-getting-started.html#step-2-install-rstudio",
+    "title": "2  Getting Started",
+    "section": "2.3 Step 2: Install RStudio",
+    "text": "2.3 Step 2: Install RStudio\nRStudio is a free application that gives you a visual, beginner-friendly environment for working with R and Quarto. Think of it as the workspace where everything comes together.\n\n\n\n\n\n\nImportant\n\n\n\nYou must install R before installing RStudio. RStudio requires R to be present on your computer in order to run.\n\n\n\nGo to the RStudio download page: https://posit.co/download/rstudio-desktop\nClick “Download RStudio Desktop” — the free version is all you need.\nChoose the installer for your operating system, download it, and run it.\nFollow the installer prompts. Again, the default settings are fine.\nOnce installed, open RStudio. You should see a window divided into several panels.\n\n\n\n\n\n\n\nTip\n\n\n\nWhat am I looking at? When RStudio opens for the first time, you’ll see a few panels: the Console (where R runs commands), the Environment (where your data and variables live), and the Files panel (where you browse your project files). Don’t worry about mastering these right away — you’ll get familiar with them as you go.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-3-install-quarto",
+    "href": "01-getting-started.html#step-3-install-quarto",
+    "title": "2  Getting Started",
+    "section": "2.4 Step 3: Install Quarto",
+    "text": "2.4 Step 3: Install Quarto\nQuarto is the tool that actually builds your website. It reads your content files and turns them into the web pages visitors will see. You’ll install it directly from inside RStudio using the R Console — no need to visit any external websites or run a separate installer.\n\n\n\n\n\n\nNote\n\n\n\nThe Console is the tab in the bottom-left panel of RStudio where you type and run R commands. It usually has a &gt; symbol waiting for your input. This is different from the Terminal tab next to it — the Console is for R code, while the Terminal is for system-level commands.\n\n\n\nOpen RStudio\nClick on the Console tab in the bottom-left panel\nClick next to the &gt; symbol and type the following command, then press Enter:\n\ninstall.packages(\"quarto\")\n\nR will download and install the Quarto package. You may see a lot of text scroll by — that’s normal. Wait until you see the &gt; prompt appear again, which means it’s done.\nOnce installed, load the package by typing the following and pressing Enter:\n\nlibrary(quarto)\n\nTo confirm everything installed correctly, run:\n\nquarto_path()\nIf a file path is printed in the Console (for example, /usr/local/bin/quarto), Quarto is installed and ready to go.\n\n\n\n\n\n\nTip\n\n\n\nSeeing a warning that says the package was built under a different version of R? That’s usually fine and won’t affect anything in this tutorial. As long as the &gt; prompt returns without an error message in red, you’re good to continue.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you see a red error message saying Quarto was not found or the path is empty, it may mean Quarto’s command-line tools are not installed on your system yet. In that case, visit https://quarto.org/docs/get-started, download the installer for your operating system, and run it. Then return to this step and run quarto_path() again to confirm.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-4-create-a-free-github-account",
+    "href": "01-getting-started.html#step-4-create-a-free-github-account",
+    "title": "2  Getting Started",
+    "section": "2.5 Step 4: Create a Free GitHub Account",
+    "text": "2.5 Step 4: Create a Free GitHub Account\nGitHub is a free platform where people store and share code and projects. You’ll use it to download the website template and later to publish your site online.\nIf you already have a GitHub account, you can skip to Step 5.\n\nGo to https://github.com and click “Sign up”\nFollow the prompts to create a free account.\nVerify your email address when prompted.\n\n\n\n\n\n\n\nTip\n\n\n\nChoose a professional username if you can — your GitHub profile may be visible to collaborators or employers in the future.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-5-download-the-website-template",
+    "href": "01-getting-started.html#step-5-download-the-website-template",
+    "title": "2  Getting Started",
+    "section": "2.6 Step 5: Download the Website Template",
+    "text": "2.6 Step 5: Download the Website Template\nYou’ll download the template directly from GitHub as a ZIP file — no special tools or commands needed for this step, just your web browser.\n\nGo to the template repository in your browser: https://github.com/vmahan1998/Personal_Website_Template\nClick the green “Code” button near the top-right of the page\nIn the dropdown that appears, click “Download ZIP”\nYour browser will download a file called Personal_Website_Template-main.zip\nOnce downloaded, unzip the file:\n\nWindows: Right-click the ZIP file → select “Extract All” → choose a destination (Desktop or Documents is fine) → click “Extract”\nMac: Double-click the ZIP file — it will automatically unzip into a folder in the same location\n\nYou should now have a folder called Personal_Website_Template-main containing all the website files\n\n\n\n\n\n\n\nTip\n\n\n\nMove the unzipped folder somewhere easy to find and remember — you’ll be opening and editing files inside it throughout this tutorial. Avoid leaving it in your Downloads folder where it can get buried.\n\n\n\n\n\n\n\n\nNote\n\n\n\nWhat’s inside the folder? Don’t worry if the contents look unfamiliar right now. The next chapter will walk you through what each file and folder does. For now, you just need the folder in place and ready to open.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-6-preview-the-website",
+    "href": "01-getting-started.html#step-6-preview-the-website",
+    "title": "2  Getting Started",
+    "section": "2.7 Step 6: Preview the Website",
+    "text": "2.7 Step 6: Preview the Website\nNow that the template is open in RStudio, let’s make sure everything is working by previewing the website on your computer.\n\nIn RStudio, click on the Terminal tab (bottom panel)\nType the following command and press Enter:\n\nquarto preview\n\nAfter a few seconds, your default web browser should open automatically and display the website template.\n\n\n\n\n\n\n\nTip\n\n\n\nNothing opened? Try copying the local address that appears in the Terminal (it will look something like http://localhost:4321) and pasting it directly into your browser.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe website is running locally — meaning it only exists on your computer right now and is not visible to anyone else online. This is your personal preview environment where you can safely make changes and see how they look before publishing.\n\n\nCongratulations! 🎉 Your website is up and running. In the next chapter, you’ll start exploring the template files and editing your content.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html#step-6-open-the-project-in-rstudio",
+    "href": "01-getting-started.html#step-6-open-the-project-in-rstudio",
+    "title": "2  Getting Started",
+    "section": "2.7 Step 6: Open the Project in RStudio",
+    "text": "2.7 Step 6: Open the Project in RStudio\nNow you’ll open the template as a project in RStudio. Opening it as a project (rather than just opening individual files) is important — it tells RStudio where all your files live so that everything works correctly together.\n\nOpen RStudio\nGo to File → Open Project\nNavigate to the Personal_Website_Template-main folder you just unzipped\nInside the folder, find the file ending in .Rproj and click on it\nClick “Open”\n\nRStudio will reload and you’ll see all the template files appear in the Files panel in the bottom-right corner of the screen.\n\n\n\n\n\n\nNote\n\n\n\nThe .Rproj file is what tells RStudio to treat this folder as a self-contained project. It sets up your working environment automatically so all the files and folder paths work correctly without any extra configuration on your part.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#the-big-picture",
+    "href": "02-structure.html#the-big-picture",
+    "title": "3  Understanding the File Structure",
+    "section": "3.2 The Big Picture",
+    "text": "3.2 The Big Picture\nA Quarto website is just a folder of plain text files. When you run quarto preview or quarto render, Quarto reads those files and converts them into the HTML pages that make up your website.\nHere’s a map of what’s in your project folder and what each piece does:\nPersonal_Website_Template/\n│\n├── _quarto.yml          ← The control center: site title, navigation, theme\n├── index.qmd            ← Your homepage\n├── research.qmd         ← Your research overview page\n├── publications.qmd     ← Your publications list\n├── projects.qmd         ← Your projects and models page\n├── cv.qmd               ← Your CV page\n├── modeling_basics.qmd  ← A learning/tutorial tab\n│\n├── custom.scss          ← Advanced style customization (colors, fonts)\n├── styles.css           ← Additional styling rules\n│\n├── images/              ← Folder for photos and figures used on the site\n├── files/               ← Folder for downloadable files like your CV PDF\n├── docs/                ← Auto-generated folder; this is what gets published online\n│\n└── *.Rproj              ← RStudio project file (you opened this in Chapter 1)\n\n\n\n\n\n\nNote\n\n\n\nYou don’t need to understand every file right now. Focus on the .qmd files and _quarto.yml for now — those are where almost all of your editing will happen.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#the-.qmd-files-your-page-content",
+    "href": "02-structure.html#the-.qmd-files-your-page-content",
+    "title": "3  Understanding the File Structure",
+    "section": "3.3 The .qmd Files — Your Page Content",
+    "text": "3.3 The .qmd Files — Your Page Content\nFiles ending in .qmd are Quarto Markdown files. Each one becomes a single page on your website. They are plain text files, which means you can open and edit them in RStudio like a document.\nHere’s what each page in your template is for:\n\n\n\n\n\n\n\n\nFile\nPage\nWhat it contains\n\n\n\n\nindex.qmd\nHomepage\nYour name, photo, research summary, and featured tools\n\n\nresearch.qmd\nResearch\nAn overview of your research areas and dissertation work\n\n\npublications.qmd\nPublications\nA list of your papers, reports, and written work\n\n\nprojects.qmd\nProjects / Models\nHighlights of tools and projects you’ve built\n\n\ncv.qmd\nCV\nA web version of your curriculum vitae\n\n\nmodeling_basics.qmd\nLearning Tab\nEducational content or resources you want to share\n\n\n\nIf you open any of these files in RStudio, you’ll see they follow the same basic pattern: a short header block at the top (called the YAML front matter, enclosed in ---), followed by regular text with some formatting.\nFor example, at the top of research.qmd you’ll see:\n---\ntitle: \"Research\"\n---\nThat’s all Quarto needs to know the title of the page. Everything below that line is the content that appears on the page.\n\n\n\n\n\n\nTip\n\n\n\nWhat is Markdown? Markdown is a simple way of formatting text using plain characters. For example, putting **text** around a word makes it bold, and starting a line with ## makes it a heading. You don’t need to learn all of Markdown right now — you’ll pick it up naturally as you edit the template pages.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#the-_quarto.yml-file-your-sites-control-center",
+    "href": "02-structure.html#the-_quarto.yml-file-your-sites-control-center",
+    "title": "3  Understanding the File Structure",
+    "section": "3.4 The _quarto.yml File — Your Site’s Control Center",
+    "text": "3.4 The _quarto.yml File — Your Site’s Control Center\nThe _quarto.yml file is the most important configuration file in your project. It controls the overall structure of the site: the title, the navigation bar, the theme, the footer, and more.\nOpen it in RStudio now and take a look. Here’s what the key sections mean:\n\n3.4.1 Site Title\nwebsite:\n  title: \"Vanessa Quintana\"\nThis sets the name that appears in the browser tab and the top-left of the navigation bar. You’ll change this to your own name when you personalize the site.\n\n\n3.4.2 Navigation Bar\nnavbar:\n  left:\n    - href: modeling_basics.qmd\n      text: Modeling Basics\n    - href: research.qmd\n      text: Research\n    - href: publications.qmd\n      text: Publications\n    - href: projects.qmd\n      text: Models\n    - href: cv.qmd\n      text: CV\nThis is where the navigation bar links are defined. Each entry has two parts: - href — the .qmd file this link points to - text — the label that appears in the navbar\nThe order here controls the order the links appear on your site. If you want to rename a tab or reorder the pages, this is where you do it.\n\n\n3.4.3 Social Links (Right Side of Navbar)\n    right:\n      - icon: github\n        href: https://github.com/vmahan1998\n      - icon: envelope\n        href: mailto:vanessa.mahan@maine.edu\n      - icon: linkedin\n        href: https://www.linkedin.com/in/vanessa-mahan/\nThese are the icon links that appear on the right side of the navigation bar. You’ll update these with your own GitHub, email, and LinkedIn in a later chapter.\n\n\n3.4.4 Theme\nformat:\n  html:\n    theme: [flatly, custom.scss]\n    css: styles.css\nThis tells Quarto which visual theme to use. The template uses flatly (a clean, professional Bootstrap theme) combined with a custom style file (custom.scss) that adds the dark color scheme you saw when you previewed the site.\n\n\n3.4.5 Output Folder\nproject:\n  output-dir: docs\nThis tells Quarto to save the built website files into a folder called docs. This matters when it comes time to publish — GitHub Pages looks for your site files in the docs folder by default.\n\n\n\n\n\n\nImportant\n\n\n\nBe careful editing _quarto.yml. It uses YAML formatting, which is very sensitive to indentation. If a line is indented by the wrong number of spaces, Quarto may throw an error. Always use spaces (not tabs) for indentation, and keep the existing structure intact while making your edits.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#the-styling-files",
+    "href": "02-structure.html#the-styling-files",
+    "title": "3  Understanding the File Structure",
+    "section": "3.5 The Styling Files",
+    "text": "3.5 The Styling Files\nYour template has two files that control how the site looks visually:\nstyles.css — A CSS file that applies the dark background, text colors, card styles, and other visual details across the site. CSS (Cascading Style Sheets) is the standard language for styling web pages. You don’t need to edit this file to personalize your content, but you’ll explore it in the styling chapter later.\ncustom.scss — A SCSS file that extends and customizes the base Quarto theme. SCSS is a more powerful version of CSS. Again, you won’t need to touch this right away.\n\n\n\n\n\n\nNote\n\n\n\nThe separation between content (.qmd files) and style (styles.css, custom.scss) is intentional and useful. It means you can completely redesign the look of your site without touching a single word of your content — and vice versa.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#the-images-and-files-folders",
+    "href": "02-structure.html#the-images-and-files-folders",
+    "title": "3  Understanding the File Structure",
+    "section": "3.6 The images/ and files/ Folders",
+    "text": "3.6 The images/ and files/ Folders\nimages/ is where you store any photos or figures used on the site — your headshot, research images, project screenshots, and so on. When a .qmd file references an image like images/Author_Picture.jpg, Quarto looks for it in this folder.\nfiles/ is where you store downloadable files — most commonly a PDF version of your CV. A link on your CV page points here so visitors can download it.\n\n\n\n\n\n\nTip\n\n\n\nWhen you’re ready to personalize the site, you’ll add your own headshot to the images/ folder and your CV PDF to the files/ folder. You’ll do this in Chapter 3.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#the-docs-folder",
+    "href": "02-structure.html#the-docs-folder",
+    "title": "3  Understanding the File Structure",
+    "section": "3.7 The docs/ Folder",
+    "text": "3.7 The docs/ Folder\nThe docs/ folder is automatically generated by Quarto when you run quarto render. You should never edit files inside docs/ directly — Quarto will overwrite your changes the next time it builds the site.\nThink of docs/ as the final, compiled version of your website. It’s the folder that gets published online when you deploy to GitHub Pages.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html#summary",
+    "href": "02-structure.html#summary",
+    "title": "3  Understanding the File Structure",
+    "section": "3.8 Summary",
+    "text": "3.8 Summary\n\n\n\n\n\n\n\n\nFile / Folder\nWhat it’s for\nDo you edit it?\n\n\n\n\n_quarto.yml\nSite structure, navigation, theme\nYes — for titles, links, settings\n\n\n*.qmd files\nPage content\nYes — your main editing happens here\n\n\nstyles.css\nVisual styling\nLater — for design customization\n\n\ncustom.scss\nTheme customization\nLater — for advanced styling\n\n\nimages/\nPhotos and figures\nYes — add your own images here\n\n\nfiles/\nDownloadable files (CV PDF)\nYes — add your CV PDF here\n\n\ndocs/\nAuto-generated site output\nNever — Quarto manages this\n\n\n*.Rproj\nRStudio project file\nNever — leave this as-is\n\n\n\nNow that you understand how the pieces fit together, you’re ready to start making the site your own. In the next chapter, you’ll edit your homepage and add your personal information.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#overview",
+    "href": "03-editing.html#overview",
+    "title": "4  Editing Your Content",
+    "section": "",
+    "text": "Replace the placeholder text with your own name and bio\nAdd your own profile photo\nArrange text and images side by side using columns\nEmbed a live public Google Calendar\n\n\n\n\n\n\n\nTip\n\n\n\nBefore making any edits, it’s a good habit to run quarto preview in the Terminal so the preview is live in your browser. That way you can see your changes reflected in real time as you save the file.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#step-1-open-your-homepage-file",
+    "href": "03-editing.html#step-1-open-your-homepage-file",
+    "title": "4  Editing Your Content",
+    "section": "4.2 Step 1: Open Your Homepage File",
+    "text": "4.2 Step 1: Open Your Homepage File\nIn RStudio, find index.qmd in the Files panel (bottom-right) and click on it to open it in the editor.\nAt the very top of the file you’ll see the YAML front matter — a short block between two --- lines that sets page-level options:\n---\ntitle: \"Vanessa Quintana\"\nsubtitle: \"Applied Ecological Modeler • Coastal Systems Scientist • Geospatial Analyst\"\npage-layout: full\nimage: images/Author_Picture.jpg\nformat:\n  html:\n    toc: false\n    smooth-scroll: true\n---\nStart by updating these fields:\n\ntitle — Replace \"Vanessa Quintana\" with your own name\nsubtitle — Replace the subtitle with your own roles or research focus areas, separated by • if you’d like the same style\nimage — This points to your profile photo (more on this in Step 2)\n\n\n\n\n\n\n\nNote\n\n\n\nThe page-layout: full setting gives the homepage a wider layout than the other pages, which is why it looks different from research.qmd or cv.qmd. Leave this as-is for the homepage.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#step-2-add-your-profile-photo",
+    "href": "03-editing.html#step-2-add-your-profile-photo",
+    "title": "4  Editing Your Content",
+    "section": "4.3 Step 2: Add Your Profile Photo",
+    "text": "4.3 Step 2: Add Your Profile Photo\nYour profile photo is displayed on the left side of the homepage. To replace the placeholder with your own image:\n\nFind a photo you’d like to use — a headshot or professional photo works best\nRename the file to something simple with no spaces, for example my_photo.jpg\nMove or copy the file into the images/ folder inside your project\nIn index.qmd, find the line that references the image:\n\n![](images/Author_Picture.jpg){.profile-image width=\"100%\" fig-alt=\"Vanessa Quintana\"}\n\nReplace Author_Picture.jpg with your own filename, and update the fig-alt text with your name:\n\n![](images/my_photo.jpg){.profile-image width=\"100%\" fig-alt=\"Your Name\"}\n\n\n\n\n\n\nTip\n\n\n\nThe fig-alt text is the alt text for your image — a short description that appears if the image fails to load and that screen readers use for accessibility. Always include a brief, accurate description.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure your image file is actually inside the images/ folder and that the filename in your .qmd file matches exactly — including capitalization and the file extension (.jpg, .png, etc.). A mismatch here is one of the most common beginner errors.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#step-3-edit-your-bio-text",
+    "href": "03-editing.html#step-3-edit-your-bio-text",
+    "title": "4  Editing Your Content",
+    "section": "4.4 Step 3: Edit Your Bio Text",
+    "text": "4.4 Step 3: Edit Your Bio Text\nBelow the YAML front matter, the homepage is built using columns — a Quarto layout feature that lets you place content side by side. Here’s how the two-column layout is structured in index.qmd:\n::: {.columns}\n::: {.column width=\"32%\"}\n\n  [your photo and profile panel go here]\n\n:::\n::: {.column width=\"68%\"}\n\n  [your bio text goes here]\n\n:::\n:::\nThe first column (32% wide) holds your photo and badge list. The second column (68% wide) holds your bio and research philosophy. To update your bio, find the text in the wider column and replace it with your own:\n::: {.column width=\"68%\"}\n\n::: {.kicker}\nAbout My Work\n:::\n\nI work at the intersection of [your research areas here]. My research focuses on\n[what you study and why it matters].\n\nI approach [your methods or philosophy here].\n\n:::\n\n\n\n\n\n\nNote\n\n\n\nWhat is .kicker? The .kicker is a small styled label that appears above a section heading — like a category tag. It’s defined in styles.css and gives the page a clean, editorial look. You can change the text inside it to anything you like, or remove it entirely if you prefer.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#step-4-understanding-side-by-side-layouts-columns",
+    "href": "03-editing.html#step-4-understanding-side-by-side-layouts-columns",
+    "title": "4  Editing Your Content",
+    "section": "4.5 Step 4: Understanding Side-by-Side Layouts (Columns)",
+    "text": "4.5 Step 4: Understanding Side-by-Side Layouts (Columns)\nThe column layout you just saw is one of the most useful features in Quarto for building a polished homepage. Here’s the full pattern so you can use it anywhere on your site:\n::: {.columns}\n::: {.column width=\"50%\"}\n\nContent for the left side goes here.\n\nYou can put text, images, lists, or anything else.\n\n:::\n::: {.column width=\"50%\"}\n\nContent for the right side goes here.\n\n:::\n:::\nThe widths must add up to 100%. You can split them however you like — for example 30% / 70%, or 25% / 25% / 25% / 25% for four equal columns (as used in the Research Areas section of the homepage).\n\n4.5.1 Placing an Image Next to Text\nA common use of the column layout is putting a photo or figure next to a block of text. Here’s a simple example you can copy and adapt:\n::: {.columns}\n::: {.column width=\"40%\"}\n\n![](images/my_photo.jpg){width=\"100%\" fig-alt=\"A description of the image\"}\n\n:::\n::: {.column width=\"60%\"}\n\n### A heading for the text side\n\nWrite your paragraph text here. This will appear to the right of the image.\nYou can include as much or as little text as you need.\n\n:::\n:::\n\n\n\n\n\n\nTip\n\n\n\nAdd a blank line between the ::: dividers and your content. Quarto needs that spacing to correctly parse the column layout — missing blank lines is a common cause of formatting issues.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#step-5-update-your-badge-list",
+    "href": "03-editing.html#step-5-update-your-badge-list",
+    "title": "4  Editing Your Content",
+    "section": "4.6 Step 5: Update Your Badge List",
+    "text": "4.6 Step 5: Update Your Badge List\nIn the left column of the homepage, below your photo, there is a badge list — a set of small styled labels showing your affiliation, title, or research focus areas. Find this block in index.qmd:\n::: {.badge-list}\nMarine Sciences, University of Maine\n\nORISE Fellow, U.S. Army Corps of Engineers\n\nEstuarine Hydrodynamics and Sediment Transport\n\nAgent-Based and Ecological Modeling\n:::\nReplace each line with your own affiliations, department, institution, or keywords. Each separate line becomes its own badge. You can add or remove lines as needed.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#step-6-embed-a-public-google-calendar",
+    "href": "03-editing.html#step-6-embed-a-public-google-calendar",
+    "title": "4  Editing Your Content",
+    "section": "4.7 Step 6: Embed a Public Google Calendar",
+    "text": "4.7 Step 6: Embed a Public Google Calendar\nIf you have a public Google Calendar — for office hours, events, lab meetings, or workshops — you can embed it directly into your website as a live, interactive calendar. Any updates you make in Google Calendar will automatically appear on your site.\n\n4.7.1 First: Make Your Google Calendar Public\n\nGo to calendar.google.com and sign in\nIn the left panel, find the calendar you want to embed, click the three dots next to its name, and select “Settings and sharing”\nUnder “Access permissions for events”, check the box that says “Make available to public”\nConfirm the warning if prompted\n\n\n\n4.7.2 Second: Get the Embed Code\n\nStill on the calendar settings page, scroll down to “Integrate calendar”\nCopy the “Public URL to this calendar” — it will look like a long link ending in @group.calendar.google.com\nIn the same section, click “Customize” to open the embed builder if you’d like to adjust the calendar’s appearance, then copy the &lt;iframe&gt; embed code\n\n\n\n4.7.3 Third: Add the Calendar to Your Site (optional)\nCreate a new file in your project called calendar.qmd and add the following. Replace the src URL with your own calendar’s embed URL:\n---\ntitle: \"Event Calendar\"\ntoc: true\npage-layout: article\n---\n\n# Event Calendar\n\n&lt;div style=\"\n  max-width: 1100px;\n  margin: 0 auto 50px auto;\n  border-radius: 22px;\n  background: #ffffff;\n  box-shadow: 0 12px 25px rgba(0,0,0,0.15);\n  overflow: hidden;\n\"&gt;\n\n  &lt;iframe \n    src=\"YOUR-GOOGLE-CALENDAR-EMBED-URL-HERE\"\n    style=\"border:0; width:100%; height:900px; display:block;\"\n    frameborder=\"0\"\n    scrolling=\"no\"\n  &gt;&lt;/iframe&gt;\n\n&lt;/div&gt;\n\n\n4.7.4 Fourth: Add the Calendar to Your Navigation Bar (optional)\nOpen _quarto.yml and add your new calendar page to the navbar under the left: section:\nnavbar:\n  left:\n    - href: calendar.qmd\n      text: Calendar\n    - href: research.qmd\n      text: Research\nSave _quarto.yml, then run quarto preview in the Terminal to see your calendar page live.\n\n\n\n\n\n\nNote\n\n\n\nThe calendar will only display correctly when viewed in a browser — it won’t show up in RStudio’s built-in viewer panel. If you don’t see it in the RStudio preview pane, copy the local address (e.g. http://localhost:4321) and open it in Chrome or Firefox.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#step-7-save-and-preview-your-changes",
+    "href": "03-editing.html#step-7-save-and-preview-your-changes",
+    "title": "4  Editing Your Content",
+    "section": "4.8 Step 7: Save and Preview Your Changes",
+    "text": "4.8 Step 7: Save and Preview Your Changes\nAfter making any edits in index.qmd or _quarto.yml, save the file with Ctrl+S (Windows) or Cmd+S (Mac). If quarto preview is already running in the Terminal, your browser should refresh automatically within a few seconds.\nIf the preview doesn’t update, go to the Terminal and run:\nquarto preview\n\n\n\n\n\n\nImportant\n\n\n\nIf you see an error in the Terminal after saving, read the message carefully — Quarto’s error messages usually tell you exactly which file and line the problem is on. The most common issues are mismatched ::: column dividers, incorrect image filenames, or indentation errors in _quarto.yml.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#summary-what-you-edited-in-this-chapter",
+    "href": "03-editing.html#summary-what-you-edited-in-this-chapter",
+    "title": "4  Editing Your Content",
+    "section": "4.10 Summary: What You Edited in This Chapter",
+    "text": "4.10 Summary: What You Edited in This Chapter\n\n\n\n\n\n\n\n\nWhat\nWhere\nHow\n\n\n\n\nYour name and subtitle\nindex.qmd YAML front matter\nEdit the title and subtitle fields\n\n\nYour profile photo\nimages/ folder + index.qmd\nAdd file to images/, update the filename\n\n\nYour bio text\nindex.qmd wide column\nReplace the paragraph text\n\n\nYour badge labels\nindex.qmd .badge-list block\nReplace each line with your own info\n\n\nSide-by-side layout\nAny .qmd file\nUse the {.columns} / {.column} pattern\n\n\nGoogle Calendar\nNew calendar.qmd + _quarto.yml\nEmbed iframe, add link to navbar\n\n\n\nIn the next chapter, you’ll edit the inner pages — Research, Publications, Projects, and CV — and learn how to add your own work to each one.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html#other-resources",
+    "href": "03-editing.html#other-resources",
+    "title": "4  Editing Your Content",
+    "section": "4.9 Other Resources",
+    "text": "4.9 Other Resources\nAs you continue building your website, you may want to explore more advanced customization, layouts, and templates. The official Quarto documentation is extremely well organized and worth bookmarking.\n\n\n\n\n\n\nTip\n\n\n\nIf something feels limited in your website, it almost always already exists in the Quarto documentation — you just need to find the right section.\n\n\n\n\n4.9.1 Website Development\n\nQuarto Websites Documentation\nA complete guide to building and structuring Quarto websites, including navigation, pages, and configuration.\nQuarto Website Gallery\nReal examples of websites built with Quarto. Useful for inspiration and design ideas.\nQuarto Guide\nA broader introduction to Quarto, including project types, publishing, and workflows.\n\n\n\n\n4.9.2 Customization and Advanced Formatting\n\nHTML Format Reference\nDetailed reference for all HTML output options, including themes, layout, and advanced settings.\nHTML Basics\nA simpler introduction to how Quarto renders HTML, useful for understanding how your site is structured.\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not need to learn all of this at once. Start by building your site, then return to these resources when you want to customize something specific.\n\n\n\n\n\n4.9.3 Suggested Workflow for Learning More\n\nBuild your basic website using this tutorial\n\nIdentify one thing you want to improve (layout, styling, navigation)\n\nUse the documentation above to find that specific feature\n\nImplement and test it\n\n\n\n\n\n\n\nImportant\n\n\n\nAvoid trying to learn all of Quarto at once. Focus on small, incremental improvements.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#overview",
+    "href": "04-styling.html#overview",
+    "title": "5  Customizing Style",
+    "section": "",
+    "text": "Theme (SCSS) → controls global design such as colors and typography\n\nCSS → fine-tunes specific elements like buttons, spacing, and layout details",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#your-current-theme-dark-mode",
+    "href": "04-styling.html#your-current-theme-dark-mode",
+    "title": "5  Customizing Style",
+    "section": "5.3 Your Current Theme: Dark Mode",
+    "text": "5.3 Your Current Theme: Dark Mode\nYour site currently uses a dark, professional theme:\n\nDeep blue background\n\nLight text\n\nBlue accent highlights\n\nThis works well for research portfolios and technical content.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#creating-multiple-themes",
+    "href": "04-styling.html#creating-multiple-themes",
+    "title": "5  Customizing Style",
+    "section": "5.4 Creating Multiple Themes",
+    "text": "5.4 Creating Multiple Themes\nYou can use different styles by switching SCSS files.\nWithin this template, we provide:\n\nDark mode\n\nLight mode\n\nPastel theme\n\n\n\n\n\n\n\nTip\n\n\n\nYou can edit these themes or create your own to personalize your website.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#where-to-edit-your-style",
+    "href": "04-styling.html#where-to-edit-your-style",
+    "title": "5  Customizing Style",
+    "section": "5.5 Where to Edit Your Style",
+    "text": "5.5 Where to Edit Your Style\n\n5.5.1 Open custom.scss\nThis file controls your core theme settings, including:\n\nBackground color\n\nText color\n\nAccent color\n\nNavbar styling\n\nThis is where you define the overall look of your site.\n\n\n\n5.5.2 Open _quarto.yml\nThis file tells Quarto which theme to use.\nFor example:\nformat:\n  html:\n    theme: [flatly, custom.scss]\nTo switch themes, replace custom.scss with another file:\ntheme: [flatly, custom-light.scss]\nor\ntheme: [flatly, custom-pastel.scss]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#key-idea",
+    "href": "04-styling.html#key-idea",
+    "title": "5  Customizing Style",
+    "section": "5.11 Key Idea",
+    "text": "5.11 Key Idea\n\ncustom.scss = controls design\n\nstyles.css = refines details\n\n_quarto.yml = connects everything\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf your styling is not updating, check that the file name in _quarto.yml matches your SCSS file exactly.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#editing-colors-step-by-step",
+    "href": "04-styling.html#editing-colors-step-by-step",
+    "title": "5  Customizing Style",
+    "section": "5.6 Editing Colors Step-by-Step",
+    "text": "5.6 Editing Colors Step-by-Step\nThis section walks you through making a simple style change so you can see how themes work in real time.\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you have quarto preview running before you start so you can see your changes instantly.\n\n\n\n\n5.6.1 Step 1: Open custom.scss\nIn your project folder, open:\ncustom.scss\nYou should see something like:\n/*-- scss:defaults --*/\n\n$body-bg: #08131d;\n$body-color: rgba(222, 238, 246, 0.92);\n$primary: #7ecce6;\n\n\n\n5.6.2 Step 2: Change the Accent Color\nFind this line:\n$primary: #7ecce6;\nReplace it with a new color, for example:\n$primary: #ff6b6b;\nSave the file.\n👉 Your site should automatically refresh, and you’ll see: - Links change color\n- Buttons change color\n- Callouts update\n\n\n\n5.6.3 Step 3: Change the Background Color\nFind:\n$body-bg: #08131d;\nTry changing it to something lighter:\n$body-bg: #f4f7fb;\nSave the file.\n👉 Notice how the entire tone of the site changes.\n\n\n\n5.6.4 Step 4: Adjust Text Color\nFind:\n$body-color: rgba(222, 238, 246, 0.92);\nIf you switched to a light background, update this to:\n$body-color: #1a1a1a;\n\n\n\n\n\n\n\nNote\n\n\n\nBackground and text color should always have strong contrast so your site remains readable.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#understanding-what-you-changed",
+    "href": "04-styling.html#understanding-what-you-changed",
+    "title": "5  Customizing Style",
+    "section": "5.7 Understanding What You Changed",
+    "text": "5.7 Understanding What You Changed\n\n\n\nVariable\nWhat it controls\n\n\n\n\n$primary\nAccent color (links, buttons, highlights)\n\n\n$body-bg\nPage background\n\n\n$body-color\nMain text color",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#try-it-yourself",
+    "href": "04-styling.html#try-it-yourself",
+    "title": "5  Customizing Style",
+    "section": "5.8 Try It Yourself",
+    "text": "5.8 Try It Yourself\nExperiment with different combinations:\n\nBlue → Green\n\nDark → Light\n\nPastel → Bold\n\nYou can use tools like: - https://coolors.co\n- https://colorhunt.co\n\n\n\n\n\n\n\nTip\n\n\n\nSmall changes go a long way. Changing just one or two variables can completely transform your site.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#common-mistakes",
+    "href": "04-styling.html#common-mistakes",
+    "title": "5  Customizing Style",
+    "section": "5.9 Common Mistakes",
+    "text": "5.9 Common Mistakes\n\n5.9.1 Nothing changes after saving\n\nMake sure quarto preview is running\n\nCheck that you’re editing the correct file\n\n\n\n5.9.2 Colors look wrong\n\nYour styles.css may be overriding your SCSS\n\n\n\n5.9.3 Site looks broken\n\nCheck for missing semicolons (;) in SCSS",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#next-step",
+    "href": "04-styling.html#next-step",
+    "title": "5  Customizing Style",
+    "section": "5.10 Next Step",
+    "text": "5.10 Next Step\nNow that you’ve changed your first colors, try:\n\nCreating your own theme file\n\nSwitching between themes in _quarto.yml\n\nMatching your site to your personal or institutional branding\n\n\n\n\n\n\n\nImportant\n\n\n\nThe goal is not to memorize SCSS — it is to understand how small changes affect your entire site.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]
   }
 ]

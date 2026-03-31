@@ -1,35 +1,240 @@
+---
+title: "Understanding the File Structure"
+subtitle: "What each file does and how they work together"
+---
+
+## Overview
+
+Now that your project is open in RStudio, you're probably looking at a list of files and
+wondering what they all do. This chapter explains how a Quarto website is organized, what
+each file's role is, and how they connect to produce the website you previewed in the
+last chapter.
+
+Understanding the structure before you start editing will save you a lot of confusion
+later — so take a few minutes to read through this before making any changes.
 
 ---
 
-# 4. `02-structure.qmd`
+## The Big Picture
 
-```markdown
+A Quarto website is just a **folder of plain text files**. When you run `quarto preview`
+or `quarto render`, Quarto reads those files and converts them into the HTML pages that
+make up your website.
+
+Here's a map of what's in your project folder and what each piece does:
+```
+Personal_Website_Template/
+│
+├── _quarto.yml          ← The control center: site title, navigation, theme
+├── index.qmd            ← Your homepage
+├── research.qmd         ← Your research overview page
+├── publications.qmd     ← Your publications list
+├── projects.qmd         ← Your projects and models page
+├── cv.qmd               ← Your CV page
+├── modeling_basics.qmd  ← A learning/tutorial tab
+│
+├── custom.scss          ← Advanced style customization (colors, fonts)
+├── styles.css           ← Additional styling rules
+│
+├── images/              ← Folder for photos and figures used on the site
+├── files/               ← Folder for downloadable files like your CV PDF
+├── docs/                ← Auto-generated folder; this is what gets published online
+│
+└── *.Rproj              ← RStudio project file (you opened this in Chapter 1)
+```
+
+::: {.callout-note}
+You don't need to understand every file right now. Focus on the `.qmd` files and
+`_quarto.yml` for now — those are where almost all of your editing will happen.
+:::
+
 ---
-title: "Understanding the Structure"
+
+## The `.qmd` Files — Your Page Content
+
+Files ending in `.qmd` are **Quarto Markdown** files. Each one becomes a single page on
+your website. They are plain text files, which means you can open and edit them in
+RStudio like a document.
+
+Here's what each page in your template is for:
+
+| File | Page | What it contains |
+|---|---|---|
+| `index.qmd` | Homepage | Your name, photo, research summary, and featured tools |
+| `research.qmd` | Research | An overview of your research areas and dissertation work |
+| `publications.qmd` | Publications | A list of your papers, reports, and written work |
+| `projects.qmd` | Projects / Models | Highlights of tools and projects you've built |
+| `cv.qmd` | CV | A web version of your curriculum vitae |
+| `modeling_basics.qmd` | Learning Tab | Educational content or resources you want to share |
+
+If you open any of these files in RStudio, you'll see they follow the same basic pattern:
+a short header block at the top (called the **YAML front matter**, enclosed in `---`),
+followed by regular text with some formatting.
+
+For example, at the top of `research.qmd` you'll see:
+```yaml
+---
+title: "Research"
+---
+```
+
+That's all Quarto needs to know the title of the page. Everything below that line is the
+content that appears on the page.
+
+::: {.callout-tip}
+**What is Markdown?** Markdown is a simple way of formatting text using plain characters.
+For example, putting `**text**` around a word makes it **bold**, and starting a line with
+`##` makes it a heading. You don't need to learn all of Markdown right now — you'll pick
+it up naturally as you edit the template pages.
+:::
+
 ---
 
-## The Core Files
+## The `_quarto.yml` File — Your Site's Control Center
 
-Your template includes:
+The `_quarto.yml` file is the most important configuration file in your project. It
+controls the overall structure of the site: the title, the navigation bar, the theme,
+the footer, and more.
 
-- `index.qmd`
-- `research.qmd`
-- `projects.qmd`
-- `publications.qmd`
-- `cv.qmd`
+Open it in RStudio now and take a look. Here's what the key sections mean:
 
-Each one becomes a page on your website.
+### Site Title
+```yaml
+website:
+  title: "Vanessa Quintana"
+```
 
----
+This sets the name that appears in the browser tab and the top-left of the navigation
+bar. You'll change this to your own name when you personalize the site.
 
-## How Navigation Works
-
-Open `_quarto.yml`.
-
-You’ll see:
-
+### Navigation Bar
 ```yaml
 navbar:
   left:
+    - href: modeling_basics.qmd
+      text: Modeling Basics
     - href: research.qmd
       text: Research
+    - href: publications.qmd
+      text: Publications
+    - href: projects.qmd
+      text: Models
+    - href: cv.qmd
+      text: CV
+```
+
+This is where the navigation bar links are defined. Each entry has two parts:
+- `href` — the `.qmd` file this link points to
+- `text` — the label that appears in the navbar
+
+The order here controls the order the links appear on your site. If you want to rename a
+tab or reorder the pages, this is where you do it.
+
+### Social Links (Right Side of Navbar)
+```yaml
+    right:
+      - icon: github
+        href: https://github.com/vmahan1998
+      - icon: envelope
+        href: mailto:vanessa.mahan@maine.edu
+      - icon: linkedin
+        href: https://www.linkedin.com/in/vanessa-mahan/
+```
+
+These are the icon links that appear on the right side of the navigation bar. You'll
+update these with your own GitHub, email, and LinkedIn in a later chapter.
+
+### Theme
+```yaml
+format:
+  html:
+    theme: [flatly, custom.scss]
+    css: styles.css
+```
+
+This tells Quarto which visual theme to use. The template uses **flatly** (a clean,
+professional Bootstrap theme) combined with a custom style file (`custom.scss`) that
+adds the dark color scheme you saw when you previewed the site.
+
+### Output Folder
+```yaml
+project:
+  output-dir: docs
+```
+
+This tells Quarto to save the built website files into a folder called `docs`. This
+matters when it comes time to publish — GitHub Pages looks for your site files in the
+`docs` folder by default.
+
+::: {.callout-important}
+Be careful editing `_quarto.yml`. It uses **YAML formatting**, which is very sensitive
+to indentation. If a line is indented by the wrong number of spaces, Quarto may throw
+an error. Always use **spaces** (not tabs) for indentation, and keep the existing
+structure intact while making your edits.
+:::
+
+---
+
+## The Styling Files
+
+Your template has two files that control how the site looks visually:
+
+**`styles.css`** — A CSS file that applies the dark background, text colors, card
+styles, and other visual details across the site. CSS (Cascading Style Sheets) is the
+standard language for styling web pages. You don't need to edit this file to personalize
+your content, but you'll explore it in the styling chapter later.
+
+**`custom.scss`** — A SCSS file that extends and customizes the base Quarto theme. SCSS
+is a more powerful version of CSS. Again, you won't need to touch this right away.
+
+::: {.callout-note}
+The separation between content (`.qmd` files) and style (`styles.css`, `custom.scss`) is
+intentional and useful. It means you can completely redesign the look of your site
+without touching a single word of your content — and vice versa.
+:::
+
+---
+
+## The `images/` and `files/` Folders
+
+**`images/`** is where you store any photos or figures used on the site — your headshot,
+research images, project screenshots, and so on. When a `.qmd` file references an image
+like `images/Author_Picture.jpg`, Quarto looks for it in this folder.
+
+**`files/`** is where you store downloadable files — most commonly a PDF version of your
+CV. A link on your CV page points here so visitors can download it.
+
+::: {.callout-tip}
+When you're ready to personalize the site, you'll add your own headshot to the `images/`
+folder and your CV PDF to the `files/` folder. You'll do this in Chapter 3.
+:::
+
+---
+
+## The `docs/` Folder
+
+The `docs/` folder is **automatically generated** by Quarto when you run
+`quarto render`. You should never edit files inside `docs/` directly — Quarto will
+overwrite your changes the next time it builds the site.
+
+Think of `docs/` as the final, compiled version of your website. It's the folder that
+gets published online when you deploy to GitHub Pages.
+
+---
+
+## Summary
+
+| File / Folder | What it's for | Do you edit it? |
+|---|---|---|
+| `_quarto.yml` | Site structure, navigation, theme | Yes — for titles, links, settings |
+| `*.qmd` files | Page content | Yes — your main editing happens here |
+| `styles.css` | Visual styling | Later — for design customization |
+| `custom.scss` | Theme customization | Later — for advanced styling |
+| `images/` | Photos and figures | Yes — add your own images here |
+| `files/` | Downloadable files (CV PDF) | Yes — add your CV PDF here |
+| `docs/` | Auto-generated site output | Never — Quarto manages this |
+| `*.Rproj` | RStudio project file | Never — leave this as-is |
+
+Now that you understand how the pieces fit together, you're ready to start making the
+site your own. In the next chapter, you'll edit your homepage and add your personal
+information.

@@ -5,47 +5,102 @@ subtitle: "A step-by-step guide using a real research template"
 
 ## Welcome
 
-This tutorial walks you through building a personal research website using Quarto.
+Welcome! This tutorial will guide you through building your own personal research website
+using **Quarto** — a free, open-source tool that lets you create beautiful websites,
+documents, and reports directly from code.
 
-You will:
-- Download a working template from GitHub
-- Run it locally
-- Edit content and structure
-- Customize styling
-- Publish your site online
+Don't worry if you've never built a website before, or if you've never used R or RStudio.
+This tutorial starts from the very beginning and walks you through every step. By the end,
+you'll have a fully working, professional-looking research website that you can share with
+the world.
 
-This tutorial is designed for beginners, but it uses a real workflow that scales to professional research websites.
+**In this tutorial, you will:**
+
+- **Install R and RStudio** — R is a free programming language widely used in research and
+  data science. RStudio is a beginner-friendly application that makes working with R much
+  easier. We'll walk you through installing both from scratch.
+- **Download a working template from GitHub** — Instead of building a website from a blank
+  page, you'll start with a real, pre-built research website template. GitHub is a free
+  platform where people share and store code — think of it like Google Drive, but for
+  projects.
+- **Run the website on your own computer** — Before publishing anything online, you'll
+  preview your website locally (meaning only you can see it on your computer). This is a
+  safe space to experiment and make mistakes.
+- **Edit the content and structure** — You'll learn how to change text, add your own
+  information, and reorganize pages to reflect your work and research.
+- **Customize the styling** — You'll make the website look like *yours* by adjusting colors,
+  fonts, and layout.
+- **Publish your site online** — Finally, you'll put your site on the internet so anyone
+  can visit it — for free.
+
+This tutorial is designed for complete beginners, but it uses a real, professional workflow.
+The skills you learn here are the same ones researchers, scientists, and developers use to
+build and maintain their own websites.
+
+> **Template source:** This tutorial is based on a real research website template. You can
+> view and download the template here:
+> [github.com/vmahan1998/Website_Development_Tutorial](https://github.com/vmahan1998/Website_Development_Tutorial.git)
 
 ::: {.callout-note}
-This is not just a demo. You will be editing an actual working template used for research communication.
+This is not just a demo. You will be editing an actual working template used for research
+communication. Every change you make is a real change to a real website — so you'll leave
+this tutorial with something you can actually use and build on.
 :::
 
 ---
 
-## What You’ll Build
+## What You'll Build
 
-By the end, you’ll have a website with:
+By the end of this tutorial, you'll have a multi-page personal research website. Here's a
+preview of what it will include:
 
-- A homepage
-- Research overview
-- Publications
-- Projects or models
-- CV page
+| Page | Description |
+|---|---|
+| **Homepage** | An introduction to who you are and what you do |
+| **Learning Tab** | A space to share resources, notes, or educational content |
+| **Research Overview** | A summary of your research interests and focus areas |
+| **Publications** | A list of your papers, reports, or written work |
+| **Projects / Models** | Highlights of specific projects or tools you've developed |
+| **CV Page** | A digital version of your curriculum vitae (résumé) |
 
 ---
 
-## What You Need
+## What You Need Before You Start
 
-- Quarto installed
-- RStudio (recommended)
-- A GitHub account (for publishing)
+You don't need to install anything right now — the first chapters will walk you through
+setup step by step. But here's a quick overview of what you'll be working with:
+
+- **R** — A free programming language. Even if you never write a single line of R code
+  yourself, it powers the tools that build your website behind the scenes.
+- **Quarto** — The tool that turns your content into a website. It's free and works
+  alongside R and RStudio.
+- **RStudio** — A free application that gives you a visual, beginner-friendly environment
+  for working with R and Quarto. Think of it as your "home base" for this whole project.
+- **A GitHub account** — A free account on [github.com](https://github.com) that you'll
+  use to store your website files and publish your site online. If you don't have one yet,
+  we'll show you how to create one.
+
+::: {.callout-tip}
+**Never used any of these tools before?** That's completely okay — and actually expected!
+Each tool is introduced gradually, with explanations along the way. You do not need any
+prior coding or web development experience.
+:::
 
 ---
 
 ## How This Tutorial Works
 
-Each chapter builds on the last. Follow in order, and make changes as you go.
+This tutorial is organized into chapters, and **each chapter builds on the one before it.**
+It's important to follow the chapters in order, especially at the beginning, since later
+steps assume you've completed the earlier ones.
+
+As you go, you'll be making real edits to the template — not just reading about how things
+work. This hands-on approach is intentional: the best way to learn is by doing.
 
 ::: {.callout-important}
-Do not just read this. Open the template and edit alongside the tutorial.
+**Go at your own pace.** There's no rush. If something doesn't work the first time, that's
+normal — troubleshooting is a natural part of working with any new tool. Each chapter
+includes tips to help you if you get stuck.
 :::
+
+Ready to get started? Head to **Chapter 1** to install R and RStudio.

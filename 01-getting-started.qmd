@@ -1,26 +1,196 @@
 ---
 title: "Getting Started"
+subtitle: "Installing your tools and setting up the template"
 ---
 
-## Step 1: Download the Template
+## Overview
 
-Go to the GitHub repository and download the template as a ZIP file.
+Before you can build or edit your website, you need to set up a few free tools on your
+computer. This chapter walks you through every installation step and gets the website
+template running on your machine for the first time.
 
-Unzip it somewhere you can easily find it.
+By the end of this chapter, you will have:
+
+- R installed on your computer
+- RStudio installed and open
+- Quarto installed
+- The website template downloaded and running in your browser
+
+::: {.callout-note}
+These installations only need to be done once. Once your environment is set up, you won't
+need to repeat these steps.
+:::
 
 ---
 
-## Step 2: Open the Project
+## Step 1: Install R
 
-Open the `.Rproj` file in RStudio.
+**R** is a free programming language that powers the tools behind your website. Even if
+you never write R code yourself, it needs to be installed for Quarto and RStudio to work
+properly.
 
-You should now see all files in the project panel.
+1. Go to the official R download page: [https://cran.r-project.org](https://cran.r-project.org)
+2. Under *"Download and Install R"*, click the link that matches your operating system:
+   - **Windows** → click *"Download R for Windows"* → then *"base"* → then the download link at the top
+   - **Mac** → click *"Download R for macOS"* → choose the version that matches your Mac
+   - **Linux** → select your distribution and follow the instructions
+3. Open the downloaded file and follow the installer prompts. The default settings are
+   fine — you don't need to change anything.
+
+::: {.callout-tip}
+**Not sure which version to download?** If you're on a newer Mac (2020 or later), you
+likely have an Apple Silicon chip — look for the file labeled **arm64**. If you're on an
+older Mac or a Windows PC, the standard download is the right choice.
+:::
 
 ---
 
-## Step 3: Run the Website
+## Step 2: Install RStudio
 
-In the terminal, run:
+**RStudio** is a free application that gives you a visual, beginner-friendly environment
+for working with R and Quarto. Think of it as the workspace where everything comes
+together.
 
-```bash
-quarto preview
+::: {.callout-important}
+You must install R **before** installing RStudio. RStudio requires R to be present on
+your computer in order to run.
+:::
+
+1. Go to the RStudio download page:
+   [https://posit.co/download/rstudio-desktop](https://posit.co/download/rstudio-desktop)
+2. Click **"Download RStudio Desktop"** — the free version is all you need.
+3. Choose the installer for your operating system, download it, and run it.
+4. Follow the installer prompts. Again, the default settings are fine.
+5. Once installed, open RStudio. You should see a window divided into several panels.
+
+::: {.callout-tip}
+**What am I looking at?** When RStudio opens for the first time, you'll see a few panels:
+the **Console** (where R runs commands), the **Environment** (where your data and
+variables live), and the **Files** panel (where you browse your project files). Don't
+worry about mastering these right away — you'll get familiar with them as you go.
+:::
+
+---
+
+## Step 3: Install Quarto
+
+**Quarto** is the tool that actually builds your website. It reads your content files and
+turns them into the web pages visitors will see. You'll install it directly from inside
+RStudio using the R Console — no need to visit any external websites or run a separate
+installer.
+
+::: {.callout-note}
+The **Console** is the tab in the bottom-left panel of RStudio where you type and run R
+commands. It usually has a `>` symbol waiting for your input. This is different from the
+**Terminal** tab next to it — the Console is for R code, while the Terminal is for
+system-level commands.
+:::
+
+1. Open **RStudio**
+2. Click on the **Console** tab in the bottom-left panel
+3. Click next to the `>` symbol and type the following command, then press **Enter**:
+```r
+install.packages("quarto")
+```
+
+4. R will download and install the Quarto package. You may see a lot of text scroll by —
+   that's normal. Wait until you see the `>` prompt appear again, which means it's done.
+5. Once installed, load the package by typing the following and pressing **Enter**:
+```r
+library(quarto)
+```
+
+6. To confirm everything installed correctly, run:
+```r
+quarto_path()
+```
+
+If a file path is printed in the Console (for example, `/usr/local/bin/quarto`), Quarto
+is installed and ready to go.
+
+::: {.callout-tip}
+**Seeing a warning that says the package was built under a different version of R?**
+That's usually fine and won't affect anything in this tutorial. As long as the `>` prompt
+returns without an error message in red, you're good to continue.
+:::
+
+::: {.callout-important}
+If you see a red error message saying Quarto was not found or the path is empty, it may
+mean Quarto's command-line tools are not installed on your system yet. In that case,
+visit [https://quarto.org/docs/get-started](https://quarto.org/docs/get-started), download
+the installer for your operating system, and run it. Then return to this step and run
+`quarto_path()` again to confirm.
+:::
+
+---
+
+## Step 4: Create a Free GitHub Account
+
+**GitHub** is a free platform where people store and share code and projects. You'll use
+it to download the website template and later to publish your site online.
+
+If you already have a GitHub account, you can skip to Step 5.
+
+1. Go to [https://github.com](https://github.com) and click **"Sign up"**
+2. Follow the prompts to create a free account.
+3. Verify your email address when prompted.
+
+::: {.callout-tip}
+Choose a professional username if you can — your GitHub profile may be visible to
+collaborators or employers in the future.
+:::
+
+---
+
+## Step 5: Download the Website Template
+
+You'll download the template directly from GitHub as a ZIP file — no special tools or
+commands needed for this step, just your web browser.
+
+1. Go to the template repository in your browser:
+   [https://github.com/vmahan1998/Personal_Website_Template](https://github.com/vmahan1998/Personal_Website_Template)
+2. Click the green **"Code"** button near the top-right of the page
+3. In the dropdown that appears, click **"Download ZIP"**
+4. Your browser will download a file called `Personal_Website_Template-main.zip`
+5. Once downloaded, **unzip the file**:
+   - **Windows:** Right-click the ZIP file → select *"Extract All"* → choose a destination
+     (Desktop or Documents is fine) → click *"Extract"*
+   - **Mac:** Double-click the ZIP file — it will automatically unzip into a folder in the
+     same location
+6. You should now have a folder called `Personal_Website_Template-main` containing all
+   the website files
+
+::: {.callout-tip}
+Move the unzipped folder somewhere easy to find and remember — you'll be opening and
+editing files inside it throughout this tutorial. Avoid leaving it in your Downloads
+folder where it can get buried.
+:::
+
+::: {.callout-note}
+**What's inside the folder?** Don't worry if the contents look unfamiliar right now.
+The next chapter will walk you through what each file and folder does. For now, you just
+need the folder in place and ready to open.
+:::
+
+---
+
+## Step 6: Open the Project in RStudio
+
+Now you'll open the template as a **project** in RStudio. Opening it as a project (rather
+than just opening individual files) is important — it tells RStudio where all your files
+live so that everything works correctly together.
+
+1. Open **RStudio**
+2. Go to **File → Open Project**
+3. Navigate to the `Personal_Website_Template-main` folder you just unzipped
+4. Inside the folder, find the file ending in **`.Rproj`** and click on it
+5. Click **"Open"**
+
+RStudio will reload and you'll see all the template files appear in the **Files** panel
+in the bottom-right corner of the screen.
+
+::: {.callout-note}
+The `.Rproj` file is what tells RStudio to treat this folder as a self-contained project.
+It sets up your working environment automatically so all the files and folder paths
+work correctly without any extra configuration on your part.
+:::
