@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "Building a Research Website with Quarto"
@@ -11,6 +12,7 @@ book:
     - 03-editing.qmd
     - 04-styling.qmd
     - 05-publishing.qmd
+number-sections: true
 
 format:
   html:

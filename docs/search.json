@@ -1,200 +1,10 @@
 [
   {
-    "objectID": "02-structure.html",
-    "href": "02-structure.html",
-    "title": "3  Understanding the File Structure",
-    "section": "",
-    "text": "3.1 Overview\nNow that your project is open in RStudio, you’re probably looking at a list of files and wondering what they all do. This chapter explains how a Quarto website is organized, what each file’s role is, and how they connect to produce the website you previewed in the last chapter.\nUnderstanding the structure before you start editing will save you a lot of confusion later — so take a few minutes to read through this before making any changes.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
-    ]
-  },
-  {
-    "objectID": "02-structure.html#title-understanding-the-structure",
-    "href": "02-structure.html#title-understanding-the-structure",
-    "title": "3  4. 02-structure.qmd",
-    "section": "3.2 title: “Understanding the Structure”",
-    "text": "3.2 title: “Understanding the Structure”",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
-    ]
-  },
-  {
-    "objectID": "02-structure.html#the-core-files",
-    "href": "02-structure.html#the-core-files",
-    "title": "3  4. 02-structure.qmd",
-    "section": "3.3 The Core Files",
-    "text": "3.3 The Core Files\nYour template includes:\n\nindex.qmd\nresearch.qmd\nprojects.qmd\npublications.qmd\ncv.qmd\n\nEach one becomes a page on your website.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
-    ]
-  },
-  {
-    "objectID": "02-structure.html#how-navigation-works",
-    "href": "02-structure.html#how-navigation-works",
-    "title": "3  4. 02-structure.qmd",
-    "section": "3.4 How Navigation Works",
-    "text": "3.4 How Navigation Works\nOpen _quarto.yml.\nYou’ll see:\n```yaml navbar: left: - href: research.qmd text: Research",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
-    ]
-  },
-  {
-    "objectID": "01-getting-started.html",
-    "href": "01-getting-started.html",
-    "title": "2  Getting Started",
-    "section": "",
-    "text": "2.1 Overview\nBefore you can build or edit your website, you need to set up a few free tools on your computer. This chapter walks you through every installation step and gets the website template running on your machine for the first time.\nBy the end of this chapter, you will have:",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
-    ]
-  },
-  {
-    "objectID": "01-getting-started.html#step-2-open-the-project",
-    "href": "01-getting-started.html#step-2-open-the-project",
-    "title": "2  Getting Started",
-    "section": "2.2 Step 2: Open the Project",
-    "text": "2.2 Step 2: Open the Project\nOpen the .Rproj file in RStudio.\nYou should now see all files in the project panel.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
-    ]
-  },
-  {
-    "objectID": "01-getting-started.html#step-3-run-the-website",
-    "href": "01-getting-started.html#step-3-run-the-website",
-    "title": "2  Getting Started",
-    "section": "2.3 Step 3: Run the Website",
-    "text": "2.3 Step 3: Run the Website\nIn the terminal, run:\n```bash quarto preview",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
-    ]
-  },
-  {
-    "objectID": "03-editing.html",
-    "href": "03-editing.html",
-    "title": "4  Editing Your Content",
-    "section": "",
-    "text": "4.1 Overview\nNow that you understand how the files are organized, it’s time to make the website yours. This chapter focuses on editing index.qmd — your homepage — which is the first thing visitors will see.\nYou’ll learn how to:",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
-    ]
-  },
-  {
-    "objectID": "03-editing.html#title-editing-your-content",
-    "href": "03-editing.html#title-editing-your-content",
-    "title": "4  📘 5. 03-editing.qmd",
-    "section": "4.2 title: “Editing Your Content”",
-    "text": "4.2 title: “Editing Your Content”",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
-    ]
-  },
-  {
-    "objectID": "03-editing.html#editing-the-homepage",
-    "href": "03-editing.html#editing-the-homepage",
-    "title": "4  📘 5. 03-editing.qmd",
-    "section": "4.3 Editing the Homepage",
-    "text": "4.3 Editing the Homepage\nOpen:\n```text index.qmd",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
-    ]
-  },
-  {
-    "objectID": "04-styling.html",
-    "href": "04-styling.html",
-    "title": "5  Customizing Style",
-    "section": "",
-    "text": "5.1 Overview\nStyling controls how your website looks, including colors, fonts, spacing, and layout.\nIn Quarto, styling happens in two layers:",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
-    ]
-  },
-  {
-    "objectID": "04-styling.html#title-customizing-style",
-    "href": "04-styling.html#title-customizing-style",
-    "title": "5  📘 6. 04-styling.qmd",
-    "section": "5.2 title: “Customizing Style”",
-    "text": "5.2 title: “Customizing Style”",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
-    ]
-  },
-  {
-    "objectID": "04-styling.html#how-styling-works",
-    "href": "04-styling.html#how-styling-works",
-    "title": "5  Customizing Style",
-    "section": "5.2 How Styling Works",
-    "text": "5.2 How Styling Works\n\n5.2.1 1. Theme (SCSS)\nDefined in _quarto.yml:\nformat:\n  html:\n    theme: [flatly, custom.scss]\n\nflatly is the base Bootstrap theme\n\ncustom.scss is your custom design layer\n\n\n\n\n\n\n\nNote\n\n\n\nSCSS allows you to define variables like colors once and reuse them across your entire site.\n\n\n\n\n\n5.2.2 2. CSS (styles.css)\ncss: styles.css\nThis file overrides specific elements after the theme is applied.\nYour current setup includes:\n\nDark background gradient\n\nLight readable text\n\nBlue accent colors\n\nStyled sidebar and headings",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
-    ]
-  },
-  {
-    "objectID": "05-publishing.html",
-    "href": "05-publishing.html",
-    "title": "6  Publishing Your Website",
-    "section": "",
-    "text": "6.1 Overview\nOnce your website is built, the final step is publishing it so others can access it online.\nThere are two common options:",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
-    ]
-  },
-  {
-    "objectID": "05-publishing.html#title-publishing-your-website",
-    "href": "05-publishing.html#title-publishing-your-website",
-    "title": "6  📘 7. 05-publishing.qmd",
-    "section": "6.2 title: “Publishing Your Website”",
-    "text": "6.2 title: “Publishing Your Website”",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
-    ]
-  },
-  {
-    "objectID": "05-publishing.html#option-1-github-pages",
-    "href": "05-publishing.html#option-1-github-pages",
-    "title": "6  📘 7. 05-publishing.qmd",
-    "section": "6.3 Option 1: GitHub Pages",
-    "text": "6.3 Option 1: GitHub Pages\nThis is the best option for most users.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
-    ]
-  },
-  {
-    "objectID": "05-publishing.html#step-1-push-to-github",
-    "href": "05-publishing.html#step-1-push-to-github",
-    "title": "6  📘 7. 05-publishing.qmd",
-    "section": "6.4 Step 1: Push to GitHub",
-    "text": "6.4 Step 1: Push to GitHub\nCreate a repository and upload your project.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
-    ]
-  },
-  {
-    "objectID": "05-publishing.html#step-2-enable-pages",
-    "href": "05-publishing.html#step-2-enable-pages",
-    "title": "6  📘 7. 05-publishing.qmd",
-    "section": "6.5 Step 2: Enable Pages",
-    "text": "6.5 Step 2: Enable Pages\nGo to:\nSettings → Pages\nSet:\n\nBranch: main\nFolder: /docs\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYour _quarto.yml already uses:\noutput-dir: docs\nThis is required for GitHub Pages.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
-    ]
-  },
-  {
-    "objectID": "05-publishing.html#step-3-access-your-site",
-    "href": "05-publishing.html#step-3-access-your-site",
-    "title": "6  📘 7. 05-publishing.qmd",
-    "section": "6.6 Step 3: Access Your Site",
-    "text": "6.6 Step 3: Access Your Site\nYour site will be available at:",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing</span>"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Building a Research Website with Quarto",
     "section": "",
-    "text": "0.1 Welcome\nWelcome! This tutorial will guide you through building your own personal research website using Quarto — a free, open-source tool that lets you create beautiful websites, documents, and reports directly from code.\nDon’t worry if you’ve never built a website before, or if you’ve never used R or RStudio. This tutorial starts from the very beginning and walks you through every step. By the end, you’ll have a fully working, professional-looking research website that you can share with the world.\nIn this tutorial, you will:\nThis tutorial is designed for complete beginners, but it uses a real, professional workflow. The skills you learn here are the same ones researchers, scientists, and developers use to build and maintain their own websites.",
+    "text": "Welcome\nWelcome! This tutorial will guide you through building your own personal research website using Quarto — a free, open-source tool that lets you create beautiful websites, documents, and reports directly from code.\nDon’t worry if you’ve never built a website before, or if you’ve never used R or RStudio. This tutorial starts from the very beginning and walks you through every step. By the end, you’ll have a fully working, professional-looking research website that you can share with the world.\nIn this tutorial, you will:\nThis tutorial is designed for complete beginners, but it uses a real, professional workflow. The skills you learn here are the same ones researchers, scientists, and developers use to build and maintain their own websites.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
     ]
@@ -213,28 +23,8 @@
     "objectID": "index.html#what-youll-build",
     "href": "index.html#what-youll-build",
     "title": "Building a Research Website with Quarto",
-    "section": "0.2 What You’ll Build",
-    "text": "0.2 What You’ll Build\nBy the end of this tutorial, you’ll have a multi-page personal research website. Here’s a preview of what it will include:\n\n\n\n\n\n\n\nPage\nDescription\n\n\n\n\nHomepage\nAn introduction to who you are and what you do\n\n\nLearning Tab\nA space to share resources, notes, or educational content\n\n\nResearch Overview\nA summary of your research interests and focus areas\n\n\nPublications\nA list of your papers, reports, or written work\n\n\nProjects / Models\nHighlights of specific projects or tools you’ve developed\n\n\nCV Page\nA digital version of your curriculum vitae (résumé)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#what-you-need",
-    "href": "index.html#what-you-need",
-    "title": "Building a Research Website with Quarto",
-    "section": "0.3 What You Need",
-    "text": "0.3 What You Need\n\nR\nQuarto installed\nRStudio (recommended)\nA GitHub account (for publishing)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#how-this-tutorial-works",
-    "href": "index.html#how-this-tutorial-works",
-    "title": "Building a Research Website with Quarto",
-    "section": "0.4 How This Tutorial Works",
-    "text": "0.4 How This Tutorial Works\nThis tutorial is organized into chapters, and each chapter builds on the one before it. It’s important to follow the chapters in order, especially at the beginning, since later steps assume you’ve completed the earlier ones.\nAs you go, you’ll be making real edits to the template — not just reading about how things work. This hands-on approach is intentional: the best way to learn is by doing.\n\n\n\n\n\n\nImportant\n\n\n\nGo at your own pace. There’s no rush. If something doesn’t work the first time, that’s normal — troubleshooting is a natural part of working with any new tool. Each chapter includes tips to help you if you get stuck.\n\n\nReady to get started? Head to Chapter 1 to install R and RStudio.",
+    "section": "What You’ll Build",
+    "text": "What You’ll Build\nBy the end of this tutorial, you’ll have a multi-page personal research website. Here’s a preview of what it will include:\n\n\n\n\n\n\n\nPage\nDescription\n\n\n\n\nHomepage\nAn introduction to who you are and what you do\n\n\nLearning Tab\nA space to share resources, notes, or educational content\n\n\nResearch Overview\nA summary of your research interests and focus areas\n\n\nPublications\nA list of your papers, reports, or written work\n\n\nProjects / Models\nHighlights of specific projects or tools you’ve developed\n\n\nCV Page\nA digital version of your curriculum vitae (résumé)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
     ]
@@ -243,10 +33,30 @@
     "objectID": "index.html#what-you-need-before-you-start",
     "href": "index.html#what-you-need-before-you-start",
     "title": "Building a Research Website with Quarto",
-    "section": "0.3 What You Need Before You Start",
-    "text": "0.3 What You Need Before You Start\nYou don’t need to install anything right now — the first chapters will walk you through setup step by step. But here’s a quick overview of what you’ll be working with:\n\nR — A free programming language. Even if you never write a single line of R code yourself, it powers the tools that build your website behind the scenes.\nQuarto — The tool that turns your content into a website. It’s free and works alongside R and RStudio.\nRStudio — A free application that gives you a visual, beginner-friendly environment for working with R and Quarto. Think of it as your “home base” for this whole project.\nA GitHub account — A free account on github.com that you’ll use to store your website files and publish your site online. If you don’t have one yet, we’ll show you how to create one.\n\n\n\n\n\n\n\nTip\n\n\n\nNever used any of these tools before? That’s completely okay — and actually expected! Each tool is introduced gradually, with explanations along the way. You do not need any prior coding or web development experience.",
+    "section": "What You Need Before You Start",
+    "text": "What You Need Before You Start\nYou don’t need to install anything right now — the first chapters will walk you through setup step by step. But here’s a quick overview of what you’ll be working with:\n\nR — A free programming language. Even if you never write a single line of R code yourself, it powers the tools that build your website behind the scenes.\nQuarto — The tool that turns your content into a website. It’s free and works alongside R and RStudio.\nRStudio — A free application that gives you a visual, beginner-friendly environment for working with R and Quarto. Think of it as your “home base” for this whole project.\nA GitHub account — A free account on github.com that you’ll use to store your website files and publish your site online. If you don’t have one yet, we’ll show you how to create one.\n\n\n\n\n\n\n\nTip\n\n\n\nNever used any of these tools before? That’s completely okay — and actually expected! Each tool is introduced gradually, with explanations along the way. You do not need any prior coding or web development experience.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-this-tutorial-works",
+    "href": "index.html#how-this-tutorial-works",
+    "title": "Building a Research Website with Quarto",
+    "section": "How This Tutorial Works",
+    "text": "How This Tutorial Works\nThis tutorial is organized into chapters, and each chapter builds on the one before it. It’s important to follow the chapters in order, especially at the beginning, since later steps assume you’ve completed the earlier ones.\nAs you go, you’ll be making real edits to the template — not just reading about how things work. This hands-on approach is intentional: the best way to learn is by doing.\n\n\n\n\n\n\nImportant\n\n\n\nGo at your own pace. There’s no rush. If something doesn’t work the first time, that’s normal — troubleshooting is a natural part of working with any new tool. Each chapter includes tips to help you if you get stuck.\n\n\nReady to get started? Head to Chapter 1 to install R and RStudio.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Building a Research Website with Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "01-getting-started.html",
+    "href": "01-getting-started.html",
+    "title": "2  Getting Started",
+    "section": "",
+    "text": "2.1 Overview\nBefore you can build or edit your website, you need to set up a few free tools on your computer. This chapter walks you through every installation step and gets the website template running on your machine for the first time.\nBy the end of this chapter, you will have:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
   },
   {
@@ -310,16 +120,6 @@
     ]
   },
   {
-    "objectID": "01-getting-started.html#step-6-preview-the-website",
-    "href": "01-getting-started.html#step-6-preview-the-website",
-    "title": "2  Getting Started",
-    "section": "2.7 Step 6: Preview the Website",
-    "text": "2.7 Step 6: Preview the Website\nNow that the template is open in RStudio, let’s make sure everything is working by previewing the website on your computer.\n\nIn RStudio, click on the Terminal tab (bottom panel)\nType the following command and press Enter:\n\nquarto preview\n\nAfter a few seconds, your default web browser should open automatically and display the website template.\n\n\n\n\n\n\n\nTip\n\n\n\nNothing opened? Try copying the local address that appears in the Terminal (it will look something like http://localhost:4321) and pasting it directly into your browser.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe website is running locally — meaning it only exists on your computer right now and is not visible to anyone else online. This is your personal preview environment where you can safely make changes and see how they look before publishing.\n\n\nCongratulations! 🎉 Your website is up and running. In the next chapter, you’ll start exploring the template files and editing your content.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
-    ]
-  },
-  {
     "objectID": "01-getting-started.html#step-6-open-the-project-in-rstudio",
     "href": "01-getting-started.html#step-6-open-the-project-in-rstudio",
     "title": "2  Getting Started",
@@ -327,6 +127,16 @@
     "text": "2.7 Step 6: Open the Project in RStudio\nNow you’ll open the template as a project in RStudio. Opening it as a project (rather than just opening individual files) is important — it tells RStudio where all your files live so that everything works correctly together.\n\nOpen RStudio\nGo to File → Open Project\nNavigate to the Personal_Website_Template-main folder you just unzipped\nInside the folder, find the file ending in .Rproj and click on it\nClick “Open”\n\nRStudio will reload and you’ll see all the template files appear in the Files panel in the bottom-right corner of the screen.\n\n\n\n\n\n\nNote\n\n\n\nThe .Rproj file is what tells RStudio to treat this folder as a self-contained project. It sets up your working environment automatically so all the files and folder paths work correctly without any extra configuration on your part.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "02-structure.html",
+    "href": "02-structure.html",
+    "title": "3  Understanding the File Structure",
+    "section": "",
+    "text": "3.1 Overview\nNow that your project is open in RStudio, you’re probably looking at a list of files and wondering what they all do. This chapter explains how a Quarto website is organized, what each file’s role is, and how they connect to produce the website you previewed in the last chapter.\nUnderstanding the structure before you start editing will save you a lot of confusion later — so take a few minutes to read through this before making any changes.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
     ]
   },
   {
@@ -397,6 +207,16 @@
     "text": "3.8 Summary\n\n\n\n\n\n\n\n\nFile / Folder\nWhat it’s for\nDo you edit it?\n\n\n\n\n_quarto.yml\nSite structure, navigation, theme\nYes — for titles, links, settings\n\n\n*.qmd files\nPage content\nYes — your main editing happens here\n\n\nstyles.css\nVisual styling\nLater — for design customization\n\n\ncustom.scss\nTheme customization\nLater — for advanced styling\n\n\nimages/\nPhotos and figures\nYes — add your own images here\n\n\nfiles/\nDownloadable files (CV PDF)\nYes — add your CV PDF here\n\n\ndocs/\nAuto-generated site output\nNever — Quarto manages this\n\n\n*.Rproj\nRStudio project file\nNever — leave this as-is\n\n\n\nNow that you understand how the pieces fit together, you’re ready to start making the site your own. In the next chapter, you’ll edit your homepage and add your personal information.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Understanding the File Structure</span>"
+    ]
+  },
+  {
+    "objectID": "03-editing.html",
+    "href": "03-editing.html",
+    "title": "4  Editing Your Content",
+    "section": "",
+    "text": "4.1 Overview\nNow that you understand how the files are organized, it’s time to make the website yours. This chapter focuses on editing index.qmd — your homepage — which is the first thing visitors will see.\nYou’ll learn how to:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
     ]
   },
   {
@@ -480,16 +300,6 @@
     ]
   },
   {
-    "objectID": "03-editing.html#summary-what-you-edited-in-this-chapter",
-    "href": "03-editing.html#summary-what-you-edited-in-this-chapter",
-    "title": "4  Editing Your Content",
-    "section": "4.10 Summary: What You Edited in This Chapter",
-    "text": "4.10 Summary: What You Edited in This Chapter\n\n\n\n\n\n\n\n\nWhat\nWhere\nHow\n\n\n\n\nYour name and subtitle\nindex.qmd YAML front matter\nEdit the title and subtitle fields\n\n\nYour profile photo\nimages/ folder + index.qmd\nAdd file to images/, update the filename\n\n\nYour bio text\nindex.qmd wide column\nReplace the paragraph text\n\n\nYour badge labels\nindex.qmd .badge-list block\nReplace each line with your own info\n\n\nSide-by-side layout\nAny .qmd file\nUse the {.columns} / {.column} pattern\n\n\nGoogle Calendar\nNew calendar.qmd + _quarto.yml\nEmbed iframe, add link to navbar\n\n\n\nIn the next chapter, you’ll edit the inner pages — Research, Publications, Projects, and CV — and learn how to add your own work to each one.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
-    ]
-  },
-  {
     "objectID": "03-editing.html#other-resources",
     "href": "03-editing.html#other-resources",
     "title": "4  Editing Your Content",
@@ -500,11 +310,41 @@
     ]
   },
   {
+    "objectID": "03-editing.html#summary-what-you-edited-in-this-chapter",
+    "href": "03-editing.html#summary-what-you-edited-in-this-chapter",
+    "title": "4  Editing Your Content",
+    "section": "4.10 Summary: What You Edited in This Chapter",
+    "text": "4.10 Summary: What You Edited in This Chapter\n\n\n\n\n\n\n\n\nWhat\nWhere\nHow\n\n\n\n\nYour name and subtitle\nindex.qmd YAML front matter\nEdit the title and subtitle fields\n\n\nYour profile photo\nimages/ folder + index.qmd\nAdd file to images/, update the filename\n\n\nYour bio text\nindex.qmd wide column\nReplace the paragraph text\n\n\nYour badge labels\nindex.qmd .badge-list block\nReplace each line with your own info\n\n\nSide-by-side layout\nAny .qmd file\nUse the {.columns} / {.column} pattern\n\n\nGoogle Calendar\nNew calendar.qmd + _quarto.yml\nEmbed iframe, add link to navbar\n\n\n\nIn the next chapter, you’ll edit the inner pages — Research, Publications, Projects, and CV — and learn how to add your own work to each one.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Editing Your Content</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html",
+    "href": "04-styling.html",
+    "title": "5  Customizing Style",
+    "section": "",
+    "text": "5.1 Overview\nStyling controls how your website looks, including colors, fonts, spacing, and layout.\nIn Quarto, styling happens in two layers:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
     "objectID": "04-styling.html#overview",
     "href": "04-styling.html#overview",
     "title": "5  Customizing Style",
     "section": "",
     "text": "Theme (SCSS) → controls global design such as colors and typography\n\nCSS → fine-tunes specific elements like buttons, spacing, and layout details",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#how-styling-works",
+    "href": "04-styling.html#how-styling-works",
+    "title": "5  Customizing Style",
+    "section": "5.2 How Styling Works",
+    "text": "5.2 How Styling Works\n\n5.2.1 1. Theme (SCSS)\nDefined in _quarto.yml:\nformat:\n  html:\n    theme: [flatly, custom.scss]\n\nflatly is the base Bootstrap theme\n\ncustom.scss is your custom design layer\n\n\n\n\n\n\n\nNote\n\n\n\nSCSS allows you to define variables like colors once and reuse them across your entire site.\n\n\n\n\n\n5.2.2 2. CSS (styles.css)\ncss: styles.css\nThis file overrides specific elements after the theme is applied.\nYour current setup includes:\n\nDark background gradient\n\nLight readable text\n\nBlue accent colors\n\nStyled sidebar and headings",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]
@@ -535,16 +375,6 @@
     "title": "5  Customizing Style",
     "section": "5.5 Where to Edit Your Style",
     "text": "5.5 Where to Edit Your Style\n\n5.5.1 Open custom.scss\nThis file controls your core theme settings, including:\n\nBackground color\n\nText color\n\nAccent color\n\nNavbar styling\n\nThis is where you define the overall look of your site.\n\n\n\n5.5.2 Open _quarto.yml\nThis file tells Quarto which theme to use.\nFor example:\nformat:\n  html:\n    theme: [flatly, custom.scss]\nTo switch themes, replace custom.scss with another file:\ntheme: [flatly, custom-light.scss]\nor\ntheme: [flatly, custom-pastel.scss]",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
-    ]
-  },
-  {
-    "objectID": "04-styling.html#key-idea",
-    "href": "04-styling.html#key-idea",
-    "title": "5  Customizing Style",
-    "section": "5.11 Key Idea",
-    "text": "5.11 Key Idea\n\ncustom.scss = controls design\n\nstyles.css = refines details\n\n_quarto.yml = connects everything\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf your styling is not updating, check that the file name in _quarto.yml matches your SCSS file exactly.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
     ]
@@ -597,6 +427,26 @@
     "text": "5.10 Next Step\nNow that you’ve changed your first colors, try:\n\nCreating your own theme file\n\nSwitching between themes in _quarto.yml\n\nMatching your site to your personal or institutional branding\n\n\n\n\n\n\n\nImportant\n\n\n\nThe goal is not to memorize SCSS — it is to understand how small changes affect your entire site.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "04-styling.html#key-idea",
+    "href": "04-styling.html#key-idea",
+    "title": "5  Customizing Style",
+    "section": "5.11 Key Idea",
+    "text": "5.11 Key Idea\n\ncustom.scss = controls design\n\nstyles.css = refines details\n\n_quarto.yml = connects everything\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf your styling is not updating, check that the file name in _quarto.yml matches your SCSS file exactly.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Customizing Style</span>"
+    ]
+  },
+  {
+    "objectID": "05-publishing.html",
+    "href": "05-publishing.html",
+    "title": "6  Publishing Your Website",
+    "section": "",
+    "text": "6.1 Overview\nOnce your website is built, the final step is publishing it so others can access it online.\nThere are two common options:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Publishing Your Website</span>"
     ]
   },
   {

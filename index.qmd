@@ -3,7 +3,7 @@ title: "Building a Research Website with Quarto"
 subtitle: "A step-by-step guide using a real research template"
 ---
 
-## Welcome
+## Welcome {-}
 
 Welcome! This tutorial will guide you through building your own personal research website
 using **Quarto** — a free, open-source tool that lets you create beautiful websites,
@@ -49,7 +49,7 @@ this tutorial with something you can actually use and build on.
 
 ---
 
-## What You'll Build
+## What You'll Build {-}
 
 By the end of this tutorial, you'll have a multi-page personal research website. Here's a
 preview of what it will include:
@@ -65,7 +65,7 @@ preview of what it will include:
 
 ---
 
-## What You Need Before You Start
+## What You Need Before You Start {-}
 
 You don't need to install anything right now — the first chapters will walk you through
 setup step by step. But here's a quick overview of what you'll be working with:
@@ -88,7 +88,7 @@ prior coding or web development experience.
 
 ---
 
-## How This Tutorial Works
+## How This Tutorial Works {-}
 
 This tutorial is organized into chapters, and **each chapter builds on the one before it.**
 It's important to follow the chapters in order, especially at the beginning, since later
