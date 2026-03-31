@@ -40,10 +40,10 @@ build and maintain their own websites.
 ::: {.callout-note}
 **Start from a Real, Working Website** 
 
-This is not just a demo. You will be editing an actual working template used for research communication. Every change you make is a real change to a real website — so you'll leave this tutorial with something you can actually use, build on, and share.
+This is not just a demo. You will be editing an actual working template used for research communication. Every change you make is a real change to a real website, so you'll leave this tutorial with something you can actually use, build on, and share.
 
-- **Template source:** [https://github.com/vmahan1998/Website_Development_Tutorial.git]  
-- **Live example:** https://vmahan1998-estuarymodeling.share.connect.posit.cloud/
+- **Template source:** [GitHub Repository](https://github.com/vmahan1998/Website_Development_Tutorial.git)  
+- **Live example:** [View Live Site](https://vmahan1998-estuarymodeling.share.connect.posit.cloud/)
 
 This example shows what your site can look like once it is fully built and published.
 :::
