@@ -104,4 +104,4 @@ normal — troubleshooting is a natural part of working with any new tool. Each 
 includes tips to help you if you get stuck.
 :::
 
-Ready to get started? Head to **Chapter 1** to install R and RStudio.
+Ready to get started? Head to **Chapter 2** to install R and RStudio.
